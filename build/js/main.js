@@ -6,7 +6,7 @@
   function SpaceLaunch() {
     // properties
     this.scrolled = 0;
-    this.distance3d = 300000;
+    this.distance3d = 800000;
     
     // cache some jQuery objects
     this.$window = $(window);

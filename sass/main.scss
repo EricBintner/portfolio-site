@@ -89,9 +89,9 @@ html, body {
 body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,181d9b+50,2989d8+65,d9fcff+90 
 background: #000000; 
-background: -moz-linear-gradient(top, #000000 0%, #181d9b 50%, #2989d8 65%, #d9fcff 90%); 
-background: -webkit-linear-gradient(top, #000000 0%,#181d9b 50%,#2989d8 65%,#d9fcff 90%); 
-background: linear-gradient(to bottom, #000000 0%,#181d9b 50%,#2989d8 65%,#d9fcff 90%); 
+background:    -moz-linear-gradient(top, #000000 20%, #181d9b 50%, #2989d8 65%, #d9fcff 90%); 
+background: -webkit-linear-gradient(top, #000000 20%,#181d9b 50%,#2989d8 65%,#d9fcff 90%); 
+background:   		linear-gradient(to bottom, #000000 20%,#181d9b 50%,#2989d8 65%,#d9fcff 90%); 
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#d9fcff',GradientType=0 );*/
 }
 
@@ -101,7 +101,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 MAGIC
 ********************/
 
-#scroll-proxy { height: 4000px; }
+#scroll-proxy { height: 4200px; }
 
 
 
@@ -147,29 +147,35 @@ MAGIC
 		  	bottom:0;
 		  	height:0px;
 
-		  	//$placement: 2500;
-
+		  	
+		  	/*
 		  	&.stop1{
-		  		bottom:calc(0);
+		  		//bottom: $placement;
 		  		border:2px solid #f00;
 		  	}
 		  	&.stop2{
-		  		//bottom:calc(2500px * 1);
+		  		//bottom:calc(3500px * 1);
 		  		border:2px solid #0f0;
 		  	}
 		  	&.stop3{
-		  		//bottom:calc(2500px * 2);
+		  		//bottom:calc(3500px * 2);
 		  		border:2px solid #00f;
 		  	}
 		  	&.stop4{
-		  		//bottom:calc(2500px * 3);
+		  		//bottom:calc(3500px * 3);
 		  		border:2px solid #000;
 		  	}
+		  	&.stop5{
+		  		//bottom:calc(3500px * 4);
+		  		border:2px solid #fff;
+		  	}
+		  	*/
 		 }
 	}
 }
 
 
+$placement:      -10000px;
 
 #first {
   //background-image: url(https://treehouse-codepen.s3.amazonaws.com/multiplane/landscape1.svg);
@@ -179,64 +185,73 @@ MAGIC
        -o-transform: translate3d( 0, 0, -11500px) scale(16);
           transform: translate3d( 0, 0, -11500px) scale(16);
             .stop1{
-		  		transform: translateY(calc(-2500px));
+		  		transform: translateY($placement);
 		  	}
 		  	.stop2{
-		  		transform: translateY(calc(-5000px));
+		  		transform: translateY(calc(#{$placement} * 2));
 		  	}
 		  	.stop3{
-		  		transform: translateY(calc(-7500px));
+		  		transform: translateY(calc(#{$placement} * 3));
 		  	}
 		  	.stop4{
-		  		transform: translateY(calc(-10000px));
+		  		transform: translateY(calc(#{$placement} * 4));
+		  	}
+		  	.stop5{
+		  		transform: translateY(calc(#{$placement} * 5));
 		  	}
 
 }
 
 #second {
-  background-image: url(https://treehouse-codepen.s3.amazonaws.com/multiplane/landscape2.svg);
+  //background-image: url(https://treehouse-codepen.s3.amazonaws.com/multiplane/landscape2.svg);
   -webkit-transform: translate3d( 0, 0, -24000px ) scale(32);
      -moz-transform: translate3d( 0, 0, -24000px ) scale(32);
       -ms-transform: translate3d( 0, 0, -24000px ) scale(32);
        -o-transform: translate3d( 0, 0, -24000px ) scale(32);
           transform: translate3d( 0, 0, -24000px ) scale(32);
-    		 .stop1{
-		  		transform: translateY(calc(-2500px));
+    		.stop1{
+		  		transform: translateY(calc(#{$placement} / 2));
 		  	}
 		  	.stop2{
-		  		transform: translateY(calc(-5000px));
+		  		transform: translateY($placement);
 		  	}
 		  	.stop3{
-		  		transform: translateY(calc(-7500px));
+		  		transform: translateY(calc(#{$placement} / 2 * 3));
 		  	}
 		  	.stop4{
-		  		transform: translateY(calc(-10000px));
+		  		transform: translateY(calc(#{$placement} / 2 * 4));
+		  	}
+		  	.stop5{
+		  		transform: translateY(calc(#{$placement} / 2 * 5));
 		  	}
 }
 
 #third {
-  background-image: url(https://treehouse-codepen.s3.amazonaws.com/multiplane/landscape3.svg);
+  //background-image: url(https://treehouse-codepen.s3.amazonaws.com/multiplane/landscape3.svg);
   -webkit-transform: translate3d( 0, 0, -48000px ) scale(64);
      -moz-transform: translate3d( 0, 0, -48000px ) scale(64);
       -ms-transform: translate3d( 0, 0, -48000px ) scale(64);
        -o-transform: translate3d( 0, 0, -48000px ) scale(64);
           transform: translate3d( 0, 0, -48000px ) scale(64);
             .stop1{
-		  		transform: translateY(calc(-2500px));
+		  		transform: translateY(calc(#{$placement} / 4));
 		  	}
 		  	.stop2{
-		  		transform: translateY(calc(-5000px));
+		  		transform: translateY(calc(#{$placement} / 2));
 		  	}
 		  	.stop3{
-		  		transform: translateY(calc(-7500px));
+		  		transform: translateY(calc(#{$placement} / 4 * 3));
 		  	}
 		  	.stop4{
-		  		transform: translateY(calc(-10000px));
+		  		transform: translateY($placement);
+		  	}
+		  	.stop5{
+		  		transform: translateY(calc(#{$placement} / 4 * 5));
 		  	}
 }
 
 #fourth {
-  background-image: url(https://treehouse-codepen.s3.amazonaws.com/multiplane/landscape4.svg);
+  //background-image: url(https://treehouse-codepen.s3.amazonaws.com/multiplane/landscape4.svg);
   -webkit-transform: translate3d( 0, 0, -64000px ) scale(128);
      -moz-transform: translate3d( 0, 0, -64000px ) scale(128);
       -ms-transform: translate3d( 0, 0, -64000px ) scale(128);
@@ -245,27 +260,30 @@ MAGIC
 
 
            .stop1{
-		  		transform: translateY(calc(-2500px+ 150000px));
+		  		transform: translateY(calc(#{$placement} / 8));
 		  	}
 		  	.stop2{
-		  		transform: translateY(calc(-5000px + 150000px));
+		  		transform: translateY(calc(#{$placement} / 4));
 		  	}
 		  	.stop3{
-		  		transform: translateY(calc(-7500px + 150000px));
+		  		transform: translateY(calc(#{$placement} / 8 * 3));
 		  	}
 		  	.stop4{
-		  		transform: translateY(calc(-10000px + 150000px));
+		  		transform: translateY(calc(#{$placement} / 2));
+		  	}
+		  	.stop5{
+		  		transform: translateY(calc(#{$placement} / 8 * 5));
 		  	}
 
    	background: #d9fcff; 
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,181d9b+54,2989d8+62,d9fcff+90 */
-background: -moz-linear-gradient(top, #000000 0%, #181d9b 54%, #2989d8 62%, #d9fcff 90%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #000000 0%,#181d9b 54%,#2989d8 62%,#d9fcff 90%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #000000 0%,#181d9b 54%,#2989d8 62%,#d9fcff 90%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+31,181d9b+54,2989d8+62,d9fcff+90 */
+background: -moz-linear-gradient(top, #000000 31%, #181d9b 54%, #2989d8 62%, #d9fcff 90%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #000000 31%,#181d9b 54%,#2989d8 62%,#d9fcff 90%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #000000 31%,#181d9b 54%,#2989d8 62%,#d9fcff 90%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#d9fcff',GradientType=0 ); /* IE6-9 */
 
-	height: 3000px !important;
-    bottom: 150000px;
+	height: 7500px !important;
+    bottom: 400000px;
 
 
 }
