@@ -3,9 +3,10 @@ var $ = require('gulp-load-plugins')();
 var hbsAll = require('gulp-handlebars-all');
 var handlebars = require('handlebars');
 var rename = require('gulp-rename');
-//var less = require('gulp-less');
+//var waypoints = require('waypoints');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var uglify = require("gulp-uglify");
 //var path = require('path');
 //var autoprefixer = require('gulp-autoprefixer');
 //var htmlmin = require('gulp-html-minifier');
@@ -56,6 +57,17 @@ gulp.task('hbsToHTML', function() {
 //     .pipe(gulp.dest('./css'));
 // });*/
 
+
+ 
+// task
+gulp.task('minify-js', function () {
+    gulp.src('./javascript/custom/*.js') // path to your files
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/js'));
+});
+
+
+
 var input = './sass/*.scss';
 var output = './build/css';
 
@@ -99,7 +111,7 @@ gulp.task('server', function() {
         }));
 });
 
-gulp.task('default', ['hbsToHTML', /*'less', 'prefix', 'reporter', 'image',*/ 'sass', 'server']);
+gulp.task('default', ['hbsToHTML', 'minify-js', /*'less', 'prefix', 'reporter', 'image',*/ 'sass', 'server']);
 
 gulp.task('watch', [ 'default', 'hbsToHTML', 'sass'], function () {
   console.log('hello world');

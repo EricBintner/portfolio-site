@@ -1,4 +1,4 @@
-/* build an initial insparation from this codepen:
+/* build an initial inspiration from this codepen:
    https://codepen.io/nickpettit/pen/eBCrK 
 */
 html,
@@ -10,7 +10,8 @@ textarea {
 
 body {
   font-size: 1em;
-  line-height: 1.4; }
+  line-height: 1.4;
+  font-family: 'Dosis', sans-serif; }
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -79,7 +80,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 MAGIC
 ********************/
 #scroll-proxy {
-  height: 4200px; }
+  height: 10000px; }
 
 #environment {
   position: fixed;

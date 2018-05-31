@@ -1,5 +1,9 @@
-# hbsToHTML
-Handlebars to HTML
-This compiler creates a single HTML file(index.html) using Handlebars and Less. Run npm install to download the node-modules. 
+# GSAP vertical menu (into space)
 
-Run gulp watch to watch over your hbs, less and image files.
+Gulp
+Handlebars to HTML via parials
+SCSS
+
+Run npm install to download the node-modules. 
+
+Run gulp watch to watch over your hbs, less and image files. (watch is not setup)
