@@ -105,7 +105,7 @@ gulp.task('sass', function () {
 gulp.task('server', function() {
     gulp.src('./build/')
         .pipe(webserver({
-            port: 3000,
+            port: 3001,
             directoryListing: false,
             open: true
         }));

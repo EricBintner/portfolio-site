@@ -1,8 +1,7 @@
 # GSAP vertical menu (into space)
 
-Gulp
+Gulp, SCSS, 
 Handlebars to HTML via parials
-SCSS
 
 Run npm install to download the node-modules. 
 

@@ -1,13 +1,30 @@
+@import 'variables';
 
 
 
 nav {
     position: fixed;
-    top: 5px;
+    left: 50%;
     z-index: 200000;
     display: flex;
-    flex-direction: column-reverse;
-
+  //flex-direction: column-reverse;
+  //top: 5px;
+  //flex-direction: row;
+  //align-items: center; 
+	bottom: 2px;
+  //transform: translateX(100%);
+  //margin-left: -50vw;
+  	.navPos {
+	    display: flex;
+	    left: -50%;
+	    position: relative;
+	}
+    @media only screen and (max-width: $mq-mobile-max)  {
+        //top: unset; 
+		//bottom: 5px;
+		//flex-direction: row;
+		//left: 3vw;
+	}
   	a {
 	  	padding: 10px;
 	    margin: 10px 10px 10px 5px;
@@ -20,6 +37,26 @@ nav {
 	    span{
 	    	width:100%;
 	    }
+	  @media only screen and (max-width: $mq-mobile-max)  {
+			padding: 3px 8vw 3px 10px;
+		    margin: 0 -12.5vw 1vh 0;
+		    height: 22px;
+		    transform: rotate(-45deg) translateY(-8.5vw);
+		    width: 16.5vw;
+		    /*span{
+		    	transform: translateX(12%) translateX(2px);
+		    }*/
+	    }
+	    @media only screen and (max-width: $mq-mini-max)  {
+		    margin: 0 -17vw 1vh 0;
+		    height: 21px;
+		    transform: rotate(-45deg) translateY(-10vw);
+		    width: 20vw;
+		    /*span{
+		    	transform: translateX(6%) translateX(1px);
+		    }*/
+		 }
+
   	}
 }
 
