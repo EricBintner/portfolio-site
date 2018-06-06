@@ -1,0 +1,22 @@
+// _variables.scss
+
+
+// 				= @media ( MAX-width: Xpx )
+$mq-lgDesk-max: 1199.9px;
+$mq-smDesk-max: 999.9px;
+$mq-tablet-max: 767.9px; // most used
+$mq-mobile-max: 599.9px; // most used
+$mq-mini-max  : 374.9px; // used 413.9px;
+
+// 				= @media ( MIN-width: Xpx )
+$mq-lgDesk-min: 1200px; // used 
+$mq-smDesk-min: 768px;
+$mq-tablet-min: 600px; 
+$mq-mobile-min: 375px; 	//414px;
+//$mq-mini-min: none;
+
+
+
+
+
+

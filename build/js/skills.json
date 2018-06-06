@@ -1,0 +1,20 @@
+[
+  {"name":"SVG", 		"category":"Presentation-Development animation","mastery":"100", 	"experience":"100", 	"love":"100", "comments":""},
+  {"name":"CSS/SASS",	"category":"Presentation-Development animation","mastery":"100",	"experience":"100",		"love": "95", "comments":""},
+  {"name":"vanilla JS", "category":"Presentation-Development",			"mastery":"60", 	"experience":" 80", 	"love": "50", "comments":""},
+  {"name":"GSAP",		"category":"Presentation-Development animation","mastery":"95",		"experience":" 95",		"love":"100", "comments":""},
+  {"name":"D3.js",		"category":"Presentation-Development script",	"mastery":"30",		"experience":" 20",		"love": "90", "comments":""},
+  {"name":"C++",		"category":"Presentation-Development script",	"mastery":"20",		"experience":" 10",		"love": "90", "comments":""},
+  {"name":"Canvas",		"category":"Presentation-Development animation","mastery":"40",		"experience":" 15",		"love": "60", "comments":""},
+  {"name":"GIT",		"category":"Structural-Development",			"mastery":"30",		"experience":" 40",		"love": "15", "comments":""},
+  {"name":"Node.js",	"category":"Structural-Development",			"mastery":"20",		"experience":" 30",		"love": "50", "comments":""},
+  {"name":"Handlebars",	"category":"Structural-Development",			"mastery":"30",		"experience":" 20",		"love": "70", "comments":""},
+  {"name":"Gulp/Grunt",	"category":"Structural-Development",			"mastery":"40",		"experience":" 25",		"love": "60", "comments":""},
+  {"name":"React.js",	"category":"Structural-Development",			"mastery":"5",		"experience":" 5",		"love": "60", "comments":""},
+  {"name":"After Effects","category":"Software animation",				"mastery":"97.5",	"experience":" 90",		"love":"100", "comments":""},
+  {"name":"Illustrator","category":"Software",							"mastery":"95",		"experience":" 90",		"love":"100", "comments":""},
+  {"name":"Photoshop",	"category":"Software",							"mastery":"95",		"experience":" 95",		"love": "90", "comments":""},
+  {"name":"CMS",		"category":"UX-Design",							"mastery":"80",		"experience":" 80",		"love": "50", "comments":""},
+  {"name":"inVision",	"category":"UX-Design",							"mastery":"85",		"experience":" 50",		"love": "25", "comments":""},
+  {"categories": "Presentation-Development Structural-Development Software  animation"}
+]

@@ -1,0 +1,30 @@
+
+//@import 'variables';
+
+
+svg#metro{
+    width: 150%;
+    position: absolute;
+    bottom: 80px;
+    left: -25%;
+
+	.metro{
+		path, line, polyline {
+			fill:none;
+			stroke-width:7;
+			stroke-linecap:round;
+			stroke-linejoin:round;
+			stroke-miterlimit:23;
+		}
+		.st0{ stroke: #008061 }
+		.st1{ stroke: #FFD400 }
+		.st2{ stroke: #00A88E } 
+		.st3{ stroke: #023F88 } 
+		.st4{ stroke: #007C8E } 
+		.st5{ stroke: #00539F }
+		.st6{ stroke: #F04E23 }
+		.st7{ stroke: #9F1866 }
+		.st8{ stroke: #9E9D92 }
+		.st9{ fill:   #53C2EF }
+	 }
+}

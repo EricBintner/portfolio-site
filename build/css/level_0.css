@@ -1,0 +1,31 @@
+svg#metro {
+  width: 150%;
+  position: absolute;
+  bottom: 80px;
+  left: -25%; }
+  svg#metro .metro path, svg#metro .metro line, svg#metro .metro polyline {
+    fill: none;
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 23; }
+  svg#metro .metro .st0 {
+    stroke: #008061; }
+  svg#metro .metro .st1 {
+    stroke: #FFD400; }
+  svg#metro .metro .st2 {
+    stroke: #00A88E; }
+  svg#metro .metro .st3 {
+    stroke: #023F88; }
+  svg#metro .metro .st4 {
+    stroke: #007C8E; }
+  svg#metro .metro .st5 {
+    stroke: #00539F; }
+  svg#metro .metro .st6 {
+    stroke: #F04E23; }
+  svg#metro .metro .st7 {
+    stroke: #9F1866; }
+  svg#metro .metro .st8 {
+    stroke: #9E9D92; }
+  svg#metro .metro .st9 {
+    fill: #53C2EF; }

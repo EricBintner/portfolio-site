@@ -34,14 +34,14 @@ nav {
 	    min-width: 20px;
 	    display: flex;
 	    text-align:center;
-	    span{
+	    span {
 	    	width:100%;
 	    }
 	  @media only screen and (max-width: $mq-mobile-max)  {
 			padding: 3px 8vw 3px 10px;
 		    margin: 0 -12.5vw 1vh 0;
 		    height: 22px;
-		    transform: rotate(-45deg) translateY(-8.5vw);
+		    transform: rotate(-45deg) translateY(-8.5vw) !important;
 		    width: 16.5vw;
 		    /*span{
 		    	transform: translateX(12%) translateX(2px);
