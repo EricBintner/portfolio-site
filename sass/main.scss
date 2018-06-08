@@ -1,6 +1,9 @@
 /* build an initial inspiration from this codepen:
    https://codepen.io/nickpettit/pen/eBCrK 
 */
+
+@import 'variables';
+
    
 html,
 button,
@@ -14,7 +17,8 @@ body {
     font-size: 1em;
     line-height: 1.4;
     font-family: 'Dosis', sans-serif;
-
+    margin:0;
+    overflow:hidden;
 }
  
 /*
@@ -100,7 +104,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 
 
 /********************
-MAGIC
+Main Background Animation - Placement Z-Axis
 ********************/
 
 #scroll-proxy { height: 10000px; }
@@ -141,15 +145,98 @@ MAGIC
 	  	svg.svgBackground{
 	  		position: absolute;
 	  		bottom: 0;
+	  		pointer-events: none;
+	  		@media only screen and (max-width: $mq-mobile-max)  { 
+			  	transform: scale(1.5);
+    			transform-origin: bottom;
+		  	}
+	  		g.svgScale{
+		  		@media only screen and (min-width: $mq-lgDesk-min)  { 
+			  		transform: scale(0.8);
+    				transform-origin: bottom;
+		  		}
+	  		}
 	  	}
+	&#fourth{
+		svg.svgBackground{
+			transform: translateY(-15vh);
+			@media only screen and (max-width: $mq-mobile-max)  { // this should be orientation
+			 	transform: translateY(-55vh);
+			}
 
+		}
+	}
 	  	.place3D{
 		  	width: 100%;
 		  	position: absolute;
 		  	bottom:0;
 		  	height:0px;
 
-		  	
+		  	.perspectiveContainer {
+			    position: relative;
+			    top: -97.5vh;
+			    width: 80%;
+    			margin: auto;
+    			max-width: 1400px;
+    			display: flex;
+    			height: calc(60px + 5vh);
+			    //-webkit-perspective: 800;
+			     @media only screen and (max-width: $mq-mobile-max)  { 
+				  	flex-direction:column;
+				  	width:90%;
+				 }
+
+			    svg {
+			    	//max-width: 66.67vh;
+			    	width:100%;
+			    	display:flex;
+			    	//margin-right: calc(-8vw - 2vh);
+			    	//max-width: 500px;
+			    	max-height: 11.5vh;
+				    //transform: scale(1.33);
+				    @media only screen and (max-width: $mq-mobile-max)  { 
+				    	margin-right: unset;
+				    	transform: scale(1.2); 
+				    	height: 12vh;
+				    }
+				    @media only screen and (min-width: 1550px)  { transform: translateX(-1vw); }
+				    @media only screen and (min-width: 1800px)  { transform: translateX(-2vw); }
+				    g.heading{
+				    	transform: scale(0.8);
+	    				transform-origin: calc(100vh - 50%) 50%;
+	    				@media only screen and (min-height: 800px)  { 
+	    					transform-origin: calc(200vh - 275%) 50%;
+	    				}
+	    				path, line, polyline { 
+	    					stroke: #fff;
+	    					stroke-width: 3px;
+	    					fill: none;
+	    					@media only screen and (max-height: 799.99px)  { 
+	    						stroke-width: 3px;
+	    					}
+	    					@media only screen and (min-width: 1400px)  { 
+	    						stroke-width: 2.5px;
+	    					}
+	    				}
+	    				
+	    				@media only screen and (max-width: $mq-mobile-max)  { 
+							//transform: scale(0.66);
+    						transform-origin: center;
+    						path, line, polyline { stroke-width: 3px;}
+	    				}
+	    				@media only screen and (min-width: $mq-smDesk-min)  { 
+	    					transform-origin: 0 50%;
+	    				}
+	    				@media (orientation: portrait) and (max-width: $mq-tablet-max)  { 
+	    					transform: scale(1);
+	    				}
+	    				@media (orientation: portrait) and (max-width: $mq-mobile-max)  { 
+	    					transform: scale(0.8) translateY(10%);
+	    				}
+			    	}
+			    }
+			    
+			}
 		  	/*
 		  	&.stop1{
 		  		//bottom: $placement;
