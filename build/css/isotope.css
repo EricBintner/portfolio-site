@@ -28,9 +28,15 @@
       margin: 0;
       padding: 0 2vw;
       width: 100%;
-      /* line-height: 0; */ }
+      border-radius: 0;
+      border: 1px solid rgba(0, 0, 0, 0); }
+      .button-group.skills#sorts button:nth-child(1) {
+        background-color: #2e3192; }
       .button-group.skills#sorts button:nth-child(2) {
-        margin: 5px 0; }
+        margin: calc(18px - 1vh) 0;
+        background: linear-gradient(to right, #ffbb00 0%, #28d32d 100%); }
+      .button-group.skills#sorts button:nth-child(3) {
+        background-color: #ec008c; }
 
 /* ---- holder ---- */
 .holder {
@@ -84,88 +90,116 @@
       } */ }
     .holder .grid * {
       box-sizing: border-box; }
+    .holder .grid > div {
+      cursor: pointer; }
     .holder .grid:after {
       content: '';
       display: block;
       clear: both; }
-    .holder .grid.skills {
-      /* 5 columns, percentage width */ }
-      .holder .grid.skills .grid-item,
-      .holder .grid.skills .grid-sizer {
-        width: 100%; }
-      .holder .grid.skills .element-item,
-      .holder .grid.skills .grid-item {
-        float: left;
-        height: calc(50px + 5vw + 2.5vh);
-        max-height: 10vh;
-        width: 100%;
-        left: 0px;
-        top: 0px;
-        flex-direction: row;
-        display: flex; }
-        .holder .grid.skills .element-item:hover,
-        .holder .grid.skills .grid-item:hover {
-          background: rgba(255, 0, 255, 0.8); }
-        .holder .grid.skills .element-item .name,
-        .holder .grid.skills .grid-item .name {
-          width: 15%;
-          min-width: 150px;
-          display: flex;
-          align-items: center; }
-          .holder .grid.skills .element-item .name p,
-          .holder .grid.skills .grid-item .name p {
-            text-align: center;
-            width: 100%;
-            padding: 0 30px 0 0;
-            color: #fff;
-            font-size: calc(1.6vh + 8px);
-            position: relative;
-            margin: 0 0 10% 0; }
-          .holder .grid.skills .element-item .name p:after,
-          .holder .grid.skills .grid-item .name p:after {
-            content: ' {';
-            font-size: 7vh;
-            font-weight: 100;
-            line-height: 3.5vh;
-            position: absolute;
-            left: calc(100% - 30px);
-            font-family: "Monoton"; }
-        .holder .grid.skills .element-item .barContainer,
-        .holder .grid.skills .grid-item .barContainer {
-          display: flex;
-          flex-direction: column;
+    .holder .grid.skills .grid-item,
+    .holder .grid.skills .grid-sizer {
+      width: 100%; }
+    .holder .grid.skills .element-item {
+      float: left;
+      height: calc(50px + 5vw + 2.5vh);
+      max-height: 9vh;
+      width: 100%;
+      left: 0px;
+      top: 0px;
+      flex-direction: row;
+      display: flex; }
+      .holder .grid.skills .element-item .name {
+        width: 15%;
+        min-width: 110px;
+        display: flex;
+        align-items: center; }
+        .holder .grid.skills .element-item .name p {
+          text-align: right;
           width: 100%;
-          margin: 0  0 10px 0; }
-          .holder .grid.skills .element-item .barContainer .bar,
-          .holder .grid.skills .grid-item .barContainer .bar {
-            height: calc(33% - 2px);
-            width: 100%;
-            margin: 1px 0px; }
-            .holder .grid.skills .element-item .barContainer .bar.mastery,
-            .holder .grid.skills .grid-item .barContainer .bar.mastery {
-              background-color: #2e3192; }
-            .holder .grid.skills .element-item .barContainer .bar.experience,
-            .holder .grid.skills .grid-item .barContainer .bar.experience {
-              background-color: rgba(255, 255, 255, 0);
-              overflow: hidden; }
-              .holder .grid.skills .element-item .barContainer .bar.experience .experience-grad,
-              .holder .grid.skills .grid-item .barContainer .bar.experience .experience-grad {
-                height: 100%;
-                background: #ffbb00;
-                background: -moz-linear-gradient(left, #ffbb00 0%, #28d32d 100%);
-                background: -webkit-linear-gradient(left, #ffbb00 0%, #28d32d 100%);
-                background: linear-gradient(to right, #ffbb00 0%, #28d32d 100%); }
-            .holder .grid.skills .element-item .barContainer .bar.love,
-            .holder .grid.skills .grid-item .barContainer .bar.love {
-              background-color: #ec008c; }
-      .holder .grid.skills svg {
-        height: 80%;
-        width: calc(100% - 180px);
-        margin-left: 180px; }
-        @media only screen and (min-width: 1200px) {
-          .holder .grid.skills svg {
-            width: calc(100% - 360px);
-            margin-right: 180px; } }
+          padding: 0 calc(3vh + 10px) 0 0;
+          color: #fff;
+          font-size: calc(1.6vh + 8px);
+          position: relative;
+          margin: -0.25vh 0 1vh 0;
+          display: flex;
+          flex-flow: row-reverse; }
+          @media only screen and (orientation: portrait) and (max-width: 599.9px) {
+            .holder .grid.skills .element-item .name p {
+              font-size: calc(2vh + 3px);
+              line-height: 3.5vh; } }
+        .holder .grid.skills .element-item .name p:after {
+          content: ' {';
+          font-size: 6.25vh;
+          font-weight: 100;
+          line-height: 2.75vh;
+          position: absolute;
+          left: calc(100% - 3.5vh);
+          font-family: "Monoton"; }
+      .holder .grid.skills .element-item .barContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0  0 10px 0; }
+        .holder .grid.skills .element-item .barContainer .bar {
+          height: calc(33% - 2px);
+          width: 100%;
+          margin: 1px 0px; }
+          .holder .grid.skills .element-item .barContainer .bar.mastery {
+            background-color: #2e3192; }
+          .holder .grid.skills .element-item .barContainer .bar.experience {
+            background-color: rgba(255, 255, 255, 0);
+            overflow: hidden; }
+            .holder .grid.skills .element-item .barContainer .bar.experience .experience-grad {
+              height: 100%;
+              background: #ffbb00;
+              background: -moz-linear-gradient(left, #ffbb00 0%, #28d32d 100%);
+              background: -webkit-linear-gradient(left, #ffbb00 0%, #28d32d 100%);
+              background: linear-gradient(to right, #ffbb00 0%, #28d32d 100%); }
+          .holder .grid.skills .element-item .barContainer .bar.love {
+            background-color: #ec008c; }
+        .holder .grid.skills .element-item .barContainer .comments {
+          position: absolute;
+          top: 7vh;
+          color: #fff;
+          opacity: 0;
+          transform: translateY(-10px);
+          max-width: 600px;
+          -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, transform 0.25s;
+          -moz-transition: -moz-transform 0.25s, opacity 0.25s, transform 0.25s;
+          -ms-transition: -ms-transform 0.25s, opacity 0.25s, transform 0.25s;
+          -o-transition: -o-transform 0.25s, opacity 0.25s, transform 0.25s;
+          transition: transform 0.25s, opacity 0.25s, transform 0.25s; }
+          @media only screen and (orientation: portrait) and (max-width: 599.9px) {
+            .holder .grid.skills .element-item .barContainer .comments {
+              width: 91vw;
+              left: 0; }
+              .holder .grid.skills .element-item .barContainer .comments p {
+                margin: calc(0.5vh + 2px) 0 0 0;
+                line-height: calc(0.25vh + 0.9vw + 12px);
+                font-size: calc(1.33vh - 1vw + 8.5px); } }
+          @media only screen and (orientation: landscape) and (max-width: 736px) {
+            .holder .grid.skills .element-item .barContainer .comments p {
+              margin: calc(0.5vh - 2px) 3px 0 0;
+              line-height: calc(0.25vw + 0.9vh + 12px);
+              font-size: calc(1.33vw - 1vh + 8.5px); } }
+      .holder .grid.skills .element-item.big {
+        margin-bottom: 8vh !important; }
+        .holder .grid.skills .element-item.big .barContainer .comments {
+          opacity: 1;
+          transform: translateY(0px);
+          -webkit-transition: -webkit-transform 0.5s, opacity 0.5s, transform 0.5s;
+          -moz-transition: -moz-transform 0.5s, opacity 0.5s, transform 0.5s;
+          -ms-transition: -ms-transform 0.5s, opacity 0.5s, transform 0.5s;
+          -o-transition: -o-transform 0.5s, opacity 0.5s, transform 0.5s;
+          transition: transform 0.5s, opacity 0.5s, transform 0.5s; }
+    .holder .grid.skills svg {
+      height: 80%;
+      width: calc(100% - 180px);
+      margin-left: 180px; }
+      @media only screen and (min-width: 1200px) {
+        .holder .grid.skills svg {
+          width: calc(100% - 360px);
+          margin-right: 180px; } }
     .holder .grid.interactive {
       /* 5 columns, percentage width */ }
       .holder .grid.interactive .grid-item,
@@ -196,5 +230,9 @@
         border-color: rgba(255, 255, 255, 0.8); }
         .holder .grid.interactive .grid-item:hover {
           background: rgba(255, 0, 255, 0.8); }
+  @media only screen and (orientation: landscape) and (max-width: 736px) {
+    .holder.skillHolder {
+      width: 95%;
+      margin: 0; } }
 
 /* ---- / END holder ---- */

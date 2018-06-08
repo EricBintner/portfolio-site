@@ -1,5 +1,7 @@
 @import 'variables';
 
+
+
 .button-group {
       //width: 100vw;
       position: relative;
@@ -44,12 +46,20 @@
     height: 10vh;
 
     button {
-      margin: 0;
-      padding: 0 2vw;
-      width: 100%;
-      /* line-height: 0; */ 
+        margin: 0;
+        padding: 0 2vw;
+        width: 100%;
+        border-radius: 0;
+        border: 1px solid rgba(0,0,0,0);
+    &:nth-child(1){
+        background-color: #2e3192;
+    }
     &:nth-child(2){
-      margin: 5px 0;
+        margin: calc(18px - 1vh) 0;
+        background: linear-gradient(to right, #ffbb00 0%, #28d32d 100%);
+    }
+    &:nth-child(3){
+        background-color: #ec008c;
     }
     }
 }
@@ -85,6 +95,9 @@
       & * {
           box-sizing: border-box;
       }
+      &> div{
+        cursor: pointer;
+      }
     
 
       /* clear fix */
@@ -96,18 +109,15 @@
   
       /* ---- .element-item ---- */
 &.skills {
-      /* 5 columns, percentage width */
       .grid-item,
       .grid-sizer {
         width: 100%;
         //@media only screen and (max-width: $mq-smDesk-max) {  width: 100%  }
       }
-      .element-item,
-      .grid-item {
-        &:hover{  background: rgba(255,0,255,0.8); }
+      .element-item {
         float: left;
         height: calc(50px + 5vw + 2.5vh);
-        max-height: 10vh;
+        max-height: 9vh;
         width: 100%;
         left: 0px;
         top: 0px;
@@ -116,29 +126,34 @@
 
         .name{
           width:15%;
-          min-width:150px;
+          min-width:110px;
           display: flex;
           align-items: center;
 
           p {
-            text-align: center;
+            text-align: right;
             width: 100%;
-            padding: 0 30px 0 0;
-            color:#fff;
+            padding: 0 calc(3vh + 10px )0 0;
+            color: #fff;
             font-size: calc(1.6vh + 8px);
-            position:relative;
-            margin: 0 0 10% 0;
-          }
-          //p:before,
-          p:after {
-            content: ' {';
-              font-size: 7vh;
-              font-weight: 100;
+            position: relative;
+            margin: -0.25vh 0 1vh 0;
+            display: flex;
+            flex-flow: row-reverse;
+            @media only screen and (orientation: portrait) and (max-width: $mq-mobile-max) {  
+              font-size: calc(2vh + 3px);
               line-height: 3.5vh;
-              position: absolute;
-              left: calc(100% - 30px);
-              font-family: "Monoton";
+            }
 
+          }
+          p:after {
+              content: ' {'; //}
+              font-size: 6.25vh;
+              font-weight: 100;
+              line-height: 2.75vh;
+              position: absolute;
+              left: calc(100% - 3.5vh);
+              font-family: "Monoton";
           }
 
         }
@@ -170,7 +185,51 @@
                 background-color: #ec008c;
               }
             }
+            .comments{
+                  position: absolute;
+                  top: 7vh;
+                  color: #fff;
+                  opacity: 0;
+                  transform: translateY(-10px);
+                  max-width:600px;
+          -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, transform 0.25s;
+             -moz-transition:    -moz-transform 0.25s, opacity 0.25s, transform 0.25s;
+              -ms-transition:     -ms-transform 0.25s, opacity 0.25s, transform 0.25s;
+               -o-transition:      -o-transform 0.25s, opacity 0.25s, transform 0.25s;
+                  transition:         transform 0.25s, opacity 0.25s, transform 0.25s;
+                   @media only screen and (orientation: portrait) and (max-width: $mq-mobile-max) {  
+                        width: 91vw;
+                        left: 0;
+                        p {
+                            margin: calc(0.5vh + 2px) 0 0 0;
+                            line-height: calc(0.25vh + 0.9vw + 12px);
+                            font-size: calc(1.33vh - 1vw + 8.5px);
+                        }
+                    } 
+                    @media only screen and (orientation: landscape) and (max-width: 736px) {
+                    
+                        p {
+                            margin: calc(0.5vh - 2px) 3px 0 0;
+                            line-height: calc(0.25vw + 0.9vh + 12px);
+                            font-size: calc(1.33vw - 1vh + 8.5px);
+                        }
+                    }
+            }
         }
+      &.big{
+          margin-bottom: 8vh !important;
+          .barContainer .comments {
+              opacity: 1;
+              transform: translateY(0px);     
+          -webkit-transition: -webkit-transform 0.5s, opacity 0.5s, transform 0.5s;
+             -moz-transition:    -moz-transform 0.5s, opacity 0.5s, transform 0.5s;
+              -ms-transition:     -ms-transform 0.5s, opacity 0.5s, transform 0.5s;
+               -o-transition:      -o-transform 0.5s, opacity 0.5s, transform 0.5s;
+                  transition:         transform 0.5s, opacity 0.5s, transform 0.5s;
+ 
+          }
+      //}
+      }
       }
       svg {
         height:80%;
@@ -183,6 +242,7 @@
       }
      
 } // end skills grid
+
 
 
 &.interactive {
@@ -204,8 +264,7 @@
         background: rgba(255,255,255,0.2);
         border: 1px solid #fff;
         border-color: rgba(255,255,255,0.8);
-        //3d
-        //transform: scale(0.85) translateZ(-100px);
+
       }
      
 } // end interactive grid
@@ -243,5 +302,12 @@
 
 
     }/* ---- / END grid ---- */
+
+&.skillHolder{
+  @media only screen and (orientation: landscape) and (max-width: 736px) {
+    width: 95%;
+    margin: 0;
+  }
+}
 
 } /* ---- / END holder ---- */

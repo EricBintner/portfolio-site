@@ -107,6 +107,7 @@ $(function() {
 	        html += '			<div class="experience-grad" style="width:'+calcPercent+'%"></div>';
 	        html += '		</div>';
 	        html += '		<div class="bar love" 		data-love="'+value.love+'"	style="width:'+value.love+'%"></div>';
+	        html += '		<div class="comments"><p>'+value.comments+'</p></div>';
 	        html += '	</div>';
 	        html += '</div>';
 	    });
@@ -279,18 +280,19 @@ function startPage(){
 	   	  //   return parseFloat( weight.replace( /[\(\)]/g, '') );
 	  	  // }
   	  	},
-  	  	//stagger: 100,
+  	  	stagger: 30,
   	  	animationEngine: 'css',
   	  	transitionDuration: '0.9s'
 	});
 
 
-
+var $skills = $('.grid.skills');
 // init Isotope
-var $grid_skills = $('.grid.skills').isotope({
+var $grid_skills = $skills.isotope({
   itemSelector: '.element-item',
   layoutMode: 'fitRows',
   sortAscending: false,
+  //stagger: 50,
   getSortData: {
     //name: '.name',
     //category: '.mastry parseInt',
@@ -419,6 +421,7 @@ $('.interactive.button-group').each( function( i, buttonGroup ) {
 
 // bind filter button click
 $('.skills#filters').on( 'click', 'button', function() {
+  $('.element-item').removeClass('big');
   var filterValue = $( this ).attr('data-filter');
   // use filterFn if matches value
   //filterValue = filterFns[ filterValue ] || filterValue;
@@ -427,6 +430,7 @@ $('.skills#filters').on( 'click', 'button', function() {
 
 // bind sort button click
 $('.skills#sorts').on( 'click', 'button', function() {
+  $('.element-item').removeClass('big');
   var sortByValue = $(this).attr('data-sort-by');
   console.log(sortByValue);
   $grid_skills.isotope({ sortBy: sortByValue });
@@ -442,6 +446,18 @@ $('.skills.button-group').each( function( i, buttonGroup ) {
 });
 
 
+$('.element-item').click(function(){
+    var $this = $(this);
+   //     tileStyle = $this.hasClass('big');// ? { width: 50, height: 50} : { width: 170, height: 110};
+    if ($this.hasClass('big')) {
+    	$this.removeClass('big');
+    } else {
+    	$('.element-item').removeClass('big');
+    	$this.addClass('big');
+	}
+    //$this.find('.item-content').stop().animate( tileStyle );
+    $skills.isotope('layout');
+  });
 
 	
 

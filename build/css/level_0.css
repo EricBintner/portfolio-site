@@ -2,7 +2,8 @@ svg#metro {
   width: 150%;
   position: absolute;
   bottom: 80px;
-  left: -25%; }
+  left: -25%;
+  pointer-events: none; }
   svg#metro .metro path, svg#metro .metro line, svg#metro .metro polyline {
     fill: none;
     stroke-width: 7;
