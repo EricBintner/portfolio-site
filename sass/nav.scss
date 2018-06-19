@@ -1,6 +1,6 @@
 @import 'variables';
 
-
+  
 
 nav {
     position: fixed;
@@ -34,20 +34,54 @@ nav {
 	    min-width: 20px;
 	    display: flex;
 	    text-align:center;
+	    cursor:pointer;
+	&.level-G {
+		transform: translateX(-47px) translateY(-290px);
+	}
+	&.level-1 {
+		transform: translateX(53px) translateY(-319px); 
+	}
+	&.level-2 {
+		transform: translateX(38px) translateY(-130px); 
+	}
+	&.level-3 {
+		transform: translateX(37px) translateY(-295px); 
+	}
+	&.level-4 {
+		transform: translateX(45px) translateY(-193px); 
+	}
+	&.level-5 {
+		transform: translateX(83px) translateY(-329px); 
+	}
 	    span {
 	    	width:100%;
 	    }
 	  @media only screen and (max-width: $mq-mobile-max)  {
 			padding: 3px 8vw 3px 10px;
-		    margin: 0 -12.5vw 1vh 0;
+		    margin: 0 -12.5vw -2.1vh 0;
+		    border-radius: 0px;
 		    height: 22px;
-		    transform: rotate(-45deg) translateY(-8.5vw) !important;
-		    width: 16.5vw;
-		    /*span{
-		    	transform: translateX(12%) translateX(2px);
-		    }*/
-	    }
-	    @media only screen and (max-width: $mq-mini-max)  {
+		    transform: rotate(-45deg) translateY(-11vw) skewX(30deg) !important;
+		    width: 15.5vw;
+		    span{
+		    	transform: skewX(-30deg) translateX(10px);;
+		    }
+
+		    .subStop {
+			    height: 40px;
+			    width: 40px;
+			    position: absolute;
+			    transform: skewX(-30deg);
+			    background: transparent;
+			    right: -26px;
+			    top: -8px;
+			    border-radius: 50%;
+			    border: 15px solid #fff;
+			    box-sizing: border-box;
+			}
+
+	  }
+	  @media only screen and (max-width: $mq-mini-max)  {
 		    margin: 0 -17vw 1vh 0;
 		    height: 21px;
 		    transform: rotate(-45deg) translateY(-10vw);
@@ -55,7 +89,8 @@ nav {
 		    /*span{
 		    	transform: translateX(6%) translateX(1px);
 		    }*/
-		 }
+		}
+
 
   	}
 }

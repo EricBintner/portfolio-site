@@ -3,30 +3,54 @@
 
 
 .button-group {
-      //width: 100vw;
-      position: relative;
-      //top: -92.6vh;
-      //margin-left: calc(10vw + 500px);
-      //height:2.4vh;
-      //float:right;
       display:flex;
-      flex-direction: row;
-      align-items: stretch;
       width: 100%;
+      flex: 0;
+      transform: translateX( calc(1.25% - 0.25vh) );
 
       button {
         flex: 1; 
         color:#fff;
         background-color:transparent;
-        border-radius: 10px;
-        padding: 5px 10px;
-        margin: 5px 5px 10px 0;
-        height: 10vh;
+        //border-radius:  calc(1vh + 1vw);
+        padding: 5px  calc(1vh + 1vw);
+        margin: 10px 5px 10px 0;
+        height: 8vh;
+        font-family: 'Dosis', sans-serif;
+        font-size: 1em;
+        transform: skewX(-8deg);
+        border: 2px solid #fff;
         &.is-checked,
         &:hover {
-          color:#050566;
-          background-color:#fff;
+          color: $chart-dkBlue;
+          background-color: #fff;
         }
+      &.notButton{
+        border: none;
+        padding: 0;
+        transform: translateX(1.75vh);
+        @media only screen and (max-width: $mq-mobile-max)  { 
+          transform: translateX(2.1vh);
+        }
+        p {
+          transform: rotate(-90deg) skewY(8deg);
+          font-size: calc(1.2vh + 4px);
+          letter-spacing: 0.15vh;
+          @media only screen and (orientation: portrait) and (max-width: $mq-mobile-max) {  
+            transform: rotate(-90deg) skewY(8deg) translateX(0.8vh);
+            font-size: calc(1.1vh + 4px);
+          }
+        }
+        &.is-checked,
+        &:hover {
+          color:#fff;
+          background-color:transparent;
+          p {
+            color:#fff;
+          }
+        }
+        
+      }
       }
       
       @media only screen and (max-width: $mq-tablet-max)  { 
@@ -35,11 +59,110 @@
       }
       @media only screen and (max-width: $mq-mobile-max)  { 
           button.button {
-              margin: 1.5vh 2px 3vh 2px;
+              margin: 1.75vh 2px 3vh 2px;
               height: 8vh;
           }
       }
+      @media only screen and (max-width: $mq-mini-max)  { 
+          button.button {
+              height: 8.25vh;
+          }
+      }
+
+/*&.skills#filters:before {
+    content: "FILTERS";
+    color: #fff;
+    letter-spacing: 0.2rem;
+    position: absolute;
+    bottom: calc(50% - 0.6rem);
+    transform: rotate(-90deg) translateY(-3.0rem);
+}*/
+&.skills#filters {
+    transform: translateX( -7.75vw );
+    @media only screen and (orientation: portrait) and (max-width: $mq-mobile-max) {  
+       transform: translateX( calc(-60px + 7.5vw) );
+    }
+
+    button:not(.notButton){
+      padding: 1vh calc(0.5vh + 0.5vw) 0 calc(0.5vh + 0.5vw);
+      //border-radius: 0 8px 0 0;
+      @media only screen and (orientation: portrait) and (max-width: $mq-mobile-max) {  
+           padding:1vh calc(0.5vh + 1.5vw) 0 calc(0.5vh + 1.5vw);
+           height: 6.5vh;
+      }
+      @media only screen and (orientation: portrait) and (max-width: $mq-mini-max) {  
+           //padding-top: 1.75vh;
+           //border-bottom: 4px solid #fff;
+      }
+
+      &> span {
+        transform: translateY(-0.75vh);
+        display: block;
+        @media only screen and (orientation: portrait) and (max-width: $mq-mobile-max) {  
+          font-size: calc(2vw + 6px);
+          transform: translateY(-1.125vh);
+        }
+        @media only screen and (orientation: landscape) and (max-width: 736px) {
+           line-height: 3.5vh;
+        }
+      }
+      &:not(.notButton) > p {
+        padding: 0.5vh calc(0.5vh + 0.5vw);
+        top: 6.5vh;
+        background-color: #fff;
+        margin: 0 calc(-0.5vh - 0.5vw);
+        display: block;
+        height: 2.1vh;
+        font-size: calc(1vh + 4px);
+        //border-radius: 8px 0 8px 0;
+        transform: skewX(16deg) scale(0.8);
+          -webkit-transition: -webkit-transform 0.25s, transform 0.25s;
+             -moz-transition:    -moz-transform 0.25s, transform 0.25s;
+              -ms-transition:     -ms-transform 0.25s, transform 0.25s;
+               -o-transition:      -o-transform 0.25s, transform 0.25s;
+                  transition:         transform 0.25s, transform 0.25s;
+        @media only screen and (orientation: portrait) and (max-width: $mq-mobile-max) {  
+          margin: -1.25vh calc(-0.5vh - 0.5vw) 0 calc(-0.5vh - 0.5vw);
+          padding: 0.2vh calc(0.5vh + 0.5vw);
+        }
+
+      }
+      &:not(.notButton) > p > span {
+        line-height: 2.1vh;
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+        transform: skewX(-8deg);
+        color: #38c;
+        @media only screen and (orientation: portrait) and (max-width: $mq-mini-max) {  
+          line-height: 2.4vh;
+        }
+        @media only screen and (orientation: landscape) and (max-width: 736px) {
+           line-height: 2.3vh;
+           font-size: calc(1vh + 8px);
+        }
+      }
+      &.is-checked,
+      &:hover{ 
+       color: #38c;
+       p {
+        background-color: #5fafe6;
+        
+        span {
+          color: #fff;
+        }
+       }
+      }
+      &.is-checked p {
+       transform: skewX(16deg) scale(0.925);
+      }      
+    }
+}
+
+
 &.skills#sorts{
+    DISPLAY: NONE;
     flex-direction: column;
     flex: 1;
     margin: 5px 5px 10px 0;
@@ -76,13 +199,13 @@
     margin: auto;
     max-width: 1400px;
     @media only screen and (max-width: $mq-mobile-max)  { 
-      top: -81vh;
-      width: 90%;
-      height: 81vh;
-    }
-    @media only screen and (max-width: $mq-mini-max)  { 
       top: -80vh;
+      width: 90%;
       height: 80vh;
+    }
+    @media only screen and (orientation: landscape) and (max-width: 736px) {
+      top: -81.5vh;
+      height: 81.5vh;
     }
     
     
@@ -125,11 +248,19 @@
         display: flex;
 
         .name{
-          width:15%;
+          width: calc(15% + 140px);
           min-width:110px;
           display: flex;
           align-items: center;
-
+            transform: translateX(0px);
+            -webkit-transition: -webkit-transform 0.4s, transform 0.4s;
+               -moz-transition:    -moz-transform 0.4s, transform 0.4s;
+                -ms-transition:     -ms-transform 0.4s, transform 0.4s;
+                 -o-transition:      -o-transform 0.4s, transform 0.4s;
+                    transition:         transform 0.4s, transform 0.4s;
+          @media only screen and (orientation: portrait) and (max-width: $mq-mobile-max) {
+              width: calc(15% + 180px);
+          }
           p {
             text-align: right;
             width: 100%;
@@ -141,7 +272,7 @@
             display: flex;
             flex-flow: row-reverse;
             @media only screen and (orientation: portrait) and (max-width: $mq-mobile-max) {  
-              font-size: calc(2vh + 3px);
+              font-size: calc(2vw + 6px);
               line-height: 3.5vh;
             }
 
@@ -154,62 +285,122 @@
               position: absolute;
               left: calc(100% - 3.5vh);
               font-family: "Monoton";
+           @media only screen and (min-width: $mq-smDesk-min) { 
+              -webkit-transition: font-size 0.5s;
+                 -moz-transition: font-size 0.5s;
+                  -ms-transition: font-size 0.5s;
+                   -o-transition: font-size 0.5s;
+                      transition: font-size 0.5s;
+              }
           }
-
         }
 
         .barContainer{
             display: flex;
             flex-direction: column;
             width: 100%;
-            margin: 0  0 10px 0;
+            margin: 0  10% 10px 0;
+            @media only screen and (max-width: 799.9px) and (orientation: portrait){
+               margin-right: 5%;
+            }
+            @media only screen and (orientation: landscape) and (max-width: 736px) {
+               margin-right: 6%;
+            }
+
             .bar {
               height: calc(33% - 2px);
               width: 100%;
               margin: 1px 0px;
+              transform: skewX(8deg);
+              //border-radius: 0 5px 0 5px;
+              p {
+                  color: #fff;
+                  margin: 0.05vh 5px 0 0;
+                  float: right;
+                  transform: skewX($skewNeg);
+                  font-size: 1.55vh;
+                  font-weight: 600;
+                  letter-spacing:0.05vh;
+              }
               &.mastery{
-                background-color: #2e3192;
+                //background-color: #2e3192;
+                background-color: $chart-dkBlue;
+
               }
               &.experience{
                 background-color: rgba(255, 255, 255, 0);
                 overflow:hidden;
                 .experience-grad {
                   height:100%;
-                  background: #ffbb00; 
-                  background: -moz-linear-gradient(left, #ffbb00 0%, #28d32d 100%); 
-                  background: -webkit-linear-gradient(left, #ffbb00 0%,#28d32d 100%); 
-                  background: linear-gradient(to right, #ffbb00 0%,#28d32d 100%);
+                  //background: #ffbb00; 
+                  //background: -moz-linear-gradient(left, #ffbb00 0%, #28d32d 100%); 
+                  //background: -webkit-linear-gradient(left, #ffbb00 0%,#28d32d 100%); 
+                  //background: linear-gradient(to right, #ffbb00 0%,#28d32d 100%);
+                  background: $chart-green; 
+                  background: -moz-linear-gradient(left, $chart-yellow 0%, $chart-green 70%); 
+                  background: -webkit-linear-gradient(left, $chart-yellow 0%, $chart-green 70%); 
+                  background: linear-gradient(to right, $chart-yellow 0%, $chart-green 70%);
+                  //transform: skewX($skew);
                 }
               }
               &.love{
-                background-color: #ec008c;
+                //background-color: #ec008c;
+                background-color: $chart-red;
+                transform: skewX($skew);
               }
             }
             .comments{
                   position: absolute;
-                  top: 7vh;
+                  top: 8vh;
                   color: #fff;
                   opacity: 0;
-                  transform: translateY(-10px);
-                  max-width:600px;
-          -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, transform 0.25s;
-             -moz-transition:    -moz-transform 0.25s, opacity 0.25s, transform 0.25s;
-              -ms-transition:     -ms-transform 0.25s, opacity 0.25s, transform 0.25s;
-               -o-transition:      -o-transform 0.25s, opacity 0.25s, transform 0.25s;
-                  transition:         transform 0.25s, opacity 0.25s, transform 0.25s;
+                  transform-origin: top;
+                  transform: translateY(-10px) skewX(8deg) rotateX(60deg);
+                  //max-width:600px;
+                  margin: 0.25vh 10% 0.5vh 0;
+                  border: 2px solid #fff;
+                  border: dashed 2px;
+                  max-width: calc(55vh + 150px + 10vw);
+          -webkit-transition: -webkit-transform 0.2s, opacity 0.33s, transform 0.33s;
+             -moz-transition:    -moz-transform 0.33s, opacity 0.33s, transform 0.33s;
+              -ms-transition:     -ms-transform 0.33s, opacity 0.33s, transform 0.33s;
+               -o-transition:      -o-transform 0.33s, opacity 0.33s, transform 0.33s;
+                  transition:                          opacity 0.2s, transform 0.2s;
+
+                  p {
+                      transform: skewX( $skewNeg);
+                      margin: 0.5vh 1vh;
+                      line-height: calc(1em + 0.35vh + 0.15vw);
+                      @media only screen and (min-width: $mq-smDesk-min) {
+                        padding: 0.33vh 0.5vh 0.166vh 0.5vh;
+                        font-size: 14.5px;
+                        //line-height: calc(.975em + 0.35vh + 0.15vw);
+                      }
+                      @media only screen and (min-width: 1400px) {
+                        padding: 0.4vh 0.5vh 0.2vh 0.5vh;
+                        font-size: 15.5px;
+                        line-height: calc(1.2em + 0.35vh + 0.15vw);
+                      }
+                  }
+
                    @media only screen and (orientation: portrait) and (max-width: $mq-mobile-max) {  
-                        width: 91vw;
-                        left: 0;
+                        margin-right:1vw;
+                        width: 84.25vw;
+                        left: 2vw;
+
                         p {
-                            margin: calc(0.5vh + 2px) 0 0 0;
+                            //margin: calc(0.5vh + 2px) 0.75vw  calc(0.5vh + 2px) 2vw;
+                            margin: calc(0.5vh + 2px) 1.75vw  calc(0.5vh + 2px) 3vw;
                             line-height: calc(0.25vh + 0.9vw + 12px);
-                            font-size: calc(1.33vh - 1vw + 8.5px);
+                            //font-size: calc(1.33vh - 1vw + 8.5px);
+                            font-size: calc(2vw + 6px);
                         }
                     } 
                     @media only screen and (orientation: landscape) and (max-width: 736px) {
                     
                         p {
-                            margin: calc(0.5vh - 2px) 3px 0 0;
+                            //margin: calc(0.5vh - 2px) 3px calc(0.5vh - 2px) 0;
+                            margin: 3px 4px;
                             line-height: calc(0.25vw + 0.9vh + 12px);
                             font-size: calc(1.33vw - 1vh + 8.5px);
                         }
@@ -217,18 +408,43 @@
             }
         }
       &.big{
-          margin-bottom: 8vh !important;
-          .barContainer .comments {
-              opacity: 1;
-              transform: translateY(0px);     
-          -webkit-transition: -webkit-transform 0.5s, opacity 0.5s, transform 0.5s;
-             -moz-transition:    -moz-transform 0.5s, opacity 0.5s, transform 0.5s;
-              -ms-transition:     -ms-transform 0.5s, opacity 0.5s, transform 0.5s;
-               -o-transition:      -o-transform 0.5s, opacity 0.5s, transform 0.5s;
-                  transition:         transform 0.5s, opacity 0.5s, transform 0.5s;
- 
+          margin-bottom: 9vh !important;
+          @media only screen and (orientation: landscape) and (max-width: 736px) {
+              margin-bottom: 15.5vh !important;
           }
-      //}
+           @media only screen and (orientation: portrait) and (max-width: $mq-mobile-max) {  
+              margin-bottom: 12.5vh !important;
+            }
+           @media only screen and (orientation: portrait) and (max-width: $mq-mini-max) {  
+              margin-bottom: 14vh !important;
+            }
+          .barContainer .comments {
+              opacity: 0.999;
+              transform: translateY(0px) skewX(8deg) rotateX(0deg);    
+           -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, transform 0.4s;
+             -moz-transition:    -moz-transform 0.4s, opacity 0.4s, transform 0.4s;
+              -ms-transition:     -ms-transform 0.4s, opacity 0.4s, transform 0.4s;
+               -o-transition:      -o-transform 0.4s, opacity 0.4s, transform 0.4s;
+                  transition:                          opacity 0.4s, transform 0.4s; 
+          }
+          .name{
+            transform: translateX(-10px);
+            @media only screen and (min-width: $mq-smDesk-min) { 
+              transform: translateX(-10px) translateY(3.75vh);
+              p:after{
+                font-size: 9vh;
+              }
+            }
+          }
+
+@media only screen and (orientation: landscape) and (max-width: 736px) {
+max-height: 10vh;
+  .comments{
+    top: 7.25vh;
+  }
+
+}
+
       }
       }
       svg {
@@ -240,6 +456,10 @@
           margin-right:180px;
         }
       }
+
+
+
+
      
 } // end skills grid
 
@@ -264,7 +484,7 @@
         background: rgba(255,255,255,0.2);
         border: 1px solid #fff;
         border-color: rgba(255,255,255,0.8);
-
+        margin: 4px 0 2px 0;
       }
      
 } // end interactive grid
@@ -304,6 +524,10 @@
     }/* ---- / END grid ---- */
 
 &.skillHolder{
+  @media only screen and (max-width: 799.9px) {
+    width: 90%;
+    //margin: 0;
+  }
   @media only screen and (orientation: landscape) and (max-width: 736px) {
     width: 95%;
     margin: 0;

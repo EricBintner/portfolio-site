@@ -1,25 +1,128 @@
+/*
+$chart-dkBlue: 	#073B4C;
+$chart-yellow: 	#ffd166;
+$chart-green: 	#06D6A0;
+$chart-red: 	#EF476F;
+$chart-blue: 	#118AB2;
+*/
 .button-group {
-  position: relative;
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  width: 100%; }
+  width: 100%;
+  flex: 0;
+  transform: translateX(calc(1.25% - 0.25vh));
+  /*&.skills#filters:before {
+    content: "FILTERS";
+    color: #fff;
+    letter-spacing: 0.2rem;
+    position: absolute;
+    bottom: calc(50% - 0.6rem);
+    transform: rotate(-90deg) translateY(-3.0rem);
+}*/ }
   .button-group button {
     flex: 1;
     color: #fff;
     background-color: transparent;
-    border-radius: 10px;
-    padding: 5px 10px;
-    margin: 5px 5px 10px 0;
-    height: 10vh; }
+    padding: 5px calc(1vh + 1vw);
+    margin: 10px 5px 10px 0;
+    height: 8vh;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1em;
+    transform: skewX(-8deg);
+    border: 2px solid #fff; }
     .button-group button.is-checked, .button-group button:hover {
-      color: #050566;
+      color: #0D2C54;
       background-color: #fff; }
+    .button-group button.notButton {
+      border: none;
+      padding: 0;
+      transform: translateX(1.75vh); }
+      @media only screen and (max-width: 599.9px) {
+        .button-group button.notButton {
+          transform: translateX(2.1vh); } }
+      .button-group button.notButton p {
+        transform: rotate(-90deg) skewY(8deg);
+        font-size: calc(1.2vh + 4px);
+        letter-spacing: 0.15vh; }
+        @media only screen and (orientation: portrait) and (max-width: 599.9px) {
+          .button-group button.notButton p {
+            transform: rotate(-90deg) skewY(8deg) translateX(0.8vh);
+            font-size: calc(1.1vh + 4px); } }
+      .button-group button.notButton.is-checked, .button-group button.notButton:hover {
+        color: #fff;
+        background-color: transparent; }
+        .button-group button.notButton.is-checked p, .button-group button.notButton:hover p {
+          color: #fff; }
   @media only screen and (max-width: 599.9px) {
     .button-group button.button {
-      margin: 1.5vh 2px 3vh 2px;
+      margin: 1.75vh 2px 3vh 2px;
       height: 8vh; } }
+  @media only screen and (max-width: 374.9px) {
+    .button-group button.button {
+      height: 8.25vh; } }
+  .button-group.skills#filters {
+    transform: translateX(-7.75vw); }
+    @media only screen and (orientation: portrait) and (max-width: 599.9px) {
+      .button-group.skills#filters {
+        transform: translateX(calc(-60px + 7.5vw)); } }
+    .button-group.skills#filters button:not(.notButton) {
+      padding: 1vh calc(0.5vh + 0.5vw) 0 calc(0.5vh + 0.5vw); }
+      @media only screen and (orientation: portrait) and (max-width: 599.9px) {
+        .button-group.skills#filters button:not(.notButton) {
+          padding: 1vh calc(0.5vh + 1.5vw) 0 calc(0.5vh + 1.5vw);
+          height: 6.5vh; } }
+      .button-group.skills#filters button:not(.notButton) > span {
+        transform: translateY(-0.75vh);
+        display: block; }
+        @media only screen and (orientation: portrait) and (max-width: 599.9px) {
+          .button-group.skills#filters button:not(.notButton) > span {
+            font-size: calc(2vw + 6px);
+            transform: translateY(-1.125vh); } }
+        @media only screen and (orientation: landscape) and (max-width: 736px) {
+          .button-group.skills#filters button:not(.notButton) > span {
+            line-height: 3.5vh; } }
+      .button-group.skills#filters button:not(.notButton):not(.notButton) > p {
+        padding: 0.5vh calc(0.5vh + 0.5vw);
+        top: 6.5vh;
+        background-color: #fff;
+        margin: 0 calc(-0.5vh - 0.5vw);
+        display: block;
+        height: 2.1vh;
+        font-size: calc(1vh + 4px);
+        transform: skewX(16deg) scale(0.8);
+        -webkit-transition: -webkit-transform 0.25s, transform 0.25s;
+        -moz-transition: -moz-transform 0.25s, transform 0.25s;
+        -ms-transition: -ms-transform 0.25s, transform 0.25s;
+        -o-transition: -o-transform 0.25s, transform 0.25s;
+        transition: transform 0.25s, transform 0.25s; }
+        @media only screen and (orientation: portrait) and (max-width: 599.9px) {
+          .button-group.skills#filters button:not(.notButton):not(.notButton) > p {
+            margin: -1.25vh calc(-0.5vh - 0.5vw) 0 calc(-0.5vh - 0.5vw);
+            padding: 0.2vh calc(0.5vh + 0.5vw); } }
+      .button-group.skills#filters button:not(.notButton):not(.notButton) > p > span {
+        line-height: 2.1vh;
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+        transform: skewX(-8deg);
+        color: #38c; }
+        @media only screen and (orientation: portrait) and (max-width: 374.9px) {
+          .button-group.skills#filters button:not(.notButton):not(.notButton) > p > span {
+            line-height: 2.4vh; } }
+        @media only screen and (orientation: landscape) and (max-width: 736px) {
+          .button-group.skills#filters button:not(.notButton):not(.notButton) > p > span {
+            line-height: 2.3vh;
+            font-size: calc(1vh + 8px); } }
+      .button-group.skills#filters button:not(.notButton).is-checked, .button-group.skills#filters button:not(.notButton):hover {
+        color: #38c; }
+        .button-group.skills#filters button:not(.notButton).is-checked p, .button-group.skills#filters button:not(.notButton):hover p {
+          background-color: #5fafe6; }
+          .button-group.skills#filters button:not(.notButton).is-checked p span, .button-group.skills#filters button:not(.notButton):hover p span {
+            color: #fff; }
+      .button-group.skills#filters button:not(.notButton).is-checked p {
+        transform: skewX(16deg) scale(0.925); }
   .button-group.skills#sorts {
+    DISPLAY: NONE;
     flex-direction: column;
     flex: 1;
     margin: 5px 5px 10px 0;
@@ -51,13 +154,13 @@
   /* ---- / END grid ---- */ }
   @media only screen and (max-width: 599.9px) {
     .holder {
-      top: -81vh;
-      width: 90%;
-      height: 81vh; } }
-  @media only screen and (max-width: 374.9px) {
-    .holder {
       top: -80vh;
+      width: 90%;
       height: 80vh; } }
+  @media only screen and (orientation: landscape) and (max-width: 736px) {
+    .holder {
+      top: -81.5vh;
+      height: 81.5vh; } }
   .holder .grid {
     margin-bottom: 25vh;
     /* clear fix */
@@ -109,10 +212,19 @@
       flex-direction: row;
       display: flex; }
       .holder .grid.skills .element-item .name {
-        width: 15%;
+        width: calc(15% + 140px);
         min-width: 110px;
         display: flex;
-        align-items: center; }
+        align-items: center;
+        transform: translateX(0px);
+        -webkit-transition: -webkit-transform 0.4s, transform 0.4s;
+        -moz-transition: -moz-transform 0.4s, transform 0.4s;
+        -ms-transition: -ms-transform 0.4s, transform 0.4s;
+        -o-transition: -o-transform 0.4s, transform 0.4s;
+        transition: transform 0.4s, transform 0.4s; }
+        @media only screen and (orientation: portrait) and (max-width: 599.9px) {
+          .holder .grid.skills .element-item .name {
+            width: calc(15% + 180px); } }
         .holder .grid.skills .element-item .name p {
           text-align: right;
           width: 100%;
@@ -125,7 +237,7 @@
           flex-flow: row-reverse; }
           @media only screen and (orientation: portrait) and (max-width: 599.9px) {
             .holder .grid.skills .element-item .name p {
-              font-size: calc(2vh + 3px);
+              font-size: calc(2vw + 6px);
               line-height: 3.5vh; } }
         .holder .grid.skills .element-item .name p:after {
           content: ' {';
@@ -135,63 +247,125 @@
           position: absolute;
           left: calc(100% - 3.5vh);
           font-family: "Monoton"; }
+          @media only screen and (min-width: 768px) {
+            .holder .grid.skills .element-item .name p:after {
+              -webkit-transition: font-size 0.5s;
+              -moz-transition: font-size 0.5s;
+              -ms-transition: font-size 0.5s;
+              -o-transition: font-size 0.5s;
+              transition: font-size 0.5s; } }
       .holder .grid.skills .element-item .barContainer {
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin: 0  0 10px 0; }
+        margin: 0  10% 10px 0; }
+        @media only screen and (max-width: 799.9px) and (orientation: portrait) {
+          .holder .grid.skills .element-item .barContainer {
+            margin-right: 5%; } }
+        @media only screen and (orientation: landscape) and (max-width: 736px) {
+          .holder .grid.skills .element-item .barContainer {
+            margin-right: 6%; } }
         .holder .grid.skills .element-item .barContainer .bar {
           height: calc(33% - 2px);
           width: 100%;
-          margin: 1px 0px; }
+          margin: 1px 0px;
+          transform: skewX(8deg); }
+          .holder .grid.skills .element-item .barContainer .bar p {
+            color: #fff;
+            margin: 0.05vh 5px 0 0;
+            float: right;
+            transform: skewX(-10deg);
+            font-size: 1.55vh;
+            font-weight: 600;
+            letter-spacing: 0.05vh; }
           .holder .grid.skills .element-item .barContainer .bar.mastery {
-            background-color: #2e3192; }
+            background-color: #0D2C54; }
           .holder .grid.skills .element-item .barContainer .bar.experience {
             background-color: rgba(255, 255, 255, 0);
             overflow: hidden; }
             .holder .grid.skills .element-item .barContainer .bar.experience .experience-grad {
               height: 100%;
-              background: #ffbb00;
-              background: -moz-linear-gradient(left, #ffbb00 0%, #28d32d 100%);
-              background: -webkit-linear-gradient(left, #ffbb00 0%, #28d32d 100%);
-              background: linear-gradient(to right, #ffbb00 0%, #28d32d 100%); }
+              background: #7FC800;
+              background: -moz-linear-gradient(left, #EfB400 0%, #7FC800 70%);
+              background: -webkit-linear-gradient(left, #EfB400 0%, #7FC800 70%);
+              background: linear-gradient(to right, #EfB400 0%, #7FC800 70%); }
           .holder .grid.skills .element-item .barContainer .bar.love {
-            background-color: #ec008c; }
+            background-color: #D8403F;
+            transform: skewX(10deg); }
         .holder .grid.skills .element-item .barContainer .comments {
           position: absolute;
-          top: 7vh;
+          top: 8vh;
           color: #fff;
           opacity: 0;
-          transform: translateY(-10px);
-          max-width: 600px;
-          -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, transform 0.25s;
-          -moz-transition: -moz-transform 0.25s, opacity 0.25s, transform 0.25s;
-          -ms-transition: -ms-transform 0.25s, opacity 0.25s, transform 0.25s;
-          -o-transition: -o-transform 0.25s, opacity 0.25s, transform 0.25s;
-          transition: transform 0.25s, opacity 0.25s, transform 0.25s; }
+          transform-origin: top;
+          transform: translateY(-10px) skewX(8deg) rotateX(60deg);
+          margin: 0.25vh 10% 0.5vh 0;
+          border: 2px solid #fff;
+          border: dashed 2px;
+          max-width: calc(55vh + 150px + 10vw);
+          -webkit-transition: -webkit-transform 0.2s, opacity 0.33s, transform 0.33s;
+          -moz-transition: -moz-transform 0.33s, opacity 0.33s, transform 0.33s;
+          -ms-transition: -ms-transform 0.33s, opacity 0.33s, transform 0.33s;
+          -o-transition: -o-transform 0.33s, opacity 0.33s, transform 0.33s;
+          transition: opacity 0.2s, transform 0.2s; }
+          .holder .grid.skills .element-item .barContainer .comments p {
+            transform: skewX(-10deg);
+            margin: 0.5vh 1vh;
+            line-height: calc(1em + 0.35vh + 0.15vw); }
+            @media only screen and (min-width: 768px) {
+              .holder .grid.skills .element-item .barContainer .comments p {
+                padding: 0.33vh 0.5vh 0.166vh 0.5vh;
+                font-size: 14.5px; } }
+            @media only screen and (min-width: 1400px) {
+              .holder .grid.skills .element-item .barContainer .comments p {
+                padding: 0.4vh 0.5vh 0.2vh 0.5vh;
+                font-size: 15.5px;
+                line-height: calc(1.2em + 0.35vh + 0.15vw); } }
           @media only screen and (orientation: portrait) and (max-width: 599.9px) {
             .holder .grid.skills .element-item .barContainer .comments {
-              width: 91vw;
-              left: 0; }
+              margin-right: 1vw;
+              width: 84.25vw;
+              left: 2vw; }
               .holder .grid.skills .element-item .barContainer .comments p {
-                margin: calc(0.5vh + 2px) 0 0 0;
+                margin: calc(0.5vh + 2px) 1.75vw calc(0.5vh + 2px) 3vw;
                 line-height: calc(0.25vh + 0.9vw + 12px);
-                font-size: calc(1.33vh - 1vw + 8.5px); } }
+                font-size: calc(2vw + 6px); } }
           @media only screen and (orientation: landscape) and (max-width: 736px) {
             .holder .grid.skills .element-item .barContainer .comments p {
-              margin: calc(0.5vh - 2px) 3px 0 0;
+              margin: 3px 4px;
               line-height: calc(0.25vw + 0.9vh + 12px);
               font-size: calc(1.33vw - 1vh + 8.5px); } }
       .holder .grid.skills .element-item.big {
-        margin-bottom: 8vh !important; }
+        margin-bottom: 9vh !important; }
+        @media only screen and (orientation: landscape) and (max-width: 736px) {
+          .holder .grid.skills .element-item.big {
+            margin-bottom: 15.5vh !important; } }
+        @media only screen and (orientation: portrait) and (max-width: 599.9px) {
+          .holder .grid.skills .element-item.big {
+            margin-bottom: 12.5vh !important; } }
+        @media only screen and (orientation: portrait) and (max-width: 374.9px) {
+          .holder .grid.skills .element-item.big {
+            margin-bottom: 14vh !important; } }
         .holder .grid.skills .element-item.big .barContainer .comments {
-          opacity: 1;
-          transform: translateY(0px);
-          -webkit-transition: -webkit-transform 0.5s, opacity 0.5s, transform 0.5s;
-          -moz-transition: -moz-transform 0.5s, opacity 0.5s, transform 0.5s;
-          -ms-transition: -ms-transform 0.5s, opacity 0.5s, transform 0.5s;
-          -o-transition: -o-transform 0.5s, opacity 0.5s, transform 0.5s;
-          transition: transform 0.5s, opacity 0.5s, transform 0.5s; }
+          opacity: 0.999;
+          transform: translateY(0px) skewX(8deg) rotateX(0deg);
+          -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, transform 0.4s;
+          -moz-transition: -moz-transform 0.4s, opacity 0.4s, transform 0.4s;
+          -ms-transition: -ms-transform 0.4s, opacity 0.4s, transform 0.4s;
+          -o-transition: -o-transform 0.4s, opacity 0.4s, transform 0.4s;
+          transition: opacity 0.4s, transform 0.4s; }
+        .holder .grid.skills .element-item.big .name {
+          transform: translateX(-10px); }
+          @media only screen and (min-width: 768px) {
+            .holder .grid.skills .element-item.big .name {
+              transform: translateX(-10px) translateY(3.75vh); }
+              .holder .grid.skills .element-item.big .name p:after {
+                font-size: 9vh; } }
+        @media only screen and (orientation: landscape) and (max-width: 736px) {
+          .holder .grid.skills .element-item.big {
+            max-height: 10vh; }
+            .holder .grid.skills .element-item.big .comments {
+              top: 7.25vh; } }
     .holder .grid.skills svg {
       height: 80%;
       width: calc(100% - 180px);
@@ -227,9 +401,13 @@
         max-height: 280px;
         background: rgba(255, 255, 255, 0.2);
         border: 1px solid #fff;
-        border-color: rgba(255, 255, 255, 0.8); }
+        border-color: rgba(255, 255, 255, 0.8);
+        margin: 4px 0 2px 0; }
         .holder .grid.interactive .grid-item:hover {
           background: rgba(255, 0, 255, 0.8); }
+  @media only screen and (max-width: 799.9px) {
+    .holder.skillHolder {
+      width: 90%; } }
   @media only screen and (orientation: landscape) and (max-width: 736px) {
     .holder.skillHolder {
       width: 95%;

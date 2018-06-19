@@ -19,8 +19,14 @@ body {
     font-family: 'Dosis', sans-serif;
     margin:0;
     overflow:hidden;
-}
- 
+
+
+	// iPhone X
+	@media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	    	margin: 15px 0 0 0;
+	}
+ }
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -181,9 +187,16 @@ Main Background Animation - Placement Z-Axis
     			display: flex;
     			height: calc(60px + 5vh);
 			    //-webkit-perspective: 800;
+			     @media only screen and (max-width: 800px)  { 
+				  	width:90%;
+				  	//left:5%
+				 }
 			     @media only screen and (max-width: $mq-mobile-max)  { 
 				  	flex-direction:column;
-				  	width:90%;
+				 }
+				 .typeFix {
+				 	display:flex; 
+				 	width:100%
 				 }
 
 			    svg {
@@ -197,16 +210,34 @@ Main Background Animation - Placement Z-Axis
 				    @media only screen and (max-width: $mq-mobile-max)  { 
 				    	margin-right: unset;
 				    	transform: scale(1.2); 
-				    	height: 12vh;
+				    	height: 8.5vh;
+				    	&.skills{
+				    	    width: 52.5%;
+				    	}
+				    	&.interactive{
+				    	    width: 85%;
+				    	}
+				    	&.motion{
+				    	    width: 95%;
+				    	}
+				    	&.art{
+				    	    width: 95%;
+				    	}
 				    }
-				    @media only screen and (min-width: 1550px)  { transform: translateX(-1vw); }
-				    @media only screen and (min-width: 1800px)  { transform: translateX(-2vw); }
+				    &.interactive{
+				    	max-width: 470px;
+				    }
+				    @media only screen and (min-width: 1550px)  { 
+				    	//transform: translateX(-1vw); 
+				    }
+				    @media only screen and (min-width: 1800px)  { 
+				    	//transform: translateX(-2vw); 
+				    }
 				    g.heading{
 				    	transform: scale(0.8);
-	    				transform-origin: calc(100vh - 50%) 50%;
-	    				@media only screen and (min-height: 800px)  { 
-	    					transform-origin: calc(200vh - 275%) 50%;
-	    				}
+	    				transform-origin: 0 50%;
+	    				
+	    				
 	    				path, line, polyline { 
 	    					stroke: #fff;
 	    					stroke-width: 3px;
@@ -221,19 +252,47 @@ Main Background Animation - Placement Z-Axis
 	    				
 	    				@media only screen and (max-width: $mq-mobile-max)  { 
 							//transform: scale(0.66);
-    						transform-origin: center;
+    						//transform-origin: 20% 50%;
     						path, line, polyline { stroke-width: 3px;}
 	    				}
 	    				@media only screen and (min-width: $mq-smDesk-min)  { 
-	    					transform-origin: 0 50%;
+	    					//transform-origin: 0 50%;
 	    				}
-	    				@media (orientation: portrait) and (max-width: $mq-tablet-max)  { 
-	    					transform: scale(1);
-	    				}
+	    				//@media (orientation: portrait) and (max-width: $mq-tablet-max)  { 
+	    				//	transform: scale(1);
+	    				//}
 	    				@media (orientation: portrait) and (max-width: $mq-mobile-max)  { 
-	    					transform: scale(0.8) translateY(10%);
+	    					transform: scale(0.7) translateY(5%);
+	    					&.intro{
+					    	    transform-origin: 0% 60%;
+					    	}
+	    					&.skills{
+	    					    transform-origin: 25% 75%;
+		    					transform: scale(0.75) translateY(5%);
+					    	}
+					    	&.interactive{
+					    	    transform-origin: 15% 60%;
+							    transform: scale(0.6) translateY(0%);					    	}
+					    	&.motion{
+					    	    transform-origin: 35% 60%;
+					    	}
+					    	&.art{
+					    	    transform-origin: 50% 60%;
+    							transform: scale(0.75) translateY(8%);
+					    	}
+					    	&.credits{
+					    	    transform-origin: 0% 60%;
+					    	}
+	    				}
+	    				@media only screen and (orientation: landscape) and (max-width: 736px) {
+	    				    transform: scale(0.6);
+    						transform-origin: 0 40%;
 	    				}
 			    	}
+			    	@media only screen and (orientation: landscape) and (max-width: 736px) {
+	    				 max-height: unset;
+	    			}
+			    	
 			    }
 			    
 			}
@@ -371,4 +430,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     bottom: 400000px;
 
 
+
+
+	
+
+
+
 }
+.place3D.stop1{
+		  	.perspectiveContainer {
+			     @media only screen and (max-width: 800px)  { 
+			        width: 100%;
+				  	left: 2.5%
+				 }
+			}
+	}

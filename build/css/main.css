@@ -1,6 +1,13 @@
 /* build an initial inspiration from this codepen:
    https://codepen.io/nickpettit/pen/eBCrK 
 */
+/*
+$chart-dkBlue: 	#073B4C;
+$chart-yellow: 	#ffd166;
+$chart-green: 	#06D6A0;
+$chart-red: 	#EF476F;
+$chart-blue: 	#118AB2;
+*/
 html,
 button,
 input,
@@ -14,6 +21,9 @@ body {
   font-family: 'Dosis', sans-serif;
   margin: 0;
   overflow: hidden; }
+  @media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    body {
+      margin: 15px 0 0 0; } }
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -160,10 +170,15 @@ Main Background Animation - Placement Z-Axis
         max-width: 1400px;
         display: flex;
         height: calc(60px + 5vh); }
+        @media only screen and (max-width: 800px) {
+          #content section .place3D .perspectiveContainer {
+            width: 90%; } }
         @media only screen and (max-width: 599.9px) {
           #content section .place3D .perspectiveContainer {
-            flex-direction: column;
-            width: 90%; } }
+            flex-direction: column; } }
+        #content section .place3D .perspectiveContainer .typeFix {
+          display: flex;
+          width: 100%; }
         #content section .place3D .perspectiveContainer svg {
           width: 100%;
           display: flex;
@@ -172,19 +187,20 @@ Main Background Animation - Placement Z-Axis
             #content section .place3D .perspectiveContainer svg {
               margin-right: unset;
               transform: scale(1.2);
-              height: 12vh; } }
-          @media only screen and (min-width: 1550px) {
-            #content section .place3D .perspectiveContainer svg {
-              transform: translateX(-1vw); } }
-          @media only screen and (min-width: 1800px) {
-            #content section .place3D .perspectiveContainer svg {
-              transform: translateX(-2vw); } }
+              height: 8.5vh; }
+              #content section .place3D .perspectiveContainer svg.skills {
+                width: 52.5%; }
+              #content section .place3D .perspectiveContainer svg.interactive {
+                width: 85%; }
+              #content section .place3D .perspectiveContainer svg.motion {
+                width: 95%; }
+              #content section .place3D .perspectiveContainer svg.art {
+                width: 95%; } }
+          #content section .place3D .perspectiveContainer svg.interactive {
+            max-width: 470px; }
           #content section .place3D .perspectiveContainer svg g.heading {
             transform: scale(0.8);
-            transform-origin: calc(100vh - 50%) 50%; }
-            @media only screen and (min-height: 800px) {
-              #content section .place3D .perspectiveContainer svg g.heading {
-                transform-origin: calc(200vh - 275%) 50%; } }
+            transform-origin: 0 50%; }
             #content section .place3D .perspectiveContainer svg g.heading path, #content section .place3D .perspectiveContainer svg g.heading line, #content section .place3D .perspectiveContainer svg g.heading polyline {
               stroke: #fff;
               stroke-width: 3px;
@@ -196,19 +212,33 @@ Main Background Animation - Placement Z-Axis
                 #content section .place3D .perspectiveContainer svg g.heading path, #content section .place3D .perspectiveContainer svg g.heading line, #content section .place3D .perspectiveContainer svg g.heading polyline {
                   stroke-width: 2.5px; } }
             @media only screen and (max-width: 599.9px) {
-              #content section .place3D .perspectiveContainer svg g.heading {
-                transform-origin: center; }
-                #content section .place3D .perspectiveContainer svg g.heading path, #content section .place3D .perspectiveContainer svg g.heading line, #content section .place3D .perspectiveContainer svg g.heading polyline {
-                  stroke-width: 3px; } }
-            @media only screen and (min-width: 768px) {
-              #content section .place3D .perspectiveContainer svg g.heading {
-                transform-origin: 0 50%; } }
-            @media (orientation: portrait) and (max-width: 767.9px) {
-              #content section .place3D .perspectiveContainer svg g.heading {
-                transform: scale(1); } }
+              #content section .place3D .perspectiveContainer svg g.heading path, #content section .place3D .perspectiveContainer svg g.heading line, #content section .place3D .perspectiveContainer svg g.heading polyline {
+                stroke-width: 3px; } }
             @media (orientation: portrait) and (max-width: 599.9px) {
               #content section .place3D .perspectiveContainer svg g.heading {
-                transform: scale(0.8) translateY(10%); } }
+                transform: scale(0.7) translateY(5%); }
+                #content section .place3D .perspectiveContainer svg g.heading.intro {
+                  transform-origin: 0% 60%; }
+                #content section .place3D .perspectiveContainer svg g.heading.skills {
+                  transform-origin: 25% 75%;
+                  transform: scale(0.75) translateY(5%); }
+                #content section .place3D .perspectiveContainer svg g.heading.interactive {
+                  transform-origin: 15% 60%;
+                  transform: scale(0.6) translateY(0%); }
+                #content section .place3D .perspectiveContainer svg g.heading.motion {
+                  transform-origin: 35% 60%; }
+                #content section .place3D .perspectiveContainer svg g.heading.art {
+                  transform-origin: 50% 60%;
+                  transform: scale(0.75) translateY(8%); }
+                #content section .place3D .perspectiveContainer svg g.heading.credits {
+                  transform-origin: 0% 60%; } }
+            @media only screen and (orientation: landscape) and (max-width: 736px) {
+              #content section .place3D .perspectiveContainer svg g.heading {
+                transform: scale(0.6);
+                transform-origin: 0 40%; } }
+          @media only screen and (orientation: landscape) and (max-width: 736px) {
+            #content section .place3D .perspectiveContainer svg {
+              max-height: unset; } }
 
 #first {
   -webkit-transform: translate3d(0, 0, -11500px) scale(16);
@@ -289,3 +319,8 @@ Main Background Animation - Placement Z-Axis
     transform: translateY(calc(-10000px / 2)); }
   #fourth .stop5 {
     transform: translateY(calc(-10000px / 8 * 5)); }
+
+@media only screen and (max-width: 800px) {
+  .place3D.stop1 .perspectiveContainer {
+    width: 100%;
+    left: 2.5%; } }

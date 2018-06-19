@@ -1,94 +1,26 @@
 
 var time = 1;
+var metroTime = time/1.5; 
+var navDelay;
+var metroEase = Power1.easeInOut;
+var metroEaseIn = Power1.easeIn;
 
     // Force initial state 
     // !!! needs url variables for states !!!
 	TweenLite.to("#content", 0, {y: 0 }); //480000
 
-	// TweenLite.from("a.level-G", 2, { y:"-298", x:"-47px" }).delay(1);
-	// TweenLite.from("a.level-1", 2, { y:"-328", x: "57px" }).delay(1);
-	// TweenLite.from("a.level-2", 2, { y:"-130", x: "44px" }).delay(1);
-	// TweenLite.from("a.level-3", 2, { y:"-304", x: "48px" }).delay(1);
-	// TweenLite.from("a.level-4", 2, { y:"-198", x: "58px" }).delay(1);
-	// TweenLite.from("a.level-5", 2, { y:"-338", x: "87px" }).delay(1);
 
-	TweenLite.to("a.level-G", 0, { y:"-290", x:"-47px" });
-	TweenLite.to("a.level-1", 0, { y:"-319", x: "53px" });
-	TweenLite.to("a.level-2", 0, { y:"-130", x: "38px" });
-	TweenLite.to("a.level-3", 0, { y:"-295", x: "37px" });
-	TweenLite.to("a.level-4", 0, { y:"-193", x: "45px" });
-	TweenLite.to("a.level-5", 0, { y:"-329", x: "83px" });
-
-	// TweenLite.to("a.level-G", 0, { y:"0", x: "0" });
-	// TweenLite.to("a.level-1", 0, { y:"0", x: "0" });
-	// TweenLite.to("a.level-2", 0, { y:"0", x: "0" });
-	// TweenLite.to("a.level-3", 0, { y:"0", x: "0" });
-	// TweenLite.to("a.level-4", 0, { y:"0", x: "0" });
-	// TweenLite.to("a.level-5", 0, { y:"0", x: "0" });
-
-
+// // GOOD
+// 	TweenLite.to("a.level-G", 0, { y:"-290", x:"-47px" });
+// 	TweenLite.to("a.level-1", 0, { y:"-319", x: "53px" });
+// 	TweenLite.to("a.level-2", 0, { y:"-130", x: "38px" });
+// 	TweenLite.to("a.level-3", 0, { y:"-295", x: "37px" });
+// 	TweenLite.to("a.level-4", 0, { y:"-193", x: "45px" });
+// 	TweenLite.to("a.level-5", 0, { y:"-329", x: "83px" });
 	
-
-	// TweenLite.to("a.level-G", 2, { y:"0", x: "0" }).delay(time);
-	// TweenLite.to("a.level-1", 2, { y:"0", x: "0" }).delay(time);
-	// TweenLite.to("a.level-2", 2, { y:"0", x: "0" }).delay(time);
-	// TweenLite.to("a.level-3", 2, { y:"0", x: "0" }).delay(time);
-	// TweenLite.to("a.level-4", 2, { y:"0", x: "0" }).delay(time);
-	// TweenLite.to("a.level-5", 2, { y:"0", x: "0" }).delay(time);
-
-
-
-// var tl = new TimelineLite({repeat: -1});
-
-//   tl.staggerTo("a.level-G", 2, { y:"-298", x:"-47px" })
-//     .staggerTo("a.level-1", 2, { y:"-328", x: "57px" })
-// 	.staggerTo("a.level-2", 2, { y:"-130", x: "44px" })
-// 	.staggerTo("a.level-3", 2, { y:"-304", x: "48px" })
-// 	.staggerTo("a.level-4", 2, { y:"-198", x: "58px" })
-// 	.staggerTo("a.level-5", 2, { y:"-338", x: "87px" });
-
-var metroTL   = new TimelineLite();
-var metroTime = time/1.5; 
-var metroEase = Power1.easeInOut;
-
- metroTL.to("svg#metro #dark-blue", 	metroTime, 	 { drawSVG: "100% 100%", ease: metroEase })
-		.to("svg#metro #dark-blue", 	metroTime/4, { opacity: 0 }, "-="+metroTime/4)
-		.to("svg#metro #blue", 			metroTime,   { drawSVG: "85% 85%", ease: metroEase }, 	"-="+metroTime )
-		.to("svg#metro #blue", 			metroTime/4, { opacity: 0 }, "-="+metroTime/4)
-		.to("svg#metro #green", 		metroTime,   { drawSVG: "0% 0%", ease: metroEase }, 	"-="+metroTime )
-		.to("svg#metro #green", 		metroTime/4, { opacity: 0 }, "-="+metroTime/4)
-		.to("svg#metro #blue-green", 	metroTime,   { drawSVG: "62% 62%", ease: metroEase }, 	"-="+metroTime )
-		.to("svg#metro #blue-green", 	metroTime/4, { opacity: 0 }, "-="+metroTime/4)
-		.to("svg#metro #dark-green", 	metroTime,   { drawSVG: "50% 50%", ease: metroEase }, 	"-="+metroTime )
-		.to("svg#metro #dark-green", 	metroTime/4, { opacity: 0 }, "-="+metroTime/4)
-		.to("svg#metro #orange", 		metroTime,   { drawSVG: "59% 59%", ease: metroEase }, 	"-="+metroTime )
-		.to("svg#metro #orange", 		metroTime/4, { opacity: 0 }, "-="+metroTime/4)
-		.to("svg#metro #purple", 		metroTime,   { drawSVG: "82% 82%", ease: metroEase }, 	"-="+metroTime )
-		.to("svg#metro #purple", 		metroTime/4, { opacity: 0 }, "-="+metroTime/4)
-		.to("svg#metro #yellow", 		metroTime,   { drawSVG: "100% 100%", ease: metroEase },	"-="+metroTime )
-		.to("svg#metro #yellow", 		metroTime/4, { opacity: 0 }, "-="+metroTime/4)
-		.to("svg#metro #grey", 			metroTime,   { drawSVG: "57% 57%", ease: metroEase }, 	"-="+metroTime )
-		.to("svg#metro #grey", 			metroTime/4, { opacity: 0 }, "-="+metroTime/4);
-
-var tl = new TimelineLite({repeat: -1});
- 	
-  tl.delay(metroTime).staggerTo(".navPos a", metroTime/2, { y:"0", x: "0" }, 0.05);
- //    .staggerTo("a.level-1", 2, { y:"0", x: "0" })
-	// .staggerTo("a.level-2", 2, { y:"0", x: "0" })
-	// .staggerTo("a.level-3", 2, { y:"0", x: "0" })
-	// .staggerTo("a.level-4", 2, { y:"0", x: "0" })
-	// .staggerTo("a.level-5", 2, { y:"0", x: "0" });
-
-
 
 
 $(function() {
-
-
-
-
-
-
 
 
 	$.getJSON("js/skills.json", function(data) {
@@ -102,11 +34,11 @@ $(function() {
 	        html += '<div class="element-item '+value.category+'">'; //data-category="'+value.category+'"
 	        html += '	<div class="name"><p>'+value.name+'</p></div>';
 	        html += '	<div class="barContainer">';
-	        html += '		<div class="bar mastery"	data-mastery="'+value.mastery+'"	style="width:'+value.mastery+'%"></div>';
+	        html += '		<div class="bar mastery"	data-mastery="'+value.mastery+'"	style="width:'+value.mastery+'%"><p>'+value.mastery+'%</p></div>';
 	        html += '		<div class="bar experience"	data-experience="'+value.experience+'"	style="width:'+value.experience+'%">';
-	        html += '			<div class="experience-grad" style="width:'+calcPercent+'%"></div>';
+	        html += '			<div class="experience-grad" style="width:'+calcPercent+'%"><p style="margin-right: calc('+(-1*(value.experience - 100))+'% + 5px);">'+value.experience+'%</p></div>';
 	        html += '		</div>';
-	        html += '		<div class="bar love" 		data-love="'+value.love+'"	style="width:'+value.love+'%"></div>';
+	        html += '		<div class="bar love" 		data-love="'+value.love+'"	style="width:'+value.love+'%"><p>'+value.love+'%</p></div>';
 	        html += '		<div class="comments"><p>'+value.comments+'</p></div>';
 	        html += '	</div>';
 	        html += '</div>';
@@ -117,16 +49,7 @@ $(function() {
 		startPage();
 	});
 });
-/*
-<div class="element-item javascript metal " data-category="javascript">
-    <div class="name">Javascript</div>
-    <div class="barContainer">
-	    <div class="bar mastery">Hg</div>
-	    <div class="bar experience">80</div>
-	    <div class="bar love">200.59</div>
-    </div>
-  </div>
-  */
+
 
 
     
@@ -247,8 +170,39 @@ function startPage(){
 	}
 
 	function GoToLink(link, speed, yaxis, easy) {
+		// If desktop NOT collapsed (default)
+		var metroDelay = 0;
+		// If desktop and menu collapsed
+		if ($('.navPos a').css('transform') !== 'matrix(1, 0, 0, 1, 0, 0)' && $(window).width() > 769  && link !== 0 ){
+			metroDelay = 1;
+			navDelay = metroDelay;
+			navAnimation()
+			metroAnimation();
+		} 
+		//else If mobile
+		else if ($(window).width() < 769 ) {
+			//else If mobile collapsed
+			if ($('.navPos a').css('color') === 'rgba(255,255,255,0)') {
+				metroDelay = 0;
+				navDelay = metroDelay;
+			} 
+			//else If mobile visible
+			else {
+				navAnimationMobile()
+				navDelay = metroDelay;
+			}
+		}
+		// If desktop NOT collapsed (reopen nav)
+		if ( link === 0 && $(window).width() > 769 ) {
+		 	metroDelay = 0;
+		 	navDelay = speed;
+		 	navAnimationOpen(navDelay);
+		 	metroAnimationOpen(navDelay)
+		 }
+
+
 		oldLink = link;
-	    TweenLite.to("#content", speed, { y: yaxis*10000, ease: easy });
+	    TweenLite.to("#content", speed, { y: yaxis*10000, ease: easy }).delay(metroDelay);
 	    if (link === 0 ) { play_level_0(speed); }
 	    if (link === 1 ) { play_level_1(speed); }
 	    if (link === 2 ) { play_level_2(speed); }
@@ -460,6 +414,99 @@ $('.element-item').click(function(){
   });
 
 	
+
+
+
+
+
+
+
+
+
+var metroTL   = new TimelineLite();
+
+
+
+function metroAnimation() {
+	console.log("metroAnimation()")
+ metroTL.to("svg#metro #dark-blue", 	metroTime, 	 { drawSVG: "100% 100%", ease: metroEase })
+		.to("svg#metro #dark-blue", 	metroTime/4, { opacity: 0 }, "-="+metroTime/4)
+		.to("svg#metro #blue", 			metroTime,   { drawSVG: "85% 85%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #blue", 			metroTime/4, { opacity: 0 }, "-="+metroTime/4)
+		.to("svg#metro #green", 		metroTime,   { drawSVG: "0% 0%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #green", 		metroTime/4, { opacity: 0 }, "-="+metroTime/4)
+		.to("svg#metro #blue-green", 	metroTime,   { drawSVG: "62% 62%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #blue-green", 	metroTime/4, { opacity: 0 }, "-="+metroTime/4)
+		.to("svg#metro #dark-green", 	metroTime,   { drawSVG: "50% 50%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #dark-green", 	metroTime/4, { opacity: 0 }, "-="+metroTime/4)
+		.to("svg#metro #orange", 		metroTime,   { drawSVG: "59% 59%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #orange", 		metroTime/4, { opacity: 0 }, "-="+metroTime/4)
+		.to("svg#metro #purple", 		metroTime,   { drawSVG: "82% 82%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #purple", 		metroTime/4, { opacity: 0 }, "-="+metroTime/4)
+		.to("svg#metro #yellow", 		metroTime,   { drawSVG: "100% 100%", ease: metroEase },	"-="+metroTime )
+		.to("svg#metro #yellow", 		metroTime/4, { opacity: 0 }, "-="+metroTime/4)
+		.to("svg#metro #grey", 			metroTime,   { drawSVG: "57% 57%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #grey", 			metroTime/4, { opacity: 0 }, "-="+metroTime/4);
+}
+//.delay(navDelay)
+function metroAnimationOpen(navDelay) {
+	mapOpenDelay = (navDelay*1000) - 200;
+	//metroTime = metroTime*2;
+	setTimeout(function(){  
+ metroTL.to("svg#metro #dark-blue", 	metroTime, 	 { drawSVG: "0% 100%", ease: metroEase })
+		.to("svg#metro #dark-blue", 	metroTime/2, { opacity: 1, ease: metroEaseIn }, "-="+metroTime/2)
+		.to("svg#metro #blue", 			metroTime,   { drawSVG: "0% 100%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #blue", 			metroTime/2, { opacity: 1, ease: metroEaseIn }, "-="+metroTime/2)
+		.to("svg#metro #green", 		metroTime,   { drawSVG: "0% 100%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #green", 		metroTime/2, { opacity: 1, ease: metroEaseIn }, "-="+metroTime/2)
+		.to("svg#metro #blue-green", 	metroTime,   { drawSVG: "0% 100%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #blue-green", 	metroTime/2, { opacity: 1, ease: metroEaseIn }, "-="+metroTime/2)
+		.to("svg#metro #dark-green", 	metroTime,   { drawSVG: "0% 100%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #dark-green", 	metroTime/2, { opacity: 1, ease: metroEaseIn }, "-="+metroTime/2)
+		.to("svg#metro #orange", 		metroTime,   { drawSVG: "0% 100%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #orange", 		metroTime/2, { opacity: 1, ease: metroEaseIn }, "-="+metroTime/2)
+		.to("svg#metro #purple", 		metroTime,   { drawSVG: "0% 100%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #purple", 		metroTime/2, { opacity: 1, ease: metroEaseIn }, "-="+metroTime/2)
+		.to("svg#metro #yellow", 		metroTime,   { drawSVG: "0% 100%", ease: metroEase },	"-="+metroTime )
+		.to("svg#metro #yellow", 		metroTime/2, { opacity: 1, ease: metroEaseIn }, "-="+metroTime/2)
+		.to("svg#metro #grey", 			metroTime,   { drawSVG: "0% 100%", ease: metroEase }, 	"-="+metroTime )
+		.to("svg#metro #grey", 			metroTime/2, { opacity: 1, ease: metroEaseIn }, "-="+metroTime/2);
+	}, mapOpenDelay );
+}
+
+function navAnimation(navDelay){
+	//console.log(navDelay);
+	if ( navDelay === undefined ) {
+	     navDelay = metroTime;
+	}
+  var tl = new TimelineLite({repeat: -1});
+	
+  tl.delay(navDelay).staggerTo(".navPos a", metroTime/2, { y:"0", x:"0" }, 0.05);
+}
+
+function navAnimationOpen(navDelay){
+    console.log("navAnimationOpen = " + navDelay);
+	TweenLite.to("a.level-G", metroTime/3, { y:"-290", x:"-47px" }).delay(navDelay);
+	TweenLite.to("a.level-1", metroTime/3, { y:"-319", x: "53px" }).delay(navDelay);
+	TweenLite.to("a.level-2", metroTime/3, { y:"-130", x: "38px" }).delay(navDelay);
+	TweenLite.to("a.level-3", metroTime/3, { y:"-295", x: "37px" }).delay(navDelay);
+	TweenLite.to("a.level-4", metroTime/3, { y:"-193", x: "45px" }).delay(navDelay);
+	TweenLite.to("a.level-5", metroTime/3, { y:"-329", x: "83px" }).delay(navDelay);
+}
+
+function navAnimationMobile(navDelay) {
+  var setNav = new TimelineLite({repeat: -1});
+	
+  setNav.staggerTo('.navPos a .subStop', 0.5, { x: '-45', ease: metroEase, yoyo:true  }, 0.05);
+  TweenLite.to('.navPos a', 0.1, { 'background-color' :'rgba(255,255,255,0)' , 'color' :'rgba(255,255,255,0)', yoyo:true });
+  TweenLite.to('.navPos  ', metroTime, { y:'12px', yoyo:true });
+
+}
+
+
+
+ 
+
 
 
 

@@ -110,33 +110,42 @@
         	{{> SVG-background_third}}
         	<div class="place3D stop1">
         		<div class="perspectiveContainer">
-        			{{> type-skills}}
-<div id="filters" class="button-group skills">  
-  <!--<button class="button is-checked" data-filter="*">show all</button>-->
-  <button class="button" data-filter=".Presentation-Development">Presentation<!-- Development--></button>
-  <button class="button" data-filter=".Structural-Development">Structure<!-- Development--></button>
-  <button class="button" data-filter=".Software">Software</button>
-  <button class="button" data-filter=".UX-Design">UX<!-- Design--></button>
-  <!--<button class="button" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</button>
-  <button class="button" data-filter=":not(.transition)">not transition</button>
-  <button class="button" data-filter=".metal:not(.transition)">metal but not transition</button>
-  <button class="button" data-filter="numberGreaterThan50">number > 50</button>
-  <button class="button" data-filter="ium">name ends with &ndash;ium</button>-->
-</div>
+        			<div class="typeFix">
+	        			{{> type-skills}}
+	        		</div>
+					<div id="filters" class="button-group skills">  
+					  <button class="button notButton" data-filter="*"><p>FILTERS</p></button>
+					  <button class="button" data-filter=".Presentation-Development">
+					  	<span>Presentation</span>
+					  	<p><span>DEV / DESIGN</span></p>
+					  </button>
+					  <button class="button" data-filter=".Structural-Development">
+					  	<span>Structural</span>
+					  	<p><span>DEVELOPMENT</span></p>
+					  </button>
+					  <button class="button" data-filter=".Software">
+					  	<span>Software</span>
+					  	<p><span>TOOLS</span></p>
+					  </button>
+					  <button class="button" data-filter=".UX-Design">
+					  	<span>UX</span>
+					  	<p><span>DESIGN</span></p>
+					  </button>
+					</div>
 
-<div id="sorts" class="button-group skills">  
-  <!--<button class="button" data-sort-by="original-order">original order</button>
-  <button class="button is-checked" data-sort-by="category">category</button>-->
-  <button class="button" data-sort-by="mastery">mastery</button>
-  <button class="button" data-sort-by="experience">experience</button>
-  <button class="button" data-sort-by="love">love</button>
-</div>
+					<div id="sorts" class="button-group skills">  
+					  <button class="button" data-sort-by="mastery">mastery</button>
+					  <button class="button" data-sort-by="experience">experience</button>
+					  <button class="button" data-sort-by="love">love</button>
+					</div>
         		</div>
         		{{> SVG-background_third}}
         	</div>
         	<div class="place3D stop2">
         		<div class="perspectiveContainer">
-        			{{> type-interactive}}
+        			<div class="typeFix">
+        				{{> type-interactive}}
+        			</div>
         			<div id="filters" class="button-group interactive">  
         			  <button class="button is-checked" data-filter="*">show all</button>
 					  <button class="button" data-filter=".dataset">dataset</button>
@@ -146,7 +155,9 @@
         	</div>
         	<div class="place3D stop3">
         		<div class="perspectiveContainer">
-        			{{> type-motion}}
+        			<div class="typeFix">
+	        			{{> type-motion}}
+	        		</div>
         			<div id="" class="button-group">  
         			  <!--  - - - - - - - - -  -->
 					</div>
@@ -155,7 +166,9 @@
         	</div>
         	<div class="place3D stop4">
         		<div class="perspectiveContainer">
-        			{{> type-art}}
+        			<div class="typeFix">
+	        			{{> type-art}}
+	        		</div>
         			<div id="" class="button-group">  
         			  <!--  - - - - - - - - -  -->
 					</div>
@@ -207,12 +220,12 @@
 
 	  <div class="navPos">
 	  	{{> metro}}
-		<a class="level-G" data-level="0" data-yaxis="0"><span>Intro</span></a>
-		<a class="level-1" data-level="1" data-yaxis="16"><span>Skills</span></a>
-		<a class="level-2" data-level="2" data-yaxis="32"><span>Interactive</span></a>
-		<a class="level-3" data-level="3" data-yaxis="48"><span>Motion</span></a>
-		<a class="level-4" data-level="4" data-yaxis="64"><span>Art</span></a>
-		<a class="level-5" data-level="5" data-yaxis="80"><span>Credits</span></a>
+		<a class="level-G" data-level="0" data-yaxis="0"><span>Intro</span><div class="subStop"></div></a>
+		<a class="level-1" data-level="1" data-yaxis="16"><span>Skills</span><div class="subStop"></div></a>
+		<a class="level-2" data-level="2" data-yaxis="32"><span>Interactive</span><div class="subStop"></div></a>
+		<a class="level-3" data-level="3" data-yaxis="48"><span>Motion</span><div class="subStop"></div></a>
+		<a class="level-4" data-level="4" data-yaxis="64"><span>Art</span><div class="subStop"></div></a>
+		<a class="level-5" data-level="5" data-yaxis="80"><span>Credits</span><div class="subStop"></div></a>
 	  </div>
 	</nav>
 
