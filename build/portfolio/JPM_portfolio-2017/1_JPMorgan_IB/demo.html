@@ -1,0 +1,915 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>IB Holiday Card 2012 - Gold Leaves</title>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<style>
+body {
+	 background-color:transparent;
+	 -ms-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    margin: 0;
+    padding: 0;
+} 
+
+#container{
+	/*width:1110px;
+	height:680px;
+	margin:0px auto;
+	z-index:0;
+	position:relative;
+	overflow:hidden;
+	background-color:#ffffff;
+	border:#cccccc 10px solid;
+	margin-top:20px;*/
+	width: 1110px;
+    height: 680px;
+    margin: 0;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: #cccccc 10px solid;
+    -ms-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    top: 0 !important;
+    box-sizing: border-box;
+
+}
+#paper{
+	width:1110px;
+	height:680px;
+	z-index:5000;
+	position:absolute;
+	top:0;
+	left:0;
+}
+#paperBG{
+	width:1110px;
+	height:680px;
+	height:591px;
+	z-index:0;
+	position:absolute;
+	top:0;
+	left:0;
+}
+#rsr{
+	width:1110px;
+	height:680px;
+	margin-left:-20px;
+	margin-top:-4px;
+	z-index:400;
+	position:relative;
+}
+#jpm{
+	padding:0px;
+	width:287px;
+	height:94px;
+	z-index:6000;
+	position:absolute;
+	top:610px;
+	left:845px;
+} 
+ 
+#txt_{
+	padding:0px;
+	width:655px; 
+	height:94px;
+	z-index:6000;
+	position:absolute;
+	top:295px;
+	left:150px;
+}
+</style> 
+</head> 
+  
+<body>
+<div id="container">
+	<div id="txt_"></div>
+    <div id="jpm"></div>
+    <div id="paper"></div> 
+	<div id="rsr"></div>
+    <div id="paperBG"></div>
+</div>
+   
+        
+<script type="text/javascript"> 
+
+var paper = Raphael('paper', '1110', '680');
+var paperBG = Raphael('paperBG', '1110', '680');
+
+var image = paperBG.image("img/tree.jpg", 0,0,772, 721);
+image.attr({'opacity': '0',transform:'s1,1,t0,0'});
+var anim = Raphael.animation({'opacity': '1'},900, 'easeInOut'); 
+image.animate(anim.delay(100)); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------ TEXT ANIMATION ------
+
+var image = paper.image("img/txt.jpg", 796,59,262, 536);
+image.attr({'opacity': '0',transform:'s1,1'});
+var anim = Raphael.animation({'opacity': '1'},1500, 'easeInOut'); 
+image.animate(anim.delay(4333)); 
+
+
+var rect_a = paper.rect(796, 139, 262, 70);
+rect_a.attr({fill: '#ffffff', 'opacity': '1','stroke-width': '0','stroke-opacity': '0'});
+var anim = Raphael.animation({'opacity': '1', 'opacity': '0'}, 1500, 'easeInOut');
+rect_a.animate(anim.delay(5000));  
+
+var rect_a = paper.rect(796, 209, 262, 135);
+rect_a.attr({fill: '#ffffff', 'opacity': '1','stroke-width': '0','stroke-opacity': '0'});
+var anim = Raphael.animation({'opacity': '1', 'opacity': '0'}, 1500, 'easeInOut');
+rect_a.animate(anim.delay(5666));  
+
+var rect_a = paper.rect(796, 344, 262, 85);
+rect_a.attr({fill: '#ffffff', 'opacity': '1','stroke-width': '0','stroke-opacity': '0'});
+var anim = Raphael.animation({'opacity': '1', 'opacity': '0'}, 1500, 'easeInOut');
+rect_a.animate(anim.delay(6333));  
+
+var rect_a = paper.rect(796, 429, 262, 65);
+rect_a.attr({fill: '#ffffff', 'opacity': '1','stroke-width': '0','stroke-opacity': '0'});
+var anim = Raphael.animation({'opacity': '1', 'opacity': '0'}, 1500, 'easeInOut');
+rect_a.animate(anim.delay(7000));  
+
+
+var rect_a = paper.rect(796, 494, 262, 115);
+rect_a.attr({fill: '#ffffff', 'opacity': '1','stroke-width': '0','stroke-opacity': '0'});
+var anim = Raphael.animation({'opacity': '1', 'opacity': '0'}, 1500, 'easeInOut');
+rect_a.animate(anim.delay(7666));  
+
+var rect_Grad3 = paper.rect(0,0,1110,1500);
+rect_Grad3.attr({"fill":"270-#fff:0-#fff:50-#fff:100",'opacity': '0',"stroke":"none",transform:'s1,1,t0,-1500'});
+var anim = Raphael.animation({'opacity': '1', 'opacity': '0',transform:'s1,1,t0,0'}, 4000, 'easeInOut');
+rect_Grad3.animate(anim.delay(10000));
+
+var rect_a = paper.rect(0,0,1110,680);
+rect_a.attr({fill: '#ffffff', 'opacity': '0','stroke-width': '0','stroke-opacity': '0'});
+var anim = Raphael.animation({'opacity': '0', 'opacity': '1'}, 3000, 'easeInOut');
+rect_a.animate(anim.delay(11000));  
+
+
+
+
+function txt_(){
+
+var txt_ = Raphael('txt_', '792', '49');
+
+var path_b = txt_.path("M128.906,32.752c0,0.928-0.704,1.632-1.6,1.632c-0.928,0-1.632-0.704-1.632-1.632   c0-0.896,0.704-1.632,1.632-1.632C128.202,31.12,128.906,31.856,128.906,32.752z");
+var path_c = txt_.path("M135.786,32.752c0,0.928-0.704,1.632-1.6,1.632c-0.928,0-1.632-0.704-1.632-1.632   c0-0.896,0.704-1.632,1.632-1.632C135.082,31.12,135.786,31.856,135.786,32.752z");
+var path_d = txt_.path("M142.666,32.752c0,0.928-0.704,1.632-1.6,1.632c-0.928,0-1.632-0.704-1.632-1.632   c0-0.896,0.704-1.632,1.632-1.632C141.962,31.12,142.666,31.856,142.666,32.752z");
+var path_e = txt_.path("M155.562,34.576c-5.76,0-9.567-3.712-9.567-10.943c0-6.176,4.032-9.919,9.567-9.919   c5.503,0,9.567,3.776,9.567,9.919C165.129,30.864,161.321,34.576,155.562,34.576z M155.562,14.642   c-4.608,0-6.656,4.063-6.656,9.247c0,5.28,2.08,9.759,6.656,9.759s6.719-4.576,6.719-9.759S160.169,14.642,155.562,14.642z");
+var path_f = txt_.path("M170.282,26.544V15.281l-2.528-0.8v-0.448h7.647v0.448l-2.56,0.8V26.32c0,5.28,1.952,7.488,5.184,7.488   c2.944,0,5.184-2.208,5.184-7.488V15.281l-2.56-0.8v-0.448h7.551v0.448l-2.528,0.8v11.263c0,5.855-2.496,8.127-7.647,8.127   C172.874,34.672,170.282,32.4,170.282,26.544z");
+var path_g = txt_.path("M190.602,33.552l2.784-0.96V15.281l-2.56-0.8v-0.416c4.736,0,5.056-0.192,7.744-0.192   c4.352,0,6.399,1.376,6.399,4.416c0,3.52-3.072,4.736-6.144,4.928c4.832,1.344,6.016,7.775,8,9.312c0,0,1.472,0.576,2.879,0.96   L209.64,34l-5.343,0.064c-1.6-3.072-3.68-10.495-8.16-10.495h-0.192v9.119l2.24,0.864V34h-7.583V33.552z M196.521,22.769   c3.231,0,5.759-0.832,5.759-4.608c0-2.848-2.464-3.392-4.288-3.392c-1.152,0-2.048,0.192-2.048,0.192v7.808H196.521z");
+var path_h = txt_.path("M226.569,34.448h-0.96l-5.919-19.134l-2.368-0.832v-0.448h6.815v0.416l-1.952,0.672l4.479,14.975   l5.952-16.223h1.824l5.408,16.191l5.023-15.007l-1.856-0.608v-0.416h5.6v0.448l-2.144,0.704l-6.56,19.262h-0.928L233,17.233   L226.569,34.448z");
+var path_i = txt_.path("M250.602,34v-0.48l2.751-0.928V15.281l-2.56-0.8v-0.448h7.711v0.448l-2.56,0.8v17.311l2.752,0.928V34   H250.602z");
+var path_j = txt_.path("M274.088,18.609l-0.512-0.032l-0.608-2.24c-0.416-0.448-1.664-1.76-3.744-1.76   c-2.24,0-4.096,1.312-4.096,3.551c0,2.912,2.848,3.36,4.736,4c2.016,0.672,5.472,1.696,5.472,6.144   c0,3.808-2.976,6.175-6.848,6.175c-2.56,0-4.352-0.64-5.952-1.728l0.384-4.608l0.576,0.064l0.704,3.136   c0.672,0.96,2.144,2.272,4.607,2.272c1.952,0,4.16-1.504,4.16-4.671c0-3.168-3.167-4.096-4.479-4.448   c-2.24-0.608-5.824-1.664-5.824-5.44c0-3.52,2.944-5.215,6.912-5.215c1.952,0,4.16,0.608,4.768,1.088L274.088,18.609z");
+var path_k = txt_.path("M284.489,23.825v8.768l2.751,0.928V34h-8.063v-0.48l2.751-0.928V15.281l-2.56-0.8v-0.448h7.679v0.448   l-2.56,0.8v7.423h9.823v-7.423l-2.56-0.8v-0.448h7.68v0.448l-2.56,0.8v17.311l2.752,0.928V34h-8.063v-0.48l2.752-0.928v-8.768   H284.489z");
+var path_l = txt_.path("M315.432,32.72l1.312-3.52h0.544l-0.224,4.8h-14.559v-0.48l2.784-0.896V15.25l-2.656-0.768v-0.448h13.951   v3.808l-0.512,0.032l-1.024-2.72h-7.295v7.551h6.336l0.928-1.952l0.448,0.032L315.304,26h-0.512l-0.704-2.112h-6.336v8.832H315.432   z");
+var path_m = txt_.path("M332.936,18.609l-0.512-0.032l-0.608-2.24c-0.416-0.448-1.664-1.76-3.744-1.76   c-2.24,0-4.096,1.312-4.096,3.551c0,2.912,2.848,3.36,4.736,4c2.016,0.672,5.472,1.696,5.472,6.144   c0,3.808-2.976,6.175-6.848,6.175c-2.56,0-4.352-0.64-5.952-1.728l0.384-4.608l0.576,0.064l0.704,3.136   c0.672,0.96,2.144,2.272,4.607,2.272c1.952,0,4.16-1.504,4.16-4.671c0-3.168-3.167-4.096-4.479-4.448   c-2.24-0.608-5.824-1.664-5.824-5.44c0-3.52,2.944-5.215,6.912-5.215c1.952,0,4.16,0.608,4.768,1.088L332.936,18.609z");
+var path_n = txt_.path("M354.472,34h-8.768v-0.48l2.784-0.896V15.25l-2.656-0.768v-0.448h13.951v3.808l-0.512,0.032l-1.023-2.72   h-7.296v7.551h6.336l0.928-1.952l0.448,0.032L358.504,26h-0.512l-0.704-2.112h-6.336v8.671l3.52,0.96V34z");
+var path_o = txt_.path("M372.52,34.576c-5.76,0-9.567-3.712-9.567-10.943c0-6.176,4.032-9.919,9.567-9.919   c5.503,0,9.567,3.776,9.567,9.919C382.087,30.864,378.279,34.576,372.52,34.576z M372.52,14.642c-4.608,0-6.656,4.063-6.656,9.247   c0,5.28,2.08,9.759,6.656,9.759s6.719-4.576,6.719-9.759S377.127,14.642,372.52,14.642z");
+var path_p = txt_.path("M384.872,33.552l2.784-0.96V15.281l-2.56-0.8v-0.416c4.736,0,5.056-0.192,7.744-0.192   c4.352,0,6.399,1.376,6.399,4.416c0,3.52-3.072,4.736-6.144,4.928c4.832,1.344,6.016,7.775,7.999,9.312c0,0,1.473,0.576,2.88,0.96   L403.911,34l-5.344,0.064c-1.6-3.072-3.68-10.495-8.16-10.495h-0.192v9.119l2.24,0.864V34h-7.583V33.552z M390.792,22.769   c3.231,0,5.759-0.832,5.759-4.608c0-2.848-2.464-3.392-4.288-3.392c-1.152,0-2.048,0.192-2.048,0.192v7.808H390.792z");
+var path_q = txt_.path("M413.928,15.281l-2.656-0.8v-0.448h7.36v0.416l-1.792,0.672l5.567,7.903l5.76-7.936l-1.92-0.64v-0.416   h6.207v0.448l-2.495,0.64c-0.769,0.928-4.992,6.303-6.912,8.991v8.511l2.72,0.896V34h-8.031v-0.48l2.752-0.928v-8.224   C419.207,22.513,414.728,16.305,413.928,15.281z");
+var path_r = txt_.path("M443.335,34.576c-5.76,0-9.567-3.712-9.567-10.943c0-6.176,4.031-9.919,9.567-9.919   c5.504,0,9.567,3.776,9.567,9.919C452.902,30.864,449.095,34.576,443.335,34.576z M443.335,14.642   c-4.607,0-6.655,4.063-6.655,9.247c0,5.28,2.079,9.759,6.655,9.759c4.575,0,6.72-4.576,6.72-9.759S447.942,14.642,443.335,14.642z");
+var path_s = txt_.path("M458.055,26.544V15.281l-2.527-0.8v-0.448h7.647v0.448l-2.56,0.8V26.32c0,5.28,1.951,7.488,5.184,7.488   c2.943,0,5.184-2.208,5.184-7.488V15.281l-2.561-0.8v-0.448h7.552v0.448l-2.527,0.8v11.263c0,5.855-2.496,8.127-7.647,8.127   C460.646,34.672,458.055,32.4,458.055,26.544z");
+var path_t = txt_.path("M490.023,34v-0.48l2.751-0.928V15.122c-1.951,0-3.68,0-5.791,0.096l-1.12,2.528l-0.608-0.064   c0,0,0.192-1.76,0.288-3.872c2.816,0.16,4.96,0.224,7.936,0.224c3.136,0,6.176-0.096,9.439-0.16l0.064,4.032l-0.576,0.032   l-0.928-2.72c-1.024-0.096-2.656-0.096-4.128-0.096h-1.952v17.471l2.752,0.928V34H490.023z");
+var path_u = txt_.path("M510.534,23.825v8.768l2.752,0.928V34h-8.063v-0.48l2.752-0.928V15.281l-2.56-0.8v-0.448h7.68v0.448   l-2.561,0.8v7.423h9.823v-7.423l-2.56-0.8v-0.448h7.68v0.448l-2.56,0.8v17.311l2.752,0.928V34h-8.063v-0.48l2.751-0.928v-8.768   H510.534z");
+var path_v = txt_.path("M528.871,34v-0.48l2.752-0.928V15.281l-2.56-0.8v-0.448h7.711v0.448l-2.56,0.8v17.311l2.752,0.928V34   H528.871z");
+var path_w = txt_.path("M552.357,18.609l-0.512-0.032l-0.608-2.24c-0.416-0.448-1.664-1.76-3.743-1.76   c-2.24,0-4.096,1.312-4.096,3.551c0,2.912,2.848,3.36,4.735,4c2.016,0.672,5.472,1.696,5.472,6.144   c0,3.808-2.976,6.175-6.848,6.175c-2.56,0-4.352-0.64-5.951-1.728l0.384-4.608l0.576,0.064l0.703,3.136   c0.672,0.96,2.145,2.272,4.608,2.272c1.951,0,4.159-1.504,4.159-4.671c0-3.168-3.168-4.096-4.479-4.448   c-2.24-0.608-5.823-1.664-5.823-5.44c0-3.52,2.943-5.215,6.911-5.215c1.952,0,4.16,0.608,4.768,1.088L552.357,18.609z");
+var path_x = txt_.path("M577.638,18.609l-0.512-0.032l-0.608-2.24c-0.416-0.448-1.664-1.76-3.743-1.76   c-2.24,0-4.096,1.312-4.096,3.551c0,2.912,2.848,3.36,4.735,4c2.016,0.672,5.472,1.696,5.472,6.144   c0,3.808-2.976,6.175-6.848,6.175c-2.56,0-4.352-0.64-5.951-1.728l0.384-4.608l0.576,0.064l0.703,3.136   c0.672,0.96,2.145,2.272,4.608,2.272c1.951,0,4.159-1.504,4.159-4.671c0-3.168-3.168-4.096-4.479-4.448   c-2.24-0.608-5.823-1.664-5.823-5.44c0-3.52,2.943-5.215,6.911-5.215c1.952,0,4.16,0.608,4.768,1.088L577.638,18.609z");
+var path_y = txt_.path("M595.334,32.72l1.312-3.52h0.544l-0.224,4.8h-14.559v-0.48l2.783-0.896V15.25l-2.655-0.768v-0.448h13.951   v3.808l-0.513,0.032l-1.023-2.72h-7.296v7.551h6.336l0.928-1.952l0.448,0.032L595.206,26h-0.512l-0.704-2.112h-6.336v8.832H595.334   z");
+var path_z = txt_.path("M605.927,25.745l-2.368,7.007l1.855,0.8V34h-5.855v-0.448l2.336-0.896l6.527-18.623l2.496-0.16l6.56,18.75   l2.399,0.928V34h-7.104v-0.448l2.08-0.8l-2.399-7.007H605.927z M612.07,24.721l-2.912-8.64l-2.88,8.64H612.07z");
+var path_aa = txt_.path("M634.182,18.609l-0.512-0.032l-0.608-2.24c-0.416-0.448-1.664-1.76-3.743-1.76   c-2.24,0-4.096,1.312-4.096,3.551c0,2.912,2.848,3.36,4.735,4c2.016,0.672,5.472,1.696,5.472,6.144   c0,3.808-2.976,6.175-6.848,6.175c-2.56,0-4.352-0.64-5.951-1.728l0.384-4.608l0.576,0.064l0.703,3.136   c0.672,0.96,2.145,2.272,4.608,2.272c1.951,0,4.159-1.504,4.159-4.671c0-3.168-3.168-4.096-4.479-4.448   c-2.24-0.608-5.823-1.664-5.823-5.44c0-3.52,2.943-5.215,6.911-5.215c1.952,0,4.16,0.608,4.768,1.088L634.182,18.609z");
+var path_ab = txt_.path("M648.741,34.576c-5.76,0-9.567-3.712-9.567-10.943c0-6.176,4.031-9.919,9.567-9.919   c5.504,0,9.567,3.776,9.567,9.919C658.309,30.864,654.501,34.576,648.741,34.576z M648.741,14.642   c-4.607,0-6.655,4.063-6.655,9.247c0,5.28,2.079,9.759,6.655,9.759c4.575,0,6.72-4.576,6.72-9.759S653.349,14.642,648.741,14.642z");
+var path_ac = txt_.path("M666.885,14.033l10.399,15.871l-0.128-14.815l-1.855-0.608v-0.448h5.407v0.448l-2.016,0.608v19.327h-1.408   l-12.063-18.303l0.16,16.639l2.4,0.768V34h-6.528v-0.48l2.561-0.8V15.281l-2.24-0.8v-0.448H666.885z");
+
+
+
+
+var set = txt_.set();
+	set.push(path_b);
+    set.push(path_c);
+    set.push(path_d);
+    set.push(path_e);
+    set.push(path_f);
+    set.push(path_g);
+    set.push(path_h);
+    set.push(path_i);
+    set.push(path_j);
+	set.push(path_k);
+    set.push(path_l);
+	set.push(path_m);
+    set.push(path_n);
+    set.push(path_o);
+    set.push(path_p);
+    set.push(path_q);
+    set.push(path_r);
+    set.push(path_s);
+    set.push(path_t);
+    set.push(path_u);
+	set.push(path_v);
+    set.push(path_w);
+	set.push(path_x);
+    set.push(path_y);
+    set.push(path_z);
+	set.push(path_aa);
+	set.push(path_ab);
+    set.push(path_ac);
+
+	
+set.transform("s1,1,0,0");
+set.attr({'opacity': '0','stroke-width': '0','stroke-opacity': '0','fill': '#999999'});
+var anim = Raphael.animation({'opacity':'1'}, 5000, 'backOut'); 
+set.animate(anim.delay(12000));
+
+
+
+} 
+
+</script> 
+
+
+<script type="text/javascript">
+	window.onload = function() {
+		leaves();
+        jpmLogo();
+		txt_();
+	};
+
+
+
+function leaves() { 
+		
+var rsr = Raphael('rsr', '810', '550');
+
+
+var fillColor = {fill: '#A8996E','stroke-width': '0', 'opacity': '0', transform:'s0,0r-60,t-5,10'}
+var anim = Raphael.animation({'opacity': '0', 'opacity': '1', transform:'s1,1 r0'}, 1500, 'backOut');
+
+
+var path_a = rsr.path("M49.21,390.645c0,0,7.804-6.24-0.229-12.49C41.399,385.002,49.21,390.645,49.21,390.645");
+path_a.attr(fillColor);
+path_a.animate(anim.delay(750+Math.random()*6500));
+ 
+var path_b = rsr.path("M344.354,228.341c0,0,9.991-0.112,7.507-9.984C341.671,219.088,344.354,228.341,344.354,228.341");
+path_b.attr(fillColor);
+path_b.animate(anim.delay(750+Math.random()*6500));
+
+var path_c = rsr.path("M74.504,100.455c0,0-5.873-15.585-19.917-6.066C61.541,109.928,74.504,100.455,74.504,100.455");
+path_c.attr(fillColor);
+path_c.animate(anim.delay(750+Math.random()*6500));
+
+var path_d = rsr.path("M209.287,457.781c0,0-16.311,3.359-9.107,18.719C216.613,472.066,209.287,457.781,209.287,457.781");
+path_d.attr(fillColor);
+path_d.animate(anim.delay(750+Math.random()*6500));
+
+var path_e = rsr.path("M153.366,227.285c0,0-14.885,7.468-3.951,20.439C164.142,239.187,153.366,227.285,153.366,227.285");
+path_e.attr(fillColor);
+path_e.animate(anim.delay(750+Math.random()*6500));
+
+var path_f = rsr.path("M170.646,293.197c0,0-15.957,4.771-7.44,19.447C179.19,306.791,170.646,293.197,170.646,293.197");
+path_f.attr(fillColor);
+path_f.animate(anim.delay(750+Math.random()*6500));
+
+var path_g = rsr.path("M448.042,81.947c0,0-16.309,3.362-9.108,18.723C455.368,96.234,448.042,81.947,448.042,81.947");
+path_g.attr(fillColor);
+path_g.animate(anim.delay(750+Math.random()*6500));
+
+var path_h = rsr.path("M237.766,108.832c0,0-14.886,7.469-3.951,20.441C248.541,120.734,237.766,108.832,237.766,108.832");
+path_h.attr(fillColor);
+path_h.animate(anim.delay(750+Math.random()*6500));
+
+var path_i = rsr.path("M476.56,73.693c0,0-15.807-5.244-17.25,11.66C475.759,89.73,476.56,73.693,476.56,73.693");
+path_i.attr(fillColor);
+path_i.animate(anim.delay(750+Math.random()*6500));
+
+var path_j = rsr.path("M359.355,111.869c0,0-4.968,15.895,11.957,17.041C375.401,112.388,359.355,111.869,359.355,111.869");
+path_j.attr(fillColor);
+path_j.animate(anim.delay(750+Math.random()*6500));
+
+var path_k = rsr.path("M91.774,281.084c0,0-16.541,1.928-10.704,17.859C97.829,295.955,91.774,281.084,91.774,281.084");
+path_k.attr(fillColor);
+path_k.animate(anim.delay(750+Math.random()*6500));
+
+var path_l = rsr.path("M250.254,166.61c0,0-7.554,3.79-2.005,10.373C255.723,172.65,250.254,166.61,250.254,166.61");
+path_l.attr(fillColor);
+path_l.animate(anim.delay(750+Math.random()*6500));
+
+var path_m = rsr.path("M648.86,109.167c0,0-10.104,13.239,5.409,20.106C663.763,115.143,648.86,109.167,648.86,109.167");
+path_m.attr(fillColor);
+path_m.animate(anim.delay(750+Math.random()*6500));
+
+var path_n = rsr.path("M718.986,206.678c0,0-14.885,7.469-3.95,20.441C729.761,218.58,718.986,206.678,718.986,206.678");
+path_n.attr(fillColor);
+path_n.animate(anim.delay(750+Math.random()*6500));
+
+var path_o = rsr.path("M738.73,376.959c0,0-14.887,7.469-3.952,20.439C749.503,388.861,738.73,376.959,738.73,376.959");
+path_o.attr(fillColor);
+path_o.animate(anim.delay(750+Math.random()*6500));
+
+var path_p = rsr.path("M332.19,41.488c0,0-15.806-5.244-17.248,11.659C331.393,57.524,332.19,41.488,332.19,41.488");
+path_p.attr(fillColor);
+path_p.animate(anim.delay(750+Math.random()*6500));
+
+var path_q = rsr.path("M606.963,356.955c0,0-15.805-5.242-17.246,11.662C606.166,372.992,606.963,356.955,606.963,356.955");
+path_q.attr(fillColor);
+path_q.animate(anim.delay(750+Math.random()*6500));
+
+var path_r = rsr.path("M148.544,39.514c0,0,15.806-5.243,17.249,11.66C149.342,55.551,148.544,39.514,148.544,39.514");
+path_r.attr(fillColor);
+path_r.animate(anim.delay(750+Math.random()*6500));
+
+var path_s = rsr.path("M113.405,145.136c0,0,15.806-5.243,17.249,11.659C114.203,161.172,113.405,145.136,113.405,145.136");
+path_s.attr(fillColor);
+path_s.animate(anim.delay(750+Math.random()*6500));
+
+var path_t = rsr.path("M260.403,125.572c0,0,11.066-12.443,20.769,1.475C269.111,139.061,260.403,125.572,260.403,125.572");
+path_t.attr(fillColor);
+path_t.animate(anim.delay(750+Math.random()*6500));
+
+var path_u = rsr.path("M257.412,276.971c0,0-6.602-15.29,10.112-18.199C273.316,274.779,257.412,276.971,257.412,276.971");
+path_u.attr(fillColor);
+path_u.animate(anim.delay(750+Math.random()*6500));
+
+var path_v = rsr.path("M187.661,56.912c0,0-15.806-5.244-17.249,11.659C186.862,72.949,187.661,56.912,187.661,56.912");
+path_v.attr(fillColor);
+path_v.animate(anim.delay(750+Math.random()*6500));
+
+var path_w = rsr.path("M206.966,116.496c0,0-15.806-5.244-17.248,11.66C206.168,132.53,206.966,116.496,206.966,116.496");
+path_w.attr(fillColor);
+path_w.animate(anim.delay(750+Math.random()*6500));
+
+var path_x = rsr.path("M293.215,188.147c0,0-16.653-0.103-12.801,16.419C297.41,203.642,293.215,188.147,293.215,188.147");
+path_x.attr(fillColor);
+path_x.animate(anim.delay(750+Math.random()*6500));
+
+var path_y = rsr.path("M350.582,281.9c0,0-4.968,15.893,11.96,17.041C366.626,282.416,350.582,281.9,350.582,281.9");
+path_y.attr(fillColor);
+path_y.animate(anim.delay(750+Math.random()*6500));
+
+var path_z = rsr.path("M461.957,252.127c0,0-4.967,15.895,11.962,17.041C478.005,252.646,461.957,252.127,461.957,252.127");
+path_z.attr(fillColor);
+path_z.animate(anim.delay(750+Math.random()*6500));
+
+var path_aa = rsr.path("M375.712,47.449c0,0-11.065-12.443-20.767,1.475C367.005,60.938,375.712,47.449,375.712,47.449");
+path_aa.attr(fillColor);
+path_aa.animate(anim.delay(750+Math.random()*6500));
+
+var path_ab = rsr.path("M289.795,13.725c0,0-15.807-5.244-17.25,11.66C288.998,29.764,289.795,13.725,289.795,13.725");
+path_ab.attr(fillColor);
+path_ab.animate(anim.delay(750+Math.random()*6500));
+
+var path_ac = rsr.path("M638.609,45.752c0,0-9.705-13.533-20.809-0.705C628.539,58.256,638.609,45.752,638.609,45.752");
+path_ac.attr(fillColor);
+path_ac.animate(anim.delay(750+Math.random()*6500));
+
+var path_ad = rsr.path("M57.299,354.943c0,0,16.549,1.842,14.448-14.992C54.746,339.092,57.299,354.943,57.299,354.943");
+path_ad.attr(fillColor);
+path_ad.animate(anim.delay(750+Math.random()*6500));
+
+var path_ae = rsr.path("M72.787,408.951c0,0,16.267,3.564,15.936-13.4C71.903,392.922,72.787,408.951,72.787,408.951");
+path_ae.attr(fillColor);
+path_ae.animate(anim.delay(750+Math.random()*6500));
+
+var path_af = rsr.path("M74.547,219.959c0,0-13.584-9.637-19.906,6.105C69.096,235.061,74.547,219.959,74.547,219.959");
+path_af.attr(fillColor);
+path_af.animate(anim.delay(750+Math.random()*6500));
+
+var path_ag = rsr.path("M160.246,95.105c0,0-16.653-0.103-12.801,16.418C164.443,110.6,160.246,95.105,160.246,95.105");
+path_ag.attr(fillColor);
+path_ag.animate(anim.delay(750+Math.random()*6500));
+
+var path_ah = rsr.path("M173.047,3.129c0,0-16.654-0.102-12.801,16.419C177.244,18.628,173.047,3.129,173.047,3.129");
+path_ah.attr(fillColor);
+path_ah.animate(anim.delay(750+Math.random()*6500));
+
+var path_ai = rsr.path("M466.851,15.771c0,0-1.264,16.606,15.487,13.916C482.604,12.664,466.851,15.771,466.851,15.771");
+path_ai.attr(fillColor);
+path_ai.animate(anim.delay(750+Math.random()*6500));
+
+var path_aj = rsr.path("M105.984,306.955c0,0-14.885,7.467-3.951,20.441C116.76,318.855,105.984,306.955,105.984,306.955");
+path_aj.attr(fillColor);
+path_aj.animate(anim.delay(750+Math.random()*6500));
+
+var path_ak = rsr.path("M664.136,261.175c0,0-10.104,13.237,5.41,20.106C679.036,267.148,664.136,261.175,664.136,261.175");
+path_ak.attr(fillColor);
+path_ak.animate(anim.delay(750+Math.random()*6500));
+
+var path_al = rsr.path("M679.216,373.873c0,0-10.105,13.24,5.409,20.107C694.116,379.848,679.216,373.873,679.216,373.873");
+path_al.attr(fillColor);
+path_al.animate(anim.delay(750+Math.random()*6500));
+
+var path_am = rsr.path("M536.577,404.969c0,0-10.104,13.238,5.411,20.105C551.478,410.943,536.577,404.969,536.577,404.969");
+path_am.attr(fillColor);
+path_am.animate(anim.delay(750+Math.random()*6500));
+
+var path_an = rsr.path("M767.95,405.668c0,0-7.394,14.922,9.146,18.701C783.719,408.689,767.95,405.668,767.95,405.668");
+path_an.attr(fillColor);
+path_an.animate(anim.delay(750+Math.random()*6500));
+
+var path_ao = rsr.path("M762.892,485.193c0,0-12.689-10.783-20.36,4.35C756.145,499.76,762.892,485.193,762.892,485.193");
+path_ao.attr(fillColor);
+path_ao.animate(anim.delay(750+Math.random()*6500));
+
+var path_ap = rsr.path("M738.028,252.127c0,0-4.969,15.895,11.96,17.041C754.075,252.646,738.028,252.127,738.028,252.127");
+path_ap.attr(fillColor);
+path_ap.animate(anim.delay(750+Math.random()*6500));
+
+var path_aq = rsr.path("M745.049,312.643c0,0-13.359,9.939-0.343,20.816C757.729,322.492,745.049,312.643,745.049,312.643");
+path_aq.attr(fillColor);
+path_aq.animate(anim.delay(750+Math.random()*6500));
+
+var path_ar = rsr.path("M637.057,132.029c0,0-10.107,13.238,5.407,20.106C651.957,138.003,637.057,132.029,637.057,132.029");
+path_ar.attr(fillColor);
+path_ar.animate(anim.delay(750+Math.random()*6500));
+
+var path_as = rsr.path("M742.012,135.484c0,0-10.104,13.238,5.409,20.105C756.912,141.459,742.012,135.484,742.012,135.484");
+path_as.attr(fillColor);
+path_as.animate(anim.delay(750+Math.random()*6500));
+
+var path_at = rsr.path("M716.906,99.185c0,0-9.704-13.534-20.809-0.706C706.834,111.688,716.906,99.185,716.906,99.185");
+path_at.attr(fillColor);
+path_at.animate(anim.delay(750+Math.random()*6500));
+
+var path_au = rsr.path("M614.235,12.754c0,0-14.924-7.395-18.703,9.145C611.216,28.522,614.235,12.754,614.235,12.754");
+path_au.attr(fillColor);
+path_au.animate(anim.delay(750+Math.random()*6500));
+
+var path_av = rsr.path("M384.709,176.973c0,0-6.602,15.289,10.112,18.197C400.614,179.164,384.709,176.973,384.709,176.973");
+path_av.attr(fillColor);
+path_av.animate(anim.delay(750+Math.random()*6500));
+
+var path_aw = rsr.path("M564.576,76.125c0,0-15.807-5.244-17.25,11.66C563.776,92.162,564.576,76.125,564.576,76.125");
+path_aw.attr(fillColor);
+path_aw.animate(anim.delay(750+Math.random()*6500));
+
+var path_ax = rsr.path("M277.651,221.296c0,0-15.806-5.243-17.248,11.659C276.854,237.332,277.651,221.296,277.651,221.296");
+path_ax.attr(fillColor);
+path_ax.animate(anim.delay(750+Math.random()*6500));
+
+var path_ay = rsr.path("M475.263,181.796c0,0-4.967,15.895,11.962,17.042C491.312,182.314,475.263,181.796,475.263,181.796");
+path_ay.attr(fillColor);
+path_ay.animate(anim.delay(750+Math.random()*6500));
+
+var path_az = rsr.path("M561.905,16.09c0,0-10.104,13.238,5.409,20.105C576.808,22.064,561.905,16.09,561.905,16.09");
+path_az.attr(fillColor);
+path_az.animate(anim.delay(750+Math.random()*6500));
+
+var path_ba = rsr.path("M691.724,154.748c0,0-13.911-9.157-19.679,6.799C686.804,170.03,691.724,154.748,691.724,154.748");
+path_ba.attr(fillColor);
+path_ba.animate(anim.delay(750+Math.random()*6500));
+
+var path_bb = rsr.path("M248.106,42.257c0,0,3.848-16.204-13.117-16.166C232.062,42.859,248.106,42.257,248.106,42.257");
+path_bb.attr(fillColor);
+path_bb.animate(anim.delay(750+Math.random()*6500));
+
+var path_bc = rsr.path("M292.901,344.613c0,0-6.602-15.289,10.113-18.199C308.809,342.422,292.901,344.613,292.901,344.613");
+path_bc.attr(fillColor);
+path_bc.animate(anim.delay(750+Math.random()*6500));
+
+var path_bd = rsr.path("M243.858,159.609c0,0-15.956,4.771-7.441,19.446C252.403,173.203,243.858,159.609,243.858,159.609");
+path_bd.attr(fillColor);
+path_bd.animate(anim.delay(750+Math.random()*6500));
+
+var path_be = rsr.path("M297.138,162.672c0,0-11.065-12.444-20.767,1.474C288.431,176.16,297.138,162.672,297.138,162.672");
+path_be.attr(fillColor);
+path_be.animate(anim.delay(750+Math.random()*6500));
+
+var path_bf = rsr.path("M345.428,246.621c0,0-3.362-16.31-18.723-9.106C331.141,253.949,345.428,246.621,345.428,246.621");
+path_bf.attr(fillColor);
+path_bf.animate(anim.delay(750+Math.random()*6500));
+
+var path_bg = rsr.path("M565.916,232.24c0,0-11.067-12.443-20.768,1.475C557.206,245.729,565.916,232.24,565.916,232.24");
+path_bg.attr(fillColor);
+path_bg.animate(anim.delay(750+Math.random()*6500));
+
+var path_bh = rsr.path("M628.204,75.492c0,0-11.065-12.443-20.768,1.475C619.498,88.98,628.204,75.492,628.204,75.492");
+path_bh.attr(fillColor);
+path_bh.animate(anim.delay(750+Math.random()*6500));
+
+var path_bi = rsr.path("M718.461,139.717c0,0-15.807-5.243-17.248,11.66C717.663,155.754,718.461,139.717,718.461,139.717");
+path_bi.attr(fillColor);
+path_bi.animate(anim.delay(750+Math.random()*6500));
+
+var path_bj = rsr.path("M495.41,58.107c0,0-5.243,15.807,11.66,17.25C511.448,58.906,495.41,58.107,495.41,58.107");
+path_bj.attr(fillColor);
+path_bj.animate(anim.delay(750+Math.random()*6500));
+
+var path_bk = rsr.path("M642.694,181.796c0,0-5.243,15.806,11.66,17.249C658.73,182.595,642.694,181.796,642.694,181.796");
+path_bk.attr(fillColor);
+path_bk.animate(anim.delay(750+Math.random()*6500));
+
+var path_bl = rsr.path("M751.353,176.973c0,0-5.244,15.806,11.66,17.248C767.389,177.77,751.353,176.973,751.353,176.973");
+path_bl.attr(fillColor);
+path_bl.animate(anim.delay(750+Math.random()*6500));
+
+var path_bm = rsr.path("M499.052,231.658c0,0-11.643,11.907,2.915,20.613C513.111,239.404,499.052,231.658,499.052,231.658");
+path_bm.attr(fillColor);
+path_bm.animate(anim.delay(750+Math.random()*6500));
+
+var path_bn = rsr.path("M212.528,181.973c0,0-13.585-9.635-19.906,6.107C207.078,197.076,212.528,181.973,212.528,181.973");
+path_bn.attr(fillColor);
+path_bn.animate(anim.delay(750+Math.random()*6500));
+
+var path_bo = rsr.path("M661.482,301.859c0,0-13.586-9.635-19.908,6.109C656.03,316.963,661.482,301.859,661.482,301.859");
+path_bo.attr(fillColor);
+path_bo.animate(anim.delay(750+Math.random()*6500));
+
+var path_bp = rsr.path("M584.182,296.545c0,0-13.362,9.941-0.342,20.818C596.86,306.398,584.182,296.545,584.182,296.545");
+path_bp.attr(fillColor);
+path_bp.animate(anim.delay(750+Math.random()*6500));
+
+var path_bq = rsr.path("M593.209,334.008c0,0-3.077-16.367-18.561-9.434C578.798,341.082,593.209,334.008,593.209,334.008");
+path_bq.attr(fillColor);
+path_bq.animate(anim.delay(750+Math.random()*6500));
+
+var path_br = rsr.path("M179.263,144.032c0,0-3.076-16.367-18.561-9.433C164.854,151.111,179.263,144.032,179.263,144.032");
+path_br.attr(fillColor);
+path_br.animate(anim.delay(750+Math.random()*6500));
+
+var path_bs = rsr.path("M107.287,456.27c0,0-3.076-16.367-18.561-9.432C92.876,463.348,107.287,456.27,107.287,456.27");
+path_bs.attr(fillColor);
+path_bs.animate(anim.delay(750+Math.random()*6500));
+
+var path_bt = rsr.path("M160.703,465.877c0,0-9.939-13.363-20.815-0.344C150.852,478.557,160.703,465.877,160.703,465.877");
+path_bt.attr(fillColor);
+path_bt.animate(anim.delay(750+Math.random()*6500));
+
+var path_bu = rsr.path("M143.565,315.285c0,0,7.468,14.885,20.44,3.949C155.468,304.508,143.565,315.285,143.565,315.285");
+path_bu.attr(fillColor);
+path_bu.animate(anim.delay(750+Math.random()*6500));
+
+var path_bv = rsr.path("M41.369,312.883c0,0-11.003,12.5,3.995,20.434C55.819,319.883,41.369,312.883,41.369,312.883");
+path_bv.attr(fillColor);
+path_bv.animate(anim.delay(750+Math.random()*6500));
+
+var path_bw = rsr.path("M276.379,36.195c0,0-15.958,4.771-7.44,19.445C284.923,49.789,276.379,36.195,276.379,36.195");
+path_bw.attr(fillColor);
+path_bw.animate(anim.delay(750+Math.random()*6500));
+
+var path_bx = rsr.path("M260.179,49.883c0,0-15.955,4.771-7.439,19.445C268.723,63.478,260.179,49.883,260.179,49.883");
+path_bx.attr(fillColor);
+path_bx.animate(anim.delay(750+Math.random()*6500));
+
+var path_by = rsr.path("M654.258,25.178c0,0-12.25,11.281,1.836,20.738C667.896,33.65,654.258,25.178,654.258,25.178");
+path_by.attr(fillColor);
+path_by.animate(anim.delay(750+Math.random()*6500));
+
+var path_bz = rsr.path("M681.155,67.25c0,0-7.651,14.79,8.821,18.86C696.87,70.546,681.155,67.25,681.155,67.25");
+path_bz.attr(fillColor);
+path_bz.animate(anim.delay(750+Math.random()*6500));
+
+var path_ca = rsr.path("M614.164,115.758c0,0-16.48-2.42-14.964,14.477C616.157,131.688,614.164,115.758,614.164,115.758");
+path_ca.attr(fillColor);
+path_ca.animate(anim.delay(750+Math.random()*6500));
+
+var path_cb = rsr.path("M723.473,281.281c0,0-9.788,2.016-5.464,11.234C727.869,289.852,723.473,281.281,723.473,281.281");
+path_cb.attr(fillColor);
+path_cb.animate(anim.delay(750+Math.random()*6500));
+
+var path_cc = rsr.path("M691.62,224.167c0,0-7.915,6.103,0.012,12.492C699.329,229.945,691.62,224.167,691.62,224.167");
+path_cc.attr(fillColor);
+path_cc.animate(anim.delay(750+Math.random()*6500));
+
+var path_cd = rsr.path("M560.029,208.156c0,0-9.89-1.452-8.981,8.687C561.229,217.715,560.029,208.156,560.029,208.156");
+path_cd.attr(fillColor);
+path_cd.animate(anim.delay(750+Math.random()*6500));
+
+var path_ce = rsr.path("M771.566,353.637c0,0-8.504,5.242-1.289,12.424C778.629,360.188,771.566,353.637,771.566,353.637");
+path_ce.attr(fillColor);
+path_ce.animate(anim.delay(750+Math.random()*6500));
+
+var path_cf = rsr.path("M707.385,389.012c0,0-4.326-9.006-12.222-2.588C700.132,395.35,707.385,389.012,707.385,389.012");
+path_cf.attr(fillColor);
+path_cf.animate(anim.delay(750+Math.random()*6500));
+
+var path_cg = rsr.path("M764.724,526.322c0,0-3.686-9.287-12.011-3.428C757.045,532.141,764.724,526.322,764.724,526.322");
+path_cg.attr(fillColor);
+path_cg.animate(anim.delay(750+Math.random()*6500));
+
+var path_ch = rsr.path("M762.275,327.301c0,0-9.761-2.139-9.561,8.039C762.805,336.918,762.275,327.301,762.275,327.301");
+path_ch.attr(fillColor);
+path_ch.animate(anim.delay(750+Math.random()*6500));
+
+var path_ci = rsr.path("M780.39,204.294c0,0-3.845-9.222-12.069-3.22C772.815,210.245,780.39,204.294,780.39,204.294");
+path_ci.attr(fillColor);
+path_ci.animate(anim.delay(750+Math.random()*6500));
+
+var path_cj = rsr.path("M673.97,124.625c0,0-4.745,8.792,5.092,11.407C683.36,126.769,673.97,124.625,673.97,124.625");
+path_cj.attr(fillColor);
+path_cj.animate(anim.delay(750+Math.random()*6500));
+
+var path_ck = rsr.path("M567.94,89.775c0,0-4.746,8.793,5.092,11.408C577.333,91.917,567.94,89.775,567.94,89.775");
+path_ck.attr(fillColor);
+path_ck.animate(anim.delay(750+Math.random()*6500));
+
+var path_cl = rsr.path("M552.745,123.717c0,0-8.509,5.24-1.293,12.424C559.808,130.266,552.745,123.717,552.745,123.717");
+path_cl.attr(fillColor);
+path_cl.animate(anim.delay(750+Math.random()*6500));
+
+var path_cm = rsr.path("M720.001,69.523c0,0-8.506,5.242-1.292,12.424C727.063,76.074,720.001,69.523,720.001,69.523");
+path_cm.attr(fillColor);
+path_cm.animate(anim.delay(750+Math.random()*6500));
+
+var path_cn = rsr.path("M668.947,44.87c0,0-7.467,6.641,0.883,12.459C677.041,50.094,668.947,44.87,668.947,44.87");
+path_cn.attr(fillColor);
+path_cn.animate(anim.delay(750+Math.random()*6500));
+
+var path_co = rsr.path("M483.125,241.965c0,0-9.787,2.017-5.465,11.235C487.519,250.535,483.125,241.965,483.125,241.965");
+path_co.attr(fillColor);
+path_co.animate(anim.delay(750+Math.random()*6500));
+
+var path_cp = rsr.path("M380.542,69.116c0,0-9.76-2.14-9.561,8.039C381.073,78.736,380.542,69.116,380.542,69.116");
+path_cp.attr(fillColor);
+path_cp.animate(anim.delay(750+Math.random()*6500));
+
+var path_cq = rsr.path("M450.061,19.146c0,0-6.063,7.943,3.245,12.062C459.001,22.73,450.061,19.146,450.061,19.146");
+path_cq.attr(fillColor);
+path_cq.animate(anim.delay(750+Math.random()*6500));
+
+var path_cr = rsr.path("M356.3,16.159c0,0-9.99,0.112-7.508,9.985C358.981,25.412,356.3,16.159,356.3,16.159");
+path_cr.attr(fillColor);
+path_cr.animate(anim.delay(750+Math.random()*6500));
+
+var path_cs = rsr.path("M217.777,91.244c0,0-9.224,3.848-3.221,12.07C223.729,98.82,217.777,91.244,217.777,91.244");
+path_cs.attr(fillColor);
+path_cs.animate(anim.delay(750+Math.random()*6500));
+
+var path_ct = rsr.path("M184.586,11.258c0,0-6.064,7.943,3.245,12.064C193.527,14.843,184.586,11.258,184.586,11.258");
+path_ct.attr(fillColor);
+path_ct.animate(anim.delay(750+Math.random()*6500));
+
+var path_cu = rsr.path("M298.924,110.25c0,0-9.225,3.846-3.223,12.069C304.875,117.824,298.924,110.25,298.924,110.25");
+path_cu.attr(fillColor);
+path_cu.animate(anim.delay(750+Math.random()*6500));
+
+var path_cv = rsr.path("M151.609,348.83c0,0,7.019,7.109,12.396-1.535C156.403,340.475,151.609,348.83,151.609,348.83");
+path_cv.attr(fillColor);
+path_cv.animate(anim.delay(750+Math.random()*6500));
+
+var path_cw = rsr.path("M206.328,208.779c0,0,7.022,7.109,12.397-1.535C211.123,200.424,206.328,208.779,206.328,208.779");
+path_cw.attr(fillColor);
+path_cw.animate(anim.delay(750+Math.random()*6500));
+
+var path_cx = rsr.path("M382.791,292.895c0,0,4.791,8.77,12.339,1.941C389.7,286.184,382.791,292.895,382.791,292.895");
+path_cx.attr(fillColor);
+path_cx.animate(anim.delay(750+Math.random()*6500));
+
+var path_cy = rsr.path("M134.525,157.091c0,0,4.791,8.77,12.34,1.942C141.437,150.381,134.525,157.091,134.525,157.091");
+path_cy.attr(fillColor);
+path_cy.animate(anim.delay(750+Math.random()*6500));
+
+var path_cz = rsr.path("M67.005,210.469c0,0,8.71,4.898,11.494-4.893C69.311,201.115,67.005,210.469,67.005,210.469");
+path_cz.attr(fillColor);
+path_cz.animate(anim.delay(750+Math.random()*6500));
+
+var path_da = rsr.path("M122.933,211.529c0,0,9.817-1.846,5.66-11.135C118.687,202.883,122.933,211.529,122.933,211.529");
+path_da.attr(fillColor);
+path_da.animate(anim.delay(750+Math.random()*6500));
+
+var path_db = rsr.path("M111.388,262.546c0,0,6.064-7.942-3.244-12.063C102.447,258.961,111.388,262.546,111.388,262.546");
+path_db.attr(fillColor);
+path_db.animate(anim.delay(750+Math.random()*6500));
+
+var path_dc = rsr.path("M50.065,295.988c0,0,9.819-1.846,5.66-11.137C45.819,287.342,50.065,295.988,50.065,295.988");
+path_dc.attr(fillColor);
+path_dc.animate(anim.delay(750+Math.random()*6500));
+
+var path_dd = rsr.path("M134.784,487.523c0,0,9.932,1.105,8.668-8.996C133.252,478.014,134.784,487.523,134.784,487.523");
+path_dd.attr(fillColor);
+path_dd.animate(anim.delay(750+Math.random()*6500));
+
+var path_de = rsr.path("M175.144,515.689c0,0-1.849-9.818-11.136-5.658C166.496,519.938,175.144,515.689,175.144,515.689");
+path_de.attr(fillColor);
+path_de.animate(anim.delay(750+Math.random()*6500));
+
+var path_df = rsr.path("M152.109,409.74c0,0,9.224-3.846,3.22-12.07C146.16,402.166,152.109,409.74,152.109,409.74");
+path_df.attr(fillColor);
+path_df.animate(anim.delay(750+Math.random()*6500));
+
+var path_dg = rsr.path("M51.75,209.938c0,0,9.819-1.846,5.66-11.136C47.506,201.291,51.75,209.938,51.75,209.938");
+path_dg.attr(fillColor);
+path_dg.animate(anim.delay(750+Math.random()*6500));
+
+var path_dh = rsr.path("M93.942,32.364c0,0,8.416-5.39,1.078-12.446C86.765,25.939,93.942,32.364,93.942,32.364");
+path_dh.attr(fillColor);
+path_dh.animate(anim.delay(750+Math.random()*6500));
+
+var path_di = rsr.path("M112.484,55.35c0,0-6.511-7.58-12.474,0.666C107.116,63.348,112.484,55.35,112.484,55.35");
+path_di.attr(fillColor);
+path_di.animate(anim.delay(750+Math.random()*6500));
+
+var path_dj = rsr.path("M80.728,106.241c0,0,9.819-1.847,5.66-11.136C76.479,97.594,80.728,106.241,80.728,106.241");
+path_dj.attr(fillColor);
+path_dj.animate(anim.delay(750+Math.random()*6500));
+
+var path_dk = rsr.path("M99.414,186.072c0,0,8.417-5.39,1.076-12.446C92.237,179.646,99.414,186.072,99.414,186.072");
+path_dk.attr(fillColor);
+path_dk.animate(anim.delay(750+Math.random()*6500));
+
+var path_dl = rsr.path("M572.499,352.652c0,0-19.944,5.961-9.301,24.305C583.18,369.645,572.499,352.652,572.499,352.652");
+path_dl.attr(fillColor);
+path_dl.animate(anim.delay(750+Math.random()*6500));
+
+var path_dm = rsr.path("M725.47,147.234c0,0-15.312,14.104,2.296,25.924C742.518,157.824,725.47,147.234,725.47,147.234");
+path_dm.attr(fillColor);
+path_dm.animate(anim.delay(750+Math.random()*6500));
+
+var path_dn = rsr.path("M505.604,13.099c0,0-3.743,20.478,17.433,19.321C525.589,11.295,505.604,13.099,505.604,13.099");
+path_dn.attr(fillColor);
+path_dn.animate(anim.delay(750+Math.random()*6500));
+
+var path_do = rsr.path("M117.585,19.918c0,0-20.39,4.202-11.384,23.402C126.744,37.775,117.585,19.918,117.585,19.918");
+path_do.attr(fillColor);
+path_do.animate(anim.delay(750+Math.random()*6500));
+
+var path_dp = rsr.path("M151.88,167.336c0,0-19.349,7.68-7.147,25.025C164.001,183.332,151.88,167.336,151.88,167.336");
+path_dp.attr(fillColor);
+path_dp.animate(anim.delay(750+Math.random()*6500));
+
+var path_dq = rsr.path("M387.087,12.799c0,0-8.253,19.11,12.641,22.748C406.968,15.539,387.087,12.799,387.087,12.799");
+path_dq.attr(fillColor);
+path_dq.animate(anim.delay(750+Math.random()*6500));
+
+var path_dr = rsr.path("M40.852,402.262c0,0-5.512,20.076,15.684,20.768C60.922,402.209,40.852,402.262,40.852,402.262");
+path_dr.attr(fillColor);
+path_dr.animate(anim.delay(750+Math.random()*6500));
+
+var path_ds = rsr.path("M206.966,307.602c0,0-19.64-6.896-21.812,14.197C205.619,327.625,206.966,307.602,206.966,307.602");
+path_ds.attr(fillColor);
+path_ds.animate(anim.delay(750+Math.random()*6500));
+
+var path_dt = rsr.path("M792.901,277.518c0,0-7.676-19.349-25.024-7.146C776.906,289.637,792.901,277.518,792.901,277.518");
+path_dt.attr(fillColor);
+path_dt.animate(anim.delay(750+Math.random()*6500));
+
+var path_du = rsr.path("M742.45,453.986c0,0,19.756,6.557,21.559-14.576C743.447,433.941,742.45,453.986,742.45,453.986");
+path_du.attr(fillColor);
+path_du.animate(anim.delay(750+Math.random()*6500));
+
+var path_dv = rsr.path("M642.481,82.266c0,0,8.35,19.068,25.259,6.27C658.046,69.594,642.481,82.266,642.481,82.266");
+path_dv.attr(fillColor);
+path_dv.animate(anim.delay(750+Math.random()*6500));
+
+
+}
+	
+
+
+
+
+
+	
+	
+	
+function jpmLogo(){
+
+var jpm = Raphael('jpm', '200', '50');
+
+var path_a = jpm.path("M11.063,1.218H5.325v0.489h1.828v9.52c0,2.862-0.794,3.667-2.562,3.667c-1.114,0-1.296-0.846-1.296-1.283  c0-1.039-0.058-1.676-1.007-1.676c-0.953,0-1.064,0.963-1.064,1.255c0,1.312,0.583,2.316,3.188,2.316  c3.106,0,4.765-1.05,4.765-4.531V1.704l1.888,0.003V1.218z");
+path_a.attr({fill: '#54301B','stroke-width': '0','stroke-opacity': '1'}).data('id', 'path_a');
+
+var path_b = jpm.path("M11.833,13.296c-0.319,0-0.583,0.102-0.799,0.32c-0.221,0.222-0.331,0.481-0.331,0.799  s0.11,0.574,0.333,0.784c0.222,0.219,0.487,0.323,0.796,0.323c0.315,0,0.58-0.104,0.807-0.323c0.22-0.21,0.33-0.467,0.33-0.784  c0-0.32-0.11-0.583-0.33-0.799C12.422,13.397,12.158,13.296,11.833,13.296");
+path_b.attr({fill: '#54301B','stroke-width': '0','stroke-opacity': '1'}).data('id', 'path_b');
+
+var path_c = jpm.path("M24.575,13.296c-0.316,0-0.581,0.102-0.798,0.32c-0.22,0.222-0.324,0.481-0.324,0.799  s0.104,0.574,0.324,0.784c0.231,0.219,0.49,0.323,0.798,0.323c0.32,0,0.586-0.104,0.812-0.323c0.221-0.21,0.33-0.467,0.33-0.784  c0-0.32-0.109-0.583-0.329-0.799C25.165,13.397,24.896,13.296,24.575,13.296");
+path_c.attr({fill: '#54301B','stroke-width': '0','stroke-opacity': '1'}).data('id', 'path_c');
+
+var path_d = jpm.path("M20.577,1.218h-5.618l0,0.489h1.65v10.859c0,0.855-0.052,1.077-0.147,1.323  c-0.103,0.276-0.333,0.495-0.675,0.635c-0.254,0.109-0.64,0.164-1.152,0.181v0.448h6.047v-0.446  c-0.512-0.014-0.903-0.07-1.159-0.161c-0.36-0.142-0.596-0.353-0.71-0.637c-0.1-0.244-0.152-0.46-0.152-0.889v-3.72l1.498-0.005  c4.345,0,5.565-1.715,5.565-4.056C25.725,2.875,24.978,1.218,20.577,1.218 M19.81,8.763h-1.147V1.77l1.04-0.014  c3.353,0,4.084,1.379,4.084,3.612C23.786,7.616,22.468,8.763,19.81,8.763");
+path_d.attr({fill: '#54301B','stroke-width': '0','stroke-opacity': '1'}).data('id', 'path_d');
+
+var path_e = jpm.path("M43.643,13.854c-0.079-0.252-0.118-0.559-0.118-0.949V1.707c0,0,1.474-0.009,1.457-0.014  c-0.017,0,0-0.443,0-0.443h-3.566c-0.051,0.129-4.26,10.616-4.26,10.616c-0.018,0.038-0.056,0.062-0.095,0.062  c-0.048,0-0.086-0.024-0.101-0.062c0,0-4.486-10.487-4.537-10.616h-3.956v0.448h1.717v10.786c0,0-0.037,0.979-0.037,0.981  c-0.027,0.26-0.109,0.489-0.235,0.676c-0.134,0.199-0.351,0.353-0.634,0.451c-0.188,0.062-0.465,0.104-0.81,0.112v0.448h3.925V14.71  c-0.333-0.014-0.478-0.046-0.673-0.112c-0.289-0.096-0.504-0.237-0.648-0.442c-0.127-0.191-0.21-0.419-0.239-0.689l-0.045-0.981  V3.167h0.231c0,0,5.079,11.854,5.132,11.986h0.424L41.38,3.299h0.122v9.606c0,0.41-0.042,0.728-0.122,0.974  c-0.094,0.287-0.299,0.506-0.596,0.65c-0.22,0.099-0.557,0.156-1,0.176v0.448h5.48v-0.448c-0.438-0.022-0.776-0.082-1.006-0.184  C43.94,14.365,43.733,14.142,43.643,13.854");
+path_e.attr({fill: '#54301B','stroke-width': '0','stroke-opacity': '1'}).data('id', 'path_e');
+
+var path_f = jpm.path("M51.016,4.944c-2.924,0-4.759,1.939-4.759,5.327c0,4.961,3.861,5.289,4.694,5.289  c1.65,0,4.778-1.028,4.778-5.382C55.729,6.788,53.729,4.944,51.016,4.944 M50.978,14.945c-2.198,0-2.538-1.1-2.538-4.619  c0-2.721,0.17-4.764,2.538-4.764c2.558,0,2.57,2.114,2.57,4.592C53.548,13.718,52.939,14.945,50.978,14.945");
+path_f.attr({fill: '#54301B','stroke-width': '0','stroke-opacity': '1'}).data('id', 'path_f');
+
+var path_g = jpm.path("M63.381,5.098c-1.749,0-2.295,1.034-2.777,2.087c0,0-0.126-0.011-0.139-0.006  c-0.014,0.006-0.25-1.531-0.34-1.982c-0.683,0-3.386-0.008-3.386-0.008v0.52h1.832c0,0-0.011,1.556-0.011,2.116v4.764  c0,0.684-0.075,1.159-0.223,1.446c-0.188,0.34-0.607,0.512-1.303,0.512h-0.296v0.607h5.673v-0.607h-0.305  c-0.745,0-1.066-0.161-1.266-0.484c-0.181-0.284-0.262-0.766-0.262-1.474V9.017c0-1.206,0.906-2.576,1.995-2.576  c1.136,0,1.108,1.75,2.396,1.045C65.672,7.103,65.555,5.098,63.381,5.098");
+path_g.attr({fill: '#54301B','stroke-width': '0','stroke-opacity': '1'}).data('id', 'path_g');
+
+var path_h = jpm.path("M85.983,14.133c-0.606,0-0.8-0.336-0.845-0.899l-0.035-1.274V7.786c0-0.902-0.146-1.507-0.678-2.037  c-0.521-0.531-1.533-0.805-2.997-0.805c-1.404,0-2.447,0.26-3.11,0.769c-0.648,0.492-0.899,0.949-0.899,1.603  c0,0.304,0.08,0.517,0.251,0.659c0.171,0.153,0.372,0.222,0.618,0.222c0.563,0,0.881-0.287,0.998-1.028  c0.087-0.55,0.207-0.864,0.478-1.151c0.29-0.304,0.742-0.454,1.354-0.454c0.711,0,1.216,0.191,1.497,0.574  c0.26,0.358,0.396,0.848,0.396,1.455v1.671c-1.818,0.164-6.11,0.509-5.919,3.776c0.071,1.28,1.199,2.404,2.657,2.404  c1.611,0,2.632-0.919,3.323-1.652c0.111,0.695,0.758,1.526,1.933,1.526c1.32,0,2.109-0.648,2.201-2.268h-0.339  C86.778,13.756,86.342,14.133,85.983,14.133 M83.011,13.08c0,0.036-0.004,0.058-0.034,0.079l-0.042,0.039  c-0.973,0.883-1.715,1.197-2.258,1.197c-1.391,0-1.6-1.159-1.6-1.739c0-1.854,2.542-2.781,3.934-2.781V13.08z");
+path_h.attr({fill: '#54301B','stroke-width': '0','stroke-opacity': '1'}).data('id', 'path_h');
+
+var path_i = jpm.path("M97.617,14.062c-0.194-0.284-0.354-0.766-0.354-1.479l0.026-4.516c0-0.65-0.088-1.211-0.333-1.668  c-0.247-0.445-0.596-0.785-1.028-1.006c-0.439-0.222-0.944-0.331-1.498-0.331c-1.994,0-2.794,1.217-3.229,1.934l-0.183-0.009  l-0.355-1.811l-3.084-0.005v0.52c0.579,0.024,1.545,0.035,1.545,0.035v6.851c0,0.533-0.043,0.916-0.12,1.17  c-0.082,0.304-0.279,0.515-0.57,0.638c-0.188,0.079-0.48,0.123-0.854,0.14v0.629h4.904v-0.632c-0.493-0.041-0.827-0.175-1.004-0.427  c-0.191-0.268-0.278-0.732-0.278-1.408v-2.631c0-1.102-0.006-2.166,0.369-2.822c0.406-0.716,1.147-1.112,1.979-1.112  c0.746,0,1.139,0.24,1.385,0.713c0.201,0.386,0.332,1.534,0.332,2.325l-0.024,3.26c0,0.544,0.068,0.943,0.024,1.203  c-0.056,0.298-0.191,0.533-0.428,0.688c-0.171,0.118-0.44,0.178-0.786,0.205v0.638h4.727v-0.629  C98.179,14.486,97.789,14.341,97.617,14.062");
+path_i.attr({fill: '#54301B','stroke-width': '0','stroke-opacity': '1'}).data('id', 'path_i');
+
+var path_j = jpm.path("M75.411,4.543c-0.292,0.093-0.486,0.353-0.589,0.793c-0.076,0.404-0.231,0.64-0.437,0.705  c-0.205,0.061-0.434,0.044-0.707-0.049c-0.507-0.474-1.483-1.048-3.199-1.048c-2.762,0-3.98,1.97-3.98,3.766  c0,2.101,0.809,3.118,2.586,3.492c0.108,0.022,0.108,0.143,0.014,0.164c-1.515,0.307-2.859,0.75-2.859,2.19  c0,0.87,0.499,1.346,1.137,1.605c0.705,0.284,1.694,0.435,2.937,0.457c1.087,0.011,1.857,0.049,2.359,0.109  c0.541,0.062,0.971,0.216,1.287,0.448c0.327,0.252,0.5,0.623,0.5,1.113c0,0.664-0.356,1.2-1.067,1.6  c-0.661,0.366-1.565,0.561-2.689,0.561c-0.964,0-1.753-0.104-2.465-0.547c-0.528-0.328-0.631-0.971-0.52-1.433  c0.099-0.468-0.07-0.96-0.611-1.054c-0.3-0.049-0.674,0.112-0.848,0.383c-0.163,0.252-0.22,0.553-0.22,0.911  c0,1.184,0.916,1.739,1.614,1.944c1.068,0.325,1.774,0.404,2.757,0.404c1.3,0,2.357-0.199,3.111-0.582  c0.755-0.38,1.281-0.848,1.563-1.384c0.297-0.541,0.438-1.091,0.438-1.622c0-0.716-0.157-1.302-0.462-1.73  c-0.987-1.356-2.389-1.185-5.541-1.335c-1.517,0-1.809-0.273-1.809-0.738c0-0.684,0.562-0.954,2.756-1.291  c2.161-0.336,4.174-1.129,4.174-3.765c0-0.761-0.178-1.411-0.392-1.868c0.447,0.099,0.863,0.099,1.243-0.024  c0.437-0.137,0.719-0.355,0.883-0.659c0.164-0.31,0.201-0.597,0.111-0.881C76.301,4.589,75.947,4.379,75.411,4.543 M70.533,11.803  c-1.291,0-2.029-0.467-2.029-3.093c0-1.854,0.646-3.232,2.029-3.232c1.609,0,2.079,1.256,2.079,3.194  C72.612,11.439,71.74,11.803,70.533,11.803");
+path_j.attr({fill: '#54301B','stroke-width': '0','stroke-opacity': '1'}).data('id', 'path_j');
+
+
+//var jpmGroups = [];
+	
+
+//var jpmGroups = [signature];
+
+var set = jpm.set();
+    set.push(path_a);
+    set.push(path_b);
+    set.push(path_c);
+    set.push(path_d);
+    set.push(path_e);
+    set.push(path_f);
+    set.push(path_g);
+    set.push(path_h);
+    set.push(path_i);
+    set.push(path_j);
+	
+set.transform("s1.6,1.6,0,0");
+set.attr({'opacity': '0'});
+var anim = Raphael.animation({'opacity':'1'}, 8000, 'backOut', replayiframe); 
+set.animate(anim.delay(13000));
+
+
+
+} 
+</script>
+
+
+
+
+<script>
+// scalable container
+
+var pageWidth, pageHeight;
+
+var basePage = {
+  width: 1110,
+  height: 680,
+  scale: 1,
+  scaleX: 1,
+  scaleY: 1
+};
+
+$(function(){
+  var $page = $('#container');
+  
+  getPageSize();
+  scalePages($page, pageWidth, pageHeight);
+  
+  //using underscore to delay resize method till finished resizing window
+  $(window).resize(function () {
+    getPageSize();            
+    scalePages($page, pageWidth, pageHeight);
+  });
+  
+
+function getPageSize() {
+  pageHeight = $('body').height();
+  pageWidth = $('body').width();
+}
+
+function scalePages(page, maxWidth, maxHeight) {            
+  var scaleX = 1, scaleY = 1;                      
+  scaleX = maxWidth / basePage.width;
+  scaleY = maxHeight / basePage.height;
+  basePage.scaleX = scaleX;
+  basePage.scaleY = scaleY;
+  basePage.scale = (scaleX > scaleY) ? scaleY : scaleX;
+
+  var newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth)/2));
+  var newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight)/2));
+
+  page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');left:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
+}
+});
+
+console.log = function() {};
+
+parent.heightWidth(680,1110); 
+
+
+function replayiframe() {
+	//window.parent.postMessage('FROM IFRAME','http://localhost:3000');
+	setTimeout(function(){ 
+		parent.replayShow(); 
+	}, 750);
+}
+
+</script>
+
+</body>  
+</html> 
+    

@@ -1,13 +1,21 @@
 
-//@import 'variables';
-
+@import 'variables';
 
 svg#metro{
+	display:none;
+}
+svg#metro.show{
+	@media only screen and (orientation: portrait) and (max-width: $mq-mobile-max) {
+		display: none;
+	}
+	display:block;
     width: 150%;
     position: absolute;
     bottom: 80px;
     left: -25%;
     pointer-events: none;
+
+    rect{fill:rgba(255,255,255,0.9)}
 
 	.metro{
 		path, line, polyline {

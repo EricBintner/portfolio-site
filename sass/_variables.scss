@@ -1,6 +1,8 @@
 // _variables.scss
 
 
+$text-dkBlue: 	#222255;
+
 // 				= @media ( MAX-width: Xpx )
 $mq-lgDesk-max: 1199.9px;
 $mq-smDesk-max: 999.9px;
@@ -10,6 +12,7 @@ $mq-mini-max  : 374.9px; // used 413.9px;
 
 // 				= @media ( MIN-width: Xpx )
 $mq-lgDesk-min: 1200px; // used 
+$mq-medDesk-min:1024px;
 $mq-smDesk-min: 768px;
 $mq-tablet-min: 600px; 
 $mq-mobile-min: 375px; 	//414px;
@@ -18,5 +21,28 @@ $mq-mobile-min: 375px; 	//414px;
 
 
 
+// COLORS
+/*
+$chart-dkBlue: 	#073B4C;
+$chart-yellow: 	#ffd166;
+$chart-green: 	#06D6A0;
+$chart-red: 	#EF476F;
+$chart-blue: 	#118AB2;
+*/
+
+//$chart-dkBlue:#0D2C54;
+$chart-dkBlue: 	$text-dkBlue;
+//$chart-red:	#D8403F;
+$chart-red:	 	#DA0000;
+//$chart-green: #7FB800;
+$chart-green: 	#7FC800;
+//$chart-yellow:#ffB400;
+$chart-yellow: 	#EfB400;
+$chart-blue: 	#00A6ED; 
 
 
+
+
+// chart skew %
+$skew: 10deg;
+$skewNeg: -10deg;

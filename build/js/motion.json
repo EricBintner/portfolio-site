@@ -1,0 +1,60 @@
+[
+  {"kind":"motion",        "client":"The Early Word", "title":"Abby", "project":"Animation by Eric, layout by Amanda Yu Dieterich for her studio: The Early Word in Chicago (music Solex).",                                                                         
+  "year":"2009",  "url":"http://ericbintner.com/video/AbbyAudio",       "img":"motion-abby.png",          "tech":"After Effects",   "ratio":"movie"},
+
+  {"kind":"motion",        "client":"Studio T.H.E.M.", "title":"MoMA PS1 Architecture Competition", "project":"2D anf 3D animation by Eric, vectors by Jen Cordova (music: Schneider TM).",                                                                         
+  "year":"2007",  "url":"http://ericbintner.com/video/PS1",       "img":"motion-them.png",          "tech":"After Effects | Lightwave 3D",   "ratio":"ntsc"},
+
+  {"kind":"events",      "client":"Mahogany (Band)",    "title":"Bunker Soldiers",        "project":"Animation built in After Effects with Trapcode.",                                                                         
+  "year":"2009",  "url":"http://ericbintner.com/video/BunkerSoldiers",  "img":"motion-mahogany.png",  "tech":"After Effects | Trapcode",   "ratio":"movie"},
+
+  {"kind":"creative", 		 "client":"Exploratory",	   "title":"Untitled",        "project":"Music done with Reason, Animation built in After Effects with Trapcode.",                                                                         
+  "year":"2008",	"url":"http://ericbintner.com/video/Untitled", 	"img":"motion-untitled.png",  "tech":"Reason | After Effects | Trapcode",   "ratio":"movie"},
+
+  {"kind":"motion",     "client":"Showreel",     "title":"Showreel 2010",        "project":"It's my showreel! I've not not done much standard motion work since 2010 and don't have access to any JPMC animation work. (music: Mouse on Mars)",                                                                         
+  "year":"2010",  "url":"http://ericbintner.com/video/REEL_2010",  "img":"motion-showreel.jpg",  "tech":"AE | Trapcode | Cinema 4D | Lightwave",   "ratio":"movie"},
+
+  {"kind":"motion",      "client":"The Rockefeller Group",     "title":"Corporate video",        "project":"Internal coorporate video for company event. ",                                                                         
+  "year":"2008",  "url":"http://ericbintner.com/video/RGI",  "img":"motion-rock.png",  "tech":"AE | Trapcode | Cinema 4D",   "ratio":"movie"},
+
+  {"kind":"events",      "client":"Mixel Pixel (Band)","title":"Cats",        "project":"Stop-motion animation hand drawn and assembled in After Effects.",                                                                         
+  "year":"2007",  "url":"http://ericbintner.com/video/Cats",  "img":"motion-cats.png",  "tech":"Hand Drawn | After Effects",   "ratio":"ntsc"},
+
+  {"kind":"events",      "client":"Cordis (Band)",     "title":"Animation for Cordis",        "project":"Stop-motion animation hand drawn and assembled in After Effects.",                                                                         
+  "year":"2007",  "url":"http://ericbintner.com/video/Cordis",  "img":"motion-cordis.png",  "tech":"After Effects",   "ratio":"movie"},
+
+  {"kind":"events",      "client":"Live Video",     "title":"Sample live video",        "project":"I played live video for Mahogany, and two other lesser-known bands: Mansions & Junipers and Bright Brown.",                                                                       
+  "year":"2007-2014",  "url":"http://ericbintner.com/video/vj",  "img":"motion-vj.png",  "tech":"Modul8 | MIDI | Trapcode",   "ratio":"movie"},
+
+  {"kind":"events",      "client":"Architectural Projection",     "title":"Sample projection",  "project":"Part of a small animation team for a massive wedding at Gotham Hall in midtown Manhattan. ",                                                                       
+  "year":"2007",  "url":"http://ericbintner.com/video/ArchitecturalMappingProjection1",  "img":"motion-architecture.png",  "tech":"After Effects | Lightwave 3D",   "ratio":"ntsc"},
+
+  {"kind":"creative",      "client":"Student Work",     "title":"Meta-Fatigue", "project":"Music done with Reason, Animation built in After Effects.",                                                                         
+  "year":"2005", "url":"http://ericbintner.com/video/Meta-Fatigue",    "img":"motion-meta.png",   "tech":"Reason | After Effects",   "ratio":"ntsc"},
+
+ {"kind":"creative",      "client":"Student Work",     "title":"Pushing Buttons", "project":"Music done with Reason, Animation built in After Effects.",                                                                         
+  "year":"2005", "url":"http://ericbintner.com/video/PushingButtons",    "img":"motion-buttons.png",   "tech":"Reason | After Effects",   "ratio":"ntsc"},
+
+ {"kind":"creative",      "client":"Student Work",     "title":"Auto-Flight",     "project":"Music done with Reason, Animation built in After Effects.",                                                                         
+  "year":"2004", "url":"http://ericbintner.com/video/Auto-Flight",       "img":"motion-auto.png",   "tech":"Reason | After Effects",   "ratio":"ntsc"},
+
+ {"kind":"creative",      "client":"Student Work",     "title":"Morning Rush",    "project":"Music done with Reason, Animation built in After Effects.",                                                                         
+  "year":"2004", "url":"http://ericbintner.com/video/MorningRush",       "img":"motion-rush.png",   "tech":"Reason | After Effects",   "ratio":"ntsc"},
+
+ {"kind":"creative",      "client":"Student Work",     "title":"Love & Rockets",    "project":"Music done with Reason, Animation built in After Effects. Video footage is public domain.",                                                                         
+  "year":"2004", "url":"http://ericbintner.com/video/Love_Rockets",       "img":"motion-love.png",   "tech":"Reason | After Effects",   "ratio":"ntsc"}, 
+
+ {"kind":"creative",      "client":"Student Work",     "title":"Documentary",    "project":"2nd Year Presentation at Cranbrook, 2D Design",                                                                         
+  "year":"2006", "url":"http://ericbintner.com/video/ERIC_2ndYr",       "img":"motion-documentary.png",   "tech":"Reason | After Effects",   "ratio":"ntsc"},
+
+ {"kind":"events",      "client":"Cranbrook Video Festival",     "title":"Theme Song",  "project":"Music done with MOTU Digital Performer, Animation built in After Effects.",                                                                         
+  "year":"2006", "url":"http://ericbintner.com/video/ThemeSong206",       "img":"motion-theme.png",   "tech":"MOTU DP | After Effects",   "ratio":"ntsc"}
+
+
+
+]
+
+
+
+
+            

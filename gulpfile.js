@@ -4,6 +4,7 @@ var hbsAll = require('gulp-handlebars-all');
 var handlebars = require('handlebars');
 var rename = require('gulp-rename');
 //var waypoints = require('waypoints');
+var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require("gulp-uglify");
@@ -12,7 +13,6 @@ var uglify = require("gulp-uglify");
 //var htmlmin = require('gulp-html-minifier');
 //const imagemin = require('gulp-imagemin');
 //var reporter = require('gulp-less-reporter');
-
 var webserver   = require('gulp-webserver');
 var watch = require('gulp-watch');
 
@@ -68,17 +68,39 @@ gulp.task('minify-js', function () {
 
 
 
+
+
+
+
+
+
 var input = './sass/*.scss';
 var output = './build/css';
 
+
+
+gulp.task('serve', ['sass'], function() {
+
+    browserSync.init({
+        server: "./build/"
+    });
+
+    gulp.watch(input, ['sass']);
+    gulp.watch("build/*.html").on('change', browserSync.reload);
+});
+
+
+
 gulp.task('sass', function () {
+
   return gulp
     // Find all `.scss` files from the `stylesheets/` folder
     .src(input)
     // Run Sass on those files
     .pipe(sass())
     // Write the resulting CSS in the output folder
-    .pipe(gulp.dest(output));
+    .pipe(gulp.dest(output))
+    .pipe(browserSync.stream());
 });
 
 
@@ -111,11 +133,12 @@ gulp.task('server', function() {
         }));
 });
 
-gulp.task('default', ['hbsToHTML', 'minify-js', /*'less', 'prefix', 'reporter', 'image',*/ 'sass', 'server']);
 
 gulp.task('watch', [ 'default', 'hbsToHTML', 'sass'], function () {
-  console.log('hello world');
+  //console.log('hello world');
   gulp.watch('templates/partials/*.hbs', ['default']);
   gulp.watch('templates/*.hbs', ['hbsToHTML']);
   gulp.watch('./sass/*.scss', ['sass']);
 });
+
+gulp.task('default', ['hbsToHTML', 'minify-js', /*'less', 'prefix', 'reporter', 'image',*/ 'sass', 'serve']);
