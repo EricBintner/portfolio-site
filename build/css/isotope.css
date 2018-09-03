@@ -5,12 +5,15 @@ $chart-green: 	#06D6A0;
 $chart-red: 	#EF476F;
 $chart-blue: 	#118AB2;
 */
+@media only screen and (max-width: 599.9px), only screen and (max-height: 500px) {
+  body, html {
+    font-size: 17px; } }
+
 .button-group {
   display: flex;
   width: 100%;
   flex: 0;
-  transform: translateX(calc(1.25% - 0.25vh));
-  /*&.skills#filters:before {
+  /*&.skills#filters-s:before {
     content: "FILTERS";
     color: #fff;
     letter-spacing: 0.2rem;
@@ -22,20 +25,27 @@ $chart-blue: 	#118AB2;
     flex: 1;
     color: #fff;
     background-color: transparent;
-    padding: 5px calc(1vh + 1vw);
     margin: 10px 5px 10px 0;
-    height: 8vh;
     font-family: 'Dosis', sans-serif;
     font-size: 1em;
     transform: skewX(-8deg);
-    border: 2px solid #fff; }
+    border: 1px solid #fff;
+    height: calc(4vh + 1.5vw);
+    margin-top: calc(3.5vh - 6px);
+    padding: 0 8px; }
+    @media only screen and (min-width: 1199.9px) {
+      .button-group button {
+        margin-top: calc(3vh - 5px);
+        padding: 0 1.25vw;
+        min-height: 45px; } }
     .button-group button.is-checked, .button-group button:hover {
-      color: #0D2C54;
+      color: #222255;
       background-color: #fff; }
     .button-group button.notButton {
       border: none;
       padding: 0;
-      transform: translateX(1.75vh); }
+      transform: translateX(1.75vh);
+      box-shadow: none; }
       @media only screen and (max-width: 599.9px) {
         .button-group button.notButton {
           transform: translateX(2.1vh); } }
@@ -54,73 +64,133 @@ $chart-blue: 	#118AB2;
           color: #fff; }
   @media only screen and (max-width: 599.9px) {
     .button-group button.button {
-      margin: 1.75vh 2px 3vh 2px;
-      height: 8vh; } }
-  @media only screen and (max-width: 374.9px) {
+      margin: 3px 2px 0 2px;
+      height: 4vh;
+      padding: 0 calc(0.66vh + 0.5vw); } }
+  @media only screen and (max-width: 599.9px) and (orientation: portrait), only screen and (max-height: 500px) and (orientation: landscape) {
     .button-group button.button {
-      height: 8.25vh; } }
-  .button-group.skills#filters {
-    transform: translateX(-7.75vw); }
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: calc(2.75vw + 0.12em); } }
+  @media only screen and (max-width: 599.9px) and (orientation: portrait) and (max-height: 500px) and (orientation: landscape), only screen and (max-height: 500px) and (orientation: landscape) and (max-height: 500px) and (orientation: landscape) {
+    .button-group button.button {
+      font-size: calc(3vh + 0.135em);
+      margin: calc(5vh - 10px) 5px 0 0; } }
+  .button-group.skills#filters-s {
+    transform: translateX(-5vw); }
+    .button-group.skills#filters-s .button-group button {
+      color: #225; }
     @media only screen and (orientation: portrait) and (max-width: 599.9px) {
-      .button-group.skills#filters {
-        transform: translateX(calc(-60px + 7.5vw)); } }
-    .button-group.skills#filters button:not(.notButton) {
-      padding: 1vh calc(0.5vh + 0.5vw) 0 calc(0.5vh + 0.5vw); }
+      .button-group.skills#filters-s {
+        transform: translateX(-0.66vw);
+        width: 96%; } }
+    @media only screen and (max-width: 599.9px) and (orientation: portrait), only screen and (max-height: 500px) and (orientation: landscape) {
+      .button-group.skills#filters-s button.button {
+        text-transform: unset;
+        font-weight: 600; } }
+    @media only screen and (max-height: 500px) and (orientation: landscape) {
+      .button-group.skills#filters-s button.button {
+        font-size: calc(1.875vw + 0.13em); } }
+    .button-group.skills#filters-s button:not(.notButton) {
+      border-color: #225;
+      color: #225;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      min-height: 32px; }
+      @media only screen and (min-width: 600px) {
+        .button-group.skills#filters-s button:not(.notButton) {
+          flex: unset; } }
       @media only screen and (orientation: portrait) and (max-width: 599.9px) {
-        .button-group.skills#filters button:not(.notButton) {
-          padding: 1vh calc(0.5vh + 1.5vw) 0 calc(0.5vh + 1.5vw);
-          height: 6.5vh; } }
-      .button-group.skills#filters button:not(.notButton) > span {
-        transform: translateY(-0.75vh);
-        display: block; }
+        .button-group.skills#filters-s button:not(.notButton) {
+          padding: 0vh calc(0.5vh + 1.5vw) 0 calc(0.5vh + 1.5vw);
+          height: 5.5vh;
+          margin-top: 7px; }
+          .button-group.skills#filters-s button:not(.notButton):nth-child(3) {
+            flex: 0.75; }
+          .button-group.skills#filters-s button:not(.notButton):last-child {
+            flex: 0.5; } }
+      @media only screen and (orientation: portrait) and (max-width: 374.9px) {
+        .button-group.skills#filters-s button:not(.notButton) {
+          padding: 0vh calc(0.5vh + 0.5vw) 0 calc(0.5vh + 0.5vw); } }
+      .button-group.skills#filters-s button:not(.notButton) > span {
+        display: flex;
+        margin: 0 0.66vw;
+        max-height: 50%;
+        min-width: 35px;
+        flex: 1;
+        align-items: center;
+        justify-content: center; }
         @media only screen and (orientation: portrait) and (max-width: 599.9px) {
-          .button-group.skills#filters button:not(.notButton) > span {
+          .button-group.skills#filters-s button:not(.notButton) > span {
             font-size: calc(2vw + 6px);
-            transform: translateY(-1.125vh); } }
+            line-height: 1em; } }
         @media only screen and (orientation: landscape) and (max-width: 736px) {
-          .button-group.skills#filters button:not(.notButton) > span {
+          .button-group.skills#filters-s button:not(.notButton) > span {
             line-height: 3.5vh; } }
-      .button-group.skills#filters button:not(.notButton):not(.notButton) > p {
-        padding: 0.5vh calc(0.5vh + 0.5vw);
+        @media only screen and (min-width: 920px) {
+          .button-group.skills#filters-s button:not(.notButton) > span {
+            margin: 0 calc(0.5vh + 0.5vw); } }
+      .button-group.skills#filters-s button:not(.notButton):not(.notButton) > p {
         top: 6.5vh;
-        background-color: #fff;
-        margin: 0 calc(-0.5vh - 0.5vw);
-        display: block;
-        height: 2.1vh;
+        background-color: #225;
         font-size: calc(1vh + 4px);
-        transform: skewX(16deg) scale(0.8);
+        width: 100%;
+        flex: 1;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
         -webkit-transition: -webkit-transform 0.25s, transform 0.25s;
         -moz-transition: -moz-transform 0.25s, transform 0.25s;
         -ms-transition: -ms-transform 0.25s, transform 0.25s;
         -o-transition: -o-transform 0.25s, transform 0.25s;
         transition: transform 0.25s, transform 0.25s; }
         @media only screen and (orientation: portrait) and (max-width: 599.9px) {
-          .button-group.skills#filters button:not(.notButton):not(.notButton) > p {
-            margin: -1.25vh calc(-0.5vh - 0.5vw) 0 calc(-0.5vh - 0.5vw);
-            padding: 0.2vh calc(0.5vh + 0.5vw); } }
-      .button-group.skills#filters button:not(.notButton):not(.notButton) > p > span {
+          .button-group.skills#filters-s button:not(.notButton):not(.notButton) > p {
+            width: 260%; } }
+      .button-group.skills#filters-s button:not(.notButton):not(.notButton) > p > span {
         line-height: 2.1vh;
         width: 100%;
         display: block;
         margin: 0;
-        padding: 0;
-        transform: skewX(-8deg);
-        color: #38c; }
+        padding: 0 calc(0.33vw + 2px);
+        transform: skewX(8deg);
+        color: #fff; }
         @media only screen and (orientation: portrait) and (max-width: 374.9px) {
-          .button-group.skills#filters button:not(.notButton):not(.notButton) > p > span {
+          .button-group.skills#filters-s button:not(.notButton):not(.notButton) > p > span {
             line-height: 2.4vh; } }
         @media only screen and (orientation: landscape) and (max-width: 736px) {
-          .button-group.skills#filters button:not(.notButton):not(.notButton) > p > span {
+          .button-group.skills#filters-s button:not(.notButton):not(.notButton) > p > span {
             line-height: 2.3vh;
             font-size: calc(1vh + 8px); } }
-      .button-group.skills#filters button:not(.notButton).is-checked, .button-group.skills#filters button:not(.notButton):hover {
-        color: #38c; }
-        .button-group.skills#filters button:not(.notButton).is-checked p, .button-group.skills#filters button:not(.notButton):hover p {
+        @media only screen and (min-width: 920px) {
+          .button-group.skills#filters-s button:not(.notButton):not(.notButton) > p > span {
+            padding: 0 calc(0.5vh + 0.5vw) 0 calc(0.5vh + 0.5vw);
+            line-height: 2.3vh; } }
+      .button-group.skills#filters-s button:not(.notButton).is-checked, .button-group.skills#filters-s button:not(.notButton):hover {
+        color: #fff;
+        background-color: #225; }
+        @media only screen and (max-width: 599.9px) and (orientation: portrait) {
+          .button-group.skills#filters-s button:not(.notButton).is-checked, .button-group.skills#filters-s button:not(.notButton):hover {
+            background-color: transparent; }
+            .button-group.skills#filters-s button:not(.notButton).is-checked > span, .button-group.skills#filters-s button:not(.notButton):hover > span {
+              background-color: #225;
+              width: 150%; } }
+        .button-group.skills#filters-s button:not(.notButton).is-checked p, .button-group.skills#filters-s button:not(.notButton):hover p {
           background-color: #5fafe6; }
-          .button-group.skills#filters button:not(.notButton).is-checked p span, .button-group.skills#filters button:not(.notButton):hover p span {
+          @media only screen and (max-width: 599.9px) and (orientation: portrait) {
+            .button-group.skills#filters-s button:not(.notButton).is-checked p, .button-group.skills#filters-s button:not(.notButton):hover p {
+              background-color: transparent; } }
+          .button-group.skills#filters-s button:not(.notButton).is-checked p span, .button-group.skills#filters-s button:not(.notButton):hover p span {
             color: #fff; }
-      .button-group.skills#filters button:not(.notButton).is-checked p {
-        transform: skewX(16deg) scale(0.925); }
+            @media only screen and (max-width: 599.9px) and (orientation: portrait) {
+              .button-group.skills#filters-s button:not(.notButton).is-checked p span, .button-group.skills#filters-s button:not(.notButton):hover p span {
+                color: #225;
+                background-color: transparent; } }
   .button-group.skills#sorts {
     DISPLAY: NONE;
     flex-direction: column;
@@ -142,29 +212,651 @@ $chart-blue: 	#118AB2;
         background-color: #ec008c; }
 
 /* ---- holder ---- */
+a.closeBtn {
+  position: fixed;
+  top: -80vh;
+  right: 2vw;
+  color: #fff;
+  width: 8vh;
+  max-height: 600px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  z-index: 21000; }
+  a.closeBtn.hidden {
+    height: 0;
+    width: 0;
+    padding: 0;
+    pointer-events: none; }
+  a.closeBtn svg {
+    transform: scale(1, 1); }
+    a.closeBtn svg .bigArrow {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 1.5;
+      stroke-miterlimit: 10;
+      transition: stroke-width 0.2s; }
+  @media only screen and (max-width: 1199.9px) {
+    a.closeBtn {
+      top: -99.5vh;
+      right: 0;
+      color: #fff;
+      width: 2.75vh;
+      padding-left: 5vw;
+      padding-right: 5vw; }
+      a.closeBtn svg {
+        transform: scale(1.5, 0.75);
+        transform-origin: 0% 25%; }
+        a.closeBtn svg .bigArrow {
+          stroke-width: 4; } }
+  @media only screen and (orientation: portrait) {
+    a.closeBtn {
+      right: 0.75vw; } }
+  a.closeBtn:hover svg .bigArrow {
+    stroke-width: 3.25; }
+    @media only screen and (max-width: 1199.9px) {
+      a.closeBtn:hover svg .bigArrow {
+        stroke-width: 7; } }
+
 .holder {
-  overflow-y: scroll;
+  overflow-y: hidden;
   position: relative;
   top: -86.5vh;
-  width: 80%;
-  height: 86.5vh;
+  width: 100%;
+  height: 82.5;
+  pointer-events: none;
   margin: auto;
-  max-width: 1400px;
+  max-width: 1800px;
+  padding: 0 0.8vw 0 0.8vw;
+  padding: 0;
   /* ---- grid ---- */
   /* ---- / END grid ---- */ }
   @media only screen and (max-width: 599.9px) {
     .holder {
-      top: -80vh;
-      width: 90%;
-      height: 80vh; } }
+      top: -88vh;
+      height: 88vh; } }
+  @media only screen and (orientation: portrait) and (max-width: 920px) {
+    .holder {
+      width: 100%;
+      padding: 1vh 0;
+      top: -88vh;
+      height: 90vh; } }
+  @media only screen and (orientation: portrait) and (max-width: 1024px) {
+    .holder {
+      top: -88vh; } }
   @media only screen and (orientation: landscape) and (max-width: 736px) {
     .holder {
       top: -81.5vh;
       height: 81.5vh; } }
+  .holder .gridContain {
+    margin-top: 0em;
+    overflow-y: scroll;
+    height: 83vh;
+    -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 1.5%, black 82%, rgba(0, 0, 0, 0) 88%);
+    pointer-events: all;
+    z-index: 10000;
+    padding-top: 1.5vh; }
+    @media only screen and (min-width: 1500px) {
+      .holder .gridContain {
+        font-size: 1.25em; } }
+    .holder .gridContain .grid {
+      width: calc(80% + 1.6vw);
+      margin-left: calc(10% - 0.8vw); }
+      @media only screen and (orientation: portrait) and (max-width: 599.9px) {
+        .holder .gridContain .grid {
+          width: 95%;
+          margin-left: 2.5%; } }
+    @media only screen and (orientation: portrait) and (max-width: 599.9px) {
+      .holder .gridContain {
+        margin-top: 3.25vh;
+        padding-top: 1vh; } }
+  .holder .videoBox {
+    position: absolute;
+    transform: translateX(-100vw);
+    width: 100%;
+    transition: transform 0.4s;
+    width: calc(80% + 1.6vw);
+    margin-left: calc(10% - 1.8vw);
+    padding-top: 1vh;
+    z-index: 20000;
+    pointer-events: all;
+    /*.closeBtn{
+          position: absolute;
+          width:20px;
+          right: calc(2vw + 2px);
+          color:#fff;
+        }*/ }
+    @media only screen and (max-width: 920px) {
+      .holder .videoBox {
+        width: 90vw;
+        margin-left: 0; } }
+    @media only screen and (max-width: 920px) and (orientation: portrait) {
+      .holder .videoBox {
+        width: 93.75vw;
+        margin-left: 2.25vw;
+        padding-top: calc(1.5vh - 0.5vw); } }
+    .holder .videoBox .interactive-content,
+    .holder .videoBox .video-content {
+      display: flex; }
+      @media screen and (orientation: landscape) {
+        .holder .videoBox .interactive-content,
+        .holder .videoBox .video-content {
+          flex-direction: row; } }
+      @media screen and (orientation: portrait) {
+        .holder .videoBox .interactive-content,
+        .holder .videoBox .video-content {
+          flex-direction: column; } }
+      .holder .videoBox .interactive-content .video-container.ntsc,
+      .holder .videoBox .video-content .video-container.ntsc {
+        flex: 1.5; }
+        @media screen and (min-width: 1200px) and (max-height: 900px) {
+          .holder .videoBox .interactive-content .video-container.ntsc,
+          .holder .videoBox .video-content .video-container.ntsc {
+            flex: 1; } }
+      .holder .videoBox .interactive-content .video-container.movie,
+      .holder .videoBox .video-content .video-container.movie {
+        flex: 2; }
+      .holder .videoBox .interactive-content .video-container video,
+      .holder .videoBox .video-content .video-container video {
+        height: unset;
+        max-width: 100%;
+        width: 100%; }
+        @media screen and (orientation: portrait) {
+          .holder .videoBox .interactive-content .video-container video,
+          .holder .videoBox .video-content .video-container video {
+            width: 100%; } }
+        @media screen and (min-width: 1200px) {
+          .holder .videoBox .interactive-content .video-container video,
+          .holder .videoBox .video-content .video-container video {
+            width: 98%; } }
+      .holder .videoBox .interactive-content .interactive-info,
+      .holder .videoBox .interactive-content .video-info,
+      .holder .videoBox .video-content .interactive-info,
+      .holder .videoBox .video-content .video-info {
+        flex: 1;
+        max-height: 550px;
+        position: relative; }
+        .holder .videoBox .interactive-content .interactive-info div,
+        .holder .videoBox .interactive-content .video-info div,
+        .holder .videoBox .video-content .interactive-info div,
+        .holder .videoBox .video-content .video-info div {
+          width: 100%;
+          font-size: calc(0.925em + 0.125vw + 0.125vh); }
+          @media screen and (min-width: 1200px) {
+            .holder .videoBox .interactive-content .interactive-info div,
+            .holder .videoBox .interactive-content .video-info div,
+            .holder .videoBox .video-content .interactive-info div,
+            .holder .videoBox .video-content .video-info div {
+              width: 90%; } }
+        .holder .videoBox .interactive-content .interactive-info p,
+        .holder .videoBox .interactive-content .video-info p,
+        .holder .videoBox .video-content .interactive-info p,
+        .holder .videoBox .video-content .video-info p {
+          color: #fff;
+          margin: 1rem 0 0.5rem 1rem; }
+          @media screen and (orientation: portrait) {
+            .holder .videoBox .interactive-content .interactive-info p,
+            .holder .videoBox .interactive-content .video-info p,
+            .holder .videoBox .video-content .interactive-info p,
+            .holder .videoBox .video-content .video-info p {
+              margin: 0.25rem 0 0.25rem 1rem; } }
+          @media screen and (max-width: 599.9px) {
+            .holder .videoBox .interactive-content .interactive-info p,
+            .holder .videoBox .interactive-content .video-info p,
+            .holder .videoBox .video-content .interactive-info p,
+            .holder .videoBox .video-content .video-info p {
+              margin: 0.35em 0 -0.15em 1px; }
+              .holder .videoBox .interactive-content .interactive-info p:not(.client),
+              .holder .videoBox .interactive-content .video-info p:not(.client),
+              .holder .videoBox .video-content .interactive-info p:not(.client),
+              .holder .videoBox .video-content .video-info p:not(.client) {
+                margin-left: 0.3rem; } }
+        .holder .videoBox .interactive-content .interactive-info .client,
+        .holder .videoBox .interactive-content .video-info .client,
+        .holder .videoBox .video-content .interactive-info .client,
+        .holder .videoBox .video-content .video-info .client {
+          background-color: #fff; }
+          .holder .videoBox .interactive-content .interactive-info .client p,
+          .holder .videoBox .interactive-content .video-info .client p,
+          .holder .videoBox .video-content .interactive-info .client p,
+          .holder .videoBox .video-content .video-info .client p {
+            text-transform: uppercase;
+            font-size: 1.2em;
+            line-height: 0.95em;
+            color: #222;
+            margin: 0 1rem 0.5rem 0.5rem;
+            letter-spacing: 0.025rem;
+            padding: 1px 0.55rem; }
+            @media screen and (orientation: portrait) {
+              .holder .videoBox .interactive-content .interactive-info .client p,
+              .holder .videoBox .interactive-content .video-info .client p,
+              .holder .videoBox .video-content .interactive-info .client p,
+              .holder .videoBox .video-content .video-info .client p {
+                margin-top: 0.33rem; } }
+            @media screen and (max-width: 599.9px) {
+              .holder .videoBox .interactive-content .interactive-info .client p,
+              .holder .videoBox .interactive-content .video-info .client p,
+              .holder .videoBox .video-content .interactive-info .client p,
+              .holder .videoBox .video-content .video-info .client p {
+                margin-left: -0.2rem; } }
+            .holder .videoBox .interactive-content .interactive-info .client p.year.hideDesktop,
+            .holder .videoBox .interactive-content .video-info .client p.year.hideDesktop,
+            .holder .videoBox .video-content .interactive-info .client p.year.hideDesktop,
+            .holder .videoBox .video-content .video-info .client p.year.hideDesktop {
+              position: absolute;
+              right: -5%;
+              top: 0; }
+        .holder .videoBox .interactive-content .interactive-info .title p,
+        .holder .videoBox .interactive-content .video-info .title p,
+        .holder .videoBox .video-content .interactive-info .title p,
+        .holder .videoBox .video-content .video-info .title p {
+          font-size: 1.3em;
+          margin-top: 1em;
+          letter-spacing: 0.025rem;
+          font-weight: 600;
+          margin-bottom: 0;
+          line-height: 1.6rem; }
+          @media screen and (max-width: 599.9px) {
+            .holder .videoBox .interactive-content .interactive-info .title p,
+            .holder .videoBox .interactive-content .video-info .title p,
+            .holder .videoBox .video-content .interactive-info .title p,
+            .holder .videoBox .video-content .video-info .title p {
+              margin-top: 0.66em; } }
+        .holder .videoBox .interactive-content .interactive-info .year p,
+        .holder .videoBox .interactive-content .video-info .year p,
+        .holder .videoBox .video-content .interactive-info .year p,
+        .holder .videoBox .video-content .video-info .year p {
+          font-size: 0.9em;
+          margin-top: 0.175em; }
+        .holder .videoBox .interactive-content .interactive-info .description,
+        .holder .videoBox .interactive-content .video-info .description,
+        .holder .videoBox .video-content .interactive-info .description,
+        .holder .videoBox .video-content .video-info .description {
+          width: 92.5%; }
+          @media screen and (orientation: landscape) and (min-width: 1199.9px) {
+            .holder .videoBox .interactive-content .interactive-info .description,
+            .holder .videoBox .interactive-content .video-info .description,
+            .holder .videoBox .video-content .interactive-info .description,
+            .holder .videoBox .video-content .video-info .description {
+              max-width: 475px;
+              width: 85%; } }
+          .holder .videoBox .interactive-content .interactive-info .description p,
+          .holder .videoBox .interactive-content .video-info .description p,
+          .holder .videoBox .video-content .interactive-info .description p,
+          .holder .videoBox .video-content .video-info .description p {
+            margin-top: 0.5em;
+            line-height: 1.3em; }
+            @media screen and (min-width: 1199.9px) {
+              .holder .videoBox .interactive-content .interactive-info .description p,
+              .holder .videoBox .interactive-content .video-info .description p,
+              .holder .videoBox .video-content .interactive-info .description p,
+              .holder .videoBox .video-content .video-info .description p {
+                margin-top: 0.75em;
+                line-height: 1.4em; } }
+        .holder .videoBox .interactive-content .interactive-info .tech,
+        .holder .videoBox .interactive-content .video-info .tech,
+        .holder .videoBox .video-content .interactive-info .tech,
+        .holder .videoBox .video-content .video-info .tech {
+          position: absolute;
+          bottom: 0.75rem; }
+          @media screen and (orientation: portrait) {
+            .holder .videoBox .interactive-content .interactive-info .tech,
+            .holder .videoBox .interactive-content .video-info .tech,
+            .holder .videoBox .video-content .interactive-info .tech,
+            .holder .videoBox .video-content .video-info .tech {
+              bottom: -2.5rem; } }
+          .holder .videoBox .interactive-content .interactive-info .tech p,
+          .holder .videoBox .interactive-content .video-info .tech p,
+          .holder .videoBox .video-content .interactive-info .tech p,
+          .holder .videoBox .video-content .video-info .tech p {
+            font-size: 0.9em;
+            margin: 0 1rem 0 1rem;
+            letter-spacing: 0.075rem;
+            font-weight: 100; }
+            @media screen and (max-width: 599.9px) {
+              .holder .videoBox .interactive-content .interactive-info .tech p,
+              .holder .videoBox .interactive-content .video-info .tech p,
+              .holder .videoBox .video-content .interactive-info .tech p,
+              .holder .videoBox .video-content .video-info .tech p {
+                margin-left: 0.3em; } }
+            @media screen and (min-width: 1199.9px) {
+              .holder .videoBox .interactive-content .interactive-info .tech p,
+              .holder .videoBox .interactive-content .video-info .tech p,
+              .holder .videoBox .video-content .interactive-info .tech p,
+              .holder .videoBox .video-content .video-info .tech p {
+                font-size: 1.05em; } }
+    @media screen and (orientation: landscape) {
+      .holder .videoBox .interactive-content {
+        max-height: 70vh;
+        overflow: hidden; } }
+  @media screen and (orientation: landscape) and (min-width: 1200px) and (min-height: 850px) {
+    .holder .videoBox .interactive-content {
+      max-height: 75vh; } }
+  @media screen and (orientation: landscape) {
+    .holder {
+      top: -87.5vh; } }
+  @media screen and (orientation: landscape) {
+    .holder .videoBox {
+      width: calc(80% + 3.2vw);
+      margin-left: calc(10% - 1.6vw); } }
+  @media only screen and (min-width: 600px) and (max-width: 1299.9px), only screen and (max-width: 1299.9px) and (min-width: 600px) and (orientation: landscape) {
+    .holder .videoBox {
+      width: calc(90% + 3.2vw);
+      margin-left: calc(4.25% - 1.6vw); } }
+  .holder .videoBox .interactive-content .interactive-container {
+    flex: 2;
+    position: relative;
+    overflow: hidden;
+    padding-top: 50%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.15+64,0+100 */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 64%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 64%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 64%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26ffffff', endColorstr='#00ffffff',GradientType=0 ); }
+    @media screen and (min-width: 1200px) {
+      .holder .videoBox .interactive-content .interactive-container {
+        margin-right: 2%; } }
+    @media screen and (min-width: 1200px) {
+      .holder .videoBox .interactive-content .interactive-container {
+        flex: 1.5; } }
+    @media screen and (orientation: portrait) {
+      .holder .videoBox .interactive-content .interactive-container {
+        padding-top: 80%; } }
+    @media screen and (orientation: portrait) and (min-width: 599.9px) {
+      .holder .videoBox .interactive-content .interactive-container {
+        padding-top: 70%; } }
+    .holder .videoBox .interactive-content .interactive-container.codepen {
+      max-width: 800px; }
+      .holder .videoBox .interactive-content .interactive-container.codepen iframe {
+        max-height: 666px; }
+    .holder .videoBox .interactive-content .interactive-container.wide {
+      flex: 3;
+      padding-top: 47%; }
+      @media screen and (orientation: portrait) {
+        .holder .videoBox .interactive-content .interactive-container.wide {
+          flex: 1;
+          padding-top: 63.3%; } }
+      @media screen and (max-width: 599.9px) {
+        .holder .videoBox .interactive-content .interactive-container.wide {
+          padding-top: 63.3%; }
+          .holder .videoBox .interactive-content .interactive-container.wide.codepen {
+            padding-top: 90%; } }
+      @media screen and (min-width: 1200px) and (max-height: 849.9px) {
+        .holder .videoBox .interactive-content .interactive-container.wide {
+          flex: 2.25;
+          padding-top: 43%; } }
+      @media screen and (min-width: 1200px) and (min-height: 850px) {
+        .holder .videoBox .interactive-content .interactive-container.wide {
+          padding-top: 46%;
+          flex: 3.125; } }
+    .holder .videoBox .interactive-content .interactive-container.ex-wide {
+      flex: 2;
+      padding-top: 50%; }
+      @media screen and (orientation: portrait) {
+        .holder .videoBox .interactive-content .interactive-container.ex-wide {
+          flex: 1;
+          padding-top: 55%; } }
+      @media screen and (max-width: 599.9px) {
+        .holder .videoBox .interactive-content .interactive-container.ex-wide {
+          padding-top: 63.3%; } }
+      @media screen and (min-width: 1200px) and (max-height: 849.9px) {
+        .holder .videoBox .interactive-content .interactive-container.ex-wide {
+          flex: 2.25;
+          padding-top: 43%; } }
+      @media screen and (min-width: 1200px) and (min-height: 850px) {
+        .holder .videoBox .interactive-content .interactive-container.ex-wide {
+          padding-top: 46%;
+          flex: 2.5; } }
+    .holder .videoBox .interactive-content .interactive-container.tall {
+      padding-top: 47%;
+      flex: 0.9; }
+      @media screen and (orientation: portrait) {
+        .holder .videoBox .interactive-content .interactive-container.tall {
+          padding-top: 65%;
+          width: 65%; } }
+      @media screen and (max-width: 599.9px) {
+        .holder .videoBox .interactive-content .interactive-container.tall {
+          padding-top: 85%;
+          width: 85%; } }
+      @media screen and (min-width: 1200px) and (max-height: 900px) {
+        .holder .videoBox .interactive-content .interactive-container.tall {
+          padding-top: 40%;
+          flex: 0.70; } }
+      @media screen and (min-width: 1200px) and (min-height: 900px) {
+        .holder .videoBox .interactive-content .interactive-container.tall {
+          padding-top: 47%;
+          flex: 1; } }
+      @media screen and (min-width: 1400px) {
+        .holder .videoBox .interactive-content .interactive-container.tall {
+          padding-top: 46%;
+          flex: 0.9; } }
+      @media screen and (min-width: 1680px) {
+        .holder .videoBox .interactive-content .interactive-container.tall {
+          padding-top: 43%;
+          flex: 0.8; } }
+      .holder .videoBox .interactive-content .interactive-container.tall#iContainer .control {
+        background-size: 66% 66%;
+        background-position-y: 47%; }
+    @media screen and (max-width: 999.9px) and (orientation: landscape) {
+      .holder .videoBox .interactive-content .interactive-container.disabledMobile iframe {
+        pointer-events: none; } }
+    @media screen and (max-width: 599.9px) and (orientation: portrait) {
+      .holder .videoBox .interactive-content .interactive-container.disabledMobile iframe {
+        pointer-events: none; } }
+    .holder .videoBox .interactive-content .interactive-container .control {
+      width: 0%;
+      opacity: 0;
+      left: -5000px;
+      top: 0;
+      position: absolute;
+      /* OLD (has been edited) Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000edb+0,121cb5+5,000000+19,000000+75&0.84+5,0.75+13,0+75 */
+      background: -moz-radial-gradient(center, ellipse cover, rgba(8, 12, 78, 0.75) 0%, rgba(0, 0, 0, 0.68) 28%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0) 65%);
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(8, 12, 78, 0.75) 0%, rgba(0, 0, 0, 0.68) 28%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0) 65%);
+      background: radial-gradient(ellipse at center, rgba(8, 12, 78, 0.75) 0%, rgba(0, 0, 0, 0.68) 28%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0) 65%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6000edb', endColorstr='#00000000',GradientType=1 );
+      background-size: 62% 96%;
+      background-position-x: 50%;
+      background-repeat: no-repeat;
+      height: 100%;
+      z-index: 5000;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .holder .videoBox .interactive-content .interactive-container .control a.reloadBtn {
+        position: absolute;
+        max-width: 50%;
+        cursor: pointer;
+        width: 25vh;
+        height: 25vh;
+        background-size: cover;
+        margin-top: -1vh;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .holder .videoBox .interactive-content .interactive-container .control a.reloadBtn span {
+          position: absolute;
+          max-width: 50%;
+          margin-top: -0.25vh;
+          color: #fff;
+          letter-spacing: 0.15rem;
+          font-weight: 100;
+          font-size: 1.1em;
+          text-shadow: 0 0 10px #000; }
+        .holder .videoBox .interactive-content .interactive-container .control a.reloadBtn svg {
+          position: absolute;
+          width: 25vh;
+          height: 25vh; }
+          .holder .videoBox .interactive-content .interactive-container .control a.reloadBtn svg path.reload {
+            fill: none;
+            stroke: #FFFFFF;
+            stroke-width: 4;
+            stroke-miterlimit: 10; }
+    .holder .videoBox .interactive-content .interactive-container .controlTab {
+      width: 100%;
+      opacity: 0;
+      left: 0;
+      transition: opacity 0.5s;
+      top: 0;
+      position: absolute;
+      background-size: 62% 96%;
+      background-position-x: 50%;
+      background-repeat: no-repeat;
+      height: 100%;
+      z-index: 5000;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      @media screen and (max-width: 599.9px) and (orientation: portrait), screen and (max-height: 500px) and (orientation: landscape) {
+        .holder .videoBox .interactive-content .interactive-container .controlTab {
+          opacity: 1; } }
+      .holder .videoBox .interactive-content .interactive-container .controlTab:hover {
+        opacity: 1; }
+      .holder .videoBox .interactive-content .interactive-container .controlTab .newTabBtn {
+        position: absolute;
+        max-width: 50%;
+        cursor: pointer;
+        width: 24vh;
+        height: 24vh;
+        padding: 0vh;
+        background-size: cover;
+        margin-top: -1vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 20px rgba(20, 20, 20, 0.7);
+        background-color: rgba(20, 20, 20, 0.5);
+        border-radius: 5vh; }
+        @media screen and (max-width: 599.9px) and (orientation: portrait), screen and (max-height: 500px) and (orientation: landscape) {
+          .holder .videoBox .interactive-content .interactive-container .controlTab .newTabBtn {
+            margin-top: 2vh; } }
+        .holder .videoBox .interactive-content .interactive-container .controlTab .newTabBtn span {
+          position: absolute;
+          max-width: 90%;
+          margin-top: 3vh;
+          color: #fff;
+          letter-spacing: 0.075rem;
+          font-weight: 100;
+          font-size: 1.1em;
+          text-shadow: 0 0 10px #000; }
+          @media screen and (max-width: 599.9px) and (orientation: portrait), screen and (max-height: 500px) and (orientation: landscape) {
+            .holder .videoBox .interactive-content .interactive-container .controlTab .newTabBtn span {
+              line-height: 1.1em;
+              margin-top: 3.5vh;
+              width: 40%; } }
+        .holder .videoBox .interactive-content .interactive-container .controlTab .newTabBtn svg {
+          position: absolute;
+          width: 20vh;
+          height: 20vh; }
+          .holder .videoBox .interactive-content .interactive-container .controlTab .newTabBtn svg .newTab {
+            fill: none;
+            stroke: #FFFFFF;
+            stroke-width: 4;
+            stroke-miterlimit: 10; }
+    .holder .videoBox .interactive-content .interactive-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      color: rgba(0, 0, 0, 0); }
+      @media screen and (orientation: portrait) and (max-width: 599.9px), screen and (orientation: landscape) and (max-height: 500px) {
+        .holder .videoBox .interactive-content .interactive-container iframe {
+          max-height: 100%;
+          max-width: 100%;
+          min-height: 100%;
+          min-width: 100%;
+          height: 0;
+          width: 0; } }
+      .holder .videoBox .interactive-content .interactive-container iframe.zoomOut {
+        transform-origin: top left; }
+        @media screen and (max-width: 1199.9px) {
+          .holder .videoBox .interactive-content .interactive-container iframe.zoomOut {
+            width: 133.33%;
+            height: 133.33%;
+            transform: scale(0.75); } }
+      .holder .videoBox .interactive-content .interactive-container iframe.zoomOut2 {
+        transform-origin: top left; }
+        @media screen and (max-width: 1499.9px) {
+          .holder .videoBox .interactive-content .interactive-container iframe.zoomOut2 {
+            width: 133.33%;
+            height: 133.33%;
+            transform: scale(0.75); } }
+        @media screen and (max-width: 599.9px) {
+          .holder .videoBox .interactive-content .interactive-container iframe.zoomOut2 {
+            width: 300%;
+            height: 225%;
+            transform: scale(0.444); } }
+  .holder .videoBox .interactive-content .interactive-info {
+    max-height: unset; }
+    .holder .videoBox .interactive-content .interactive-info.codepen {
+      max-height: 666px; }
+  @media screen and (orientation: landscape) {
+    .holder .gridContain .grid {
+      width: calc(80% + 3.2vw);
+      margin-left: calc(10% - 1.6vw); } }
+  @media only screen and (min-width: 600px) and (max-width: 1299.9px) {
+    .holder .gridContain .grid {
+      width: calc(90% + 3.2vw);
+      margin-left: calc(4.5% - 1.6vw); } }
+  @media screen and (orientation: landscape) and (max-height: 450px) {
+    .holder .gridContain .grid {
+      width: 96%;
+      margin-left: 2%; } }
+  @media screen and (orientation: landscape) and (max-height: 500px) {
+    .holder {
+      width: 98%; }
+      .holder #filters-i.button-group,
+      .holder #filters-m.button-group {
+        padding-top: 1.25vh; } }
+  @media screen and (max-width: 599.9px) {
+    .holder.open .videoBox {
+      margin-top: -1vh; } }
+  .holder:not(.open) .gridContain {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch; }
+  .holder .grid.interactive,
+  .holder .grid.motion {
+    transition: transform 0.4s;
+    transform: translateX(0); }
+  .holder.open {
+    overflow-y: hidden; }
+    @media only screen and (max-width: 599.9px) and (orientation: portrait) {
+      .holder.open {
+        -webkit-mask-image: unset;
+        mask-image: unset;
+        overflow-y: visible; } }
+    .holder.open .videoBox {
+      transform: translateX(calc(0vw + 0.8vw)); }
+    .holder.open .grid.interactive,
+    .holder.open .grid.motion {
+      transform: translateX(100vw); }
+  @media only screen and (min-width: 1300.1px) and (max-width: 1440px) {
+    .holder:not(.skillHolder) .grid-item {
+      min-height: 120px; } }
   .holder .grid {
-    margin-bottom: 25vh;
+    margin-bottom: 12.5vh;
     /* clear fix */
     /* ---- .element-item ---- */
+    /*&.motion {
+  @media only screen and (min-width: 600px) and (max-width: 919.9px) {
+      width: 87%;
+      margin-left: 6.5%;
+  }
+  
+}
+&.motion,
+&.interactive {
+  @media only screen and (min-width: 600px) and (max-width: 919.9px) {
+      width: 90%;
+      margin-left: 4.5%;
+  }
+  @media only screen and (max-width: 599.9px) {
+      width: 97%;
+      margin-left: 1.5%;
+  }
+  
+}
+*/
     /*
       .grid,
       .grid .grid-item {
@@ -211,6 +903,12 @@ $chart-blue: 	#118AB2;
       top: 0px;
       flex-direction: row;
       display: flex; }
+      @media only screen and (max-height: 500px) and (orientation: landscape) {
+        .holder .grid.skills .element-item {
+          height: 25vh;
+          max-height: 25vh; }
+          .holder .grid.skills .element-item.big {
+            max-height: 25vh; } }
       .holder .grid.skills .element-item .name {
         width: calc(15% + 140px);
         min-width: 110px;
@@ -229,7 +927,7 @@ $chart-blue: 	#118AB2;
           text-align: right;
           width: 100%;
           padding: 0 calc(3vh + 10px) 0 0;
-          color: #fff;
+          color: #225;
           font-size: calc(1.6vh + 8px);
           position: relative;
           margin: -0.25vh 0 1vh 0;
@@ -246,14 +944,16 @@ $chart-blue: 	#118AB2;
           line-height: 2.75vh;
           position: absolute;
           left: calc(100% - 3.5vh);
-          font-family: "Monoton"; }
+          font-family: "Monoton";
+          transform: scale(1); }
           @media only screen and (min-width: 768px) {
             .holder .grid.skills .element-item .name p:after {
-              -webkit-transition: font-size 0.5s;
-              -moz-transition: font-size 0.5s;
-              -ms-transition: font-size 0.5s;
-              -o-transition: font-size 0.5s;
-              transition: font-size 0.5s; } }
+              -webkit-transition: transform 0.5s;
+              -moz-transition: transform 0.5s;
+              -ms-transition: transform 0.5s;
+              -o-transition: transform 0.5s;
+              transition: transform 0.5s;
+              transform-origin: -5% 50%; } }
       .holder .grid.skills .element-item .barContainer {
         display: flex;
         flex-direction: column;
@@ -277,9 +977,10 @@ $chart-blue: 	#118AB2;
             transform: skewX(-10deg);
             font-size: 1.55vh;
             font-weight: 600;
-            letter-spacing: 0.05vh; }
+            letter-spacing: 0.05vh;
+            line-height: 2.4vh; }
           .holder .grid.skills .element-item .barContainer .bar.mastery {
-            background-color: #0D2C54; }
+            background-color: #222255; }
           .holder .grid.skills .element-item .barContainer .bar.experience {
             background-color: rgba(255, 255, 255, 0);
             overflow: hidden; }
@@ -289,20 +990,27 @@ $chart-blue: 	#118AB2;
               background: -moz-linear-gradient(left, #EfB400 0%, #7FC800 70%);
               background: -webkit-linear-gradient(left, #EfB400 0%, #7FC800 70%);
               background: linear-gradient(to right, #EfB400 0%, #7FC800 70%); }
+              @media only screen and (orientation: portrait) and (max-width: 1024px), only screen and (max-height: 768px) and (orientation: landscape) {
+                .holder .grid.skills .element-item .barContainer .bar.experience .experience-grad {
+                  width: 100% !important;
+                  background: #7FC800; }
+                  .holder .grid.skills .element-item .barContainer .bar.experience .experience-grad p {
+                    margin-right: 5px !important; } }
           .holder .grid.skills .element-item .barContainer .bar.love {
-            background-color: #D8403F;
+            background-color: #DA0000;
             transform: skewX(10deg); }
         .holder .grid.skills .element-item .barContainer .comments {
           position: absolute;
           top: 8vh;
-          color: #fff;
+          color: #225;
           opacity: 0;
           transform-origin: top;
           transform: translateY(-10px) skewX(8deg) rotateX(60deg);
           margin: 0.25vh 10% 0.5vh 0;
-          border: 2px solid #fff;
+          border: 2px solid #225;
           border: dashed 2px;
           max-width: calc(55vh + 150px + 10vw);
+          background-color: rgba(255, 255, 255, 0.5);
           -webkit-transition: -webkit-transform 0.2s, opacity 0.33s, transform 0.33s;
           -moz-transition: -moz-transform 0.33s, opacity 0.33s, transform 0.33s;
           -ms-transition: -ms-transform 0.33s, opacity 0.33s, transform 0.33s;
@@ -311,16 +1019,16 @@ $chart-blue: 	#118AB2;
           .holder .grid.skills .element-item .barContainer .comments p {
             transform: skewX(-10deg);
             margin: 0.5vh 1vh;
-            line-height: calc(1em + 0.35vh + 0.15vw); }
+            line-height: calc(1em + 0.35vh + 0.15vw);
+            font-size: calc(8px + 0.5vh + 0.5vw); }
             @media only screen and (min-width: 768px) {
               .holder .grid.skills .element-item .barContainer .comments p {
-                padding: 0.33vh 0.5vh 0.166vh 0.5vh;
-                font-size: 14.5px; } }
+                padding: 0.33vh 0.5vh 0.7vh 0.5vh;
+                font-size: calc(9px + 0.5vh + 0.25vw); } }
             @media only screen and (min-width: 1400px) {
               .holder .grid.skills .element-item .barContainer .comments p {
-                padding: 0.4vh 0.5vh 0.2vh 0.5vh;
-                font-size: 15.5px;
-                line-height: calc(1.2em + 0.35vh + 0.15vw); } }
+                font-size: calc(11px + 0.5vh + 0.125vw);
+                line-height: calc(1em + 0.45vh + 0.125vw); } }
           @media only screen and (orientation: portrait) and (max-width: 599.9px) {
             .holder .grid.skills .element-item .barContainer .comments {
               margin-right: 1vw;
@@ -335,37 +1043,62 @@ $chart-blue: 	#118AB2;
               margin: 3px 4px;
               line-height: calc(0.25vw + 0.9vh + 12px);
               font-size: calc(1.33vw - 1vh + 8.5px); } }
-      .holder .grid.skills .element-item.big {
-        margin-bottom: 9vh !important; }
-        @media only screen and (orientation: landscape) and (max-width: 736px) {
+      .holder .grid.skills .element-item.big .barContainer .comments {
+        opacity: 0.999;
+        transform: translateY(0px) skewX(8deg) rotateX(0deg);
+        -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, transform 0.4s;
+        -moz-transition: -moz-transform 0.4s, opacity 0.4s, transform 0.4s;
+        -ms-transition: -ms-transform 0.4s, opacity 0.4s, transform 0.4s;
+        -o-transition: -o-transform 0.4s, opacity 0.4s, transform 0.4s;
+        transition: opacity 0.4s, transform 0.4s; }
+      .holder .grid.skills .element-item.big .name {
+        transform: translateX(-10px); }
+        @media only screen and (min-width: 768px) {
+          .holder .grid.skills .element-item.big .name {
+            transform: translateX(-10px) translateY(3.75vh); }
+            .holder .grid.skills .element-item.big .name p:after {
+              transform: scale(1.55); } }
+      @media only screen and (orientation: landscape) and (max-width: 736px) {
+        .holder .grid.skills .element-item.big {
+          max-height: 10vh; }
+          .holder .grid.skills .element-item.big .comments {
+            top: 7.25vh; } }
+      @media only screen and (max-height: 500px) and (orientation: landscape) {
+        .holder .grid.skills .element-item {
+          height: 20vh;
+          max-height: 20vh; }
+          .holder .grid.skills .element-item .name {
+            width: calc(22% + 140px); }
+            .holder .grid.skills .element-item .name p {
+              font-size: calc(1.6vw + 7px);
+              padding-right: 5vw;
+              line-height: 3vw; }
+              .holder .grid.skills .element-item .name p:after {
+                font-size: 6.5vw;
+                right: 1vw;
+                left: unset;
+                line-height: 3.5vh;
+                transform: translateX(0px);
+                transition: transform 0.33s;
+                transition-timing-function: ease-out; }
+          .holder .grid.skills .element-item .barContainer .comments {
+            top: 18vh; }
+            .holder .grid.skills .element-item .barContainer .comments p {
+              margin: 4px 8px 6px 8px; }
+          .holder .grid.skills .element-item .barContainer .bar p {
+            font-size: 2.45vw;
+            font-weight: 400;
+            line-height: 2.8vw; }
           .holder .grid.skills .element-item.big {
-            margin-bottom: 15.5vh !important; } }
-        @media only screen and (orientation: portrait) and (max-width: 599.9px) {
-          .holder .grid.skills .element-item.big {
-            margin-bottom: 12.5vh !important; } }
-        @media only screen and (orientation: portrait) and (max-width: 374.9px) {
-          .holder .grid.skills .element-item.big {
-            margin-bottom: 14vh !important; } }
-        .holder .grid.skills .element-item.big .barContainer .comments {
-          opacity: 0.999;
-          transform: translateY(0px) skewX(8deg) rotateX(0deg);
-          -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, transform 0.4s;
-          -moz-transition: -moz-transform 0.4s, opacity 0.4s, transform 0.4s;
-          -ms-transition: -ms-transform 0.4s, opacity 0.4s, transform 0.4s;
-          -o-transition: -o-transform 0.4s, opacity 0.4s, transform 0.4s;
-          transition: opacity 0.4s, transform 0.4s; }
-        .holder .grid.skills .element-item.big .name {
-          transform: translateX(-10px); }
-          @media only screen and (min-width: 768px) {
-            .holder .grid.skills .element-item.big .name {
-              transform: translateX(-10px) translateY(3.75vh); }
-              .holder .grid.skills .element-item.big .name p:after {
-                font-size: 9vh; } }
-        @media only screen and (orientation: landscape) and (max-width: 736px) {
-          .holder .grid.skills .element-item.big {
-            max-height: 10vh; }
+            max-height: 20vh; }
             .holder .grid.skills .element-item.big .comments {
-              top: 7.25vh; } }
+              top: 18vh; }
+            .holder .grid.skills .element-item.big .name p {
+              font-size: calc(2.4vw + 7px); }
+              .holder .grid.skills .element-item.big .name p:after {
+                font-size: 9.5vw;
+                transform: translateX(7px);
+                transition-timing-function: ease-out; } }
     .holder .grid.skills svg {
       height: 80%;
       width: calc(100% - 180px);
@@ -374,43 +1107,264 @@ $chart-blue: 	#118AB2;
         .holder .grid.skills svg {
           width: calc(100% - 360px);
           margin-right: 180px; } }
-    .holder .grid.interactive {
-      /* 5 columns, percentage width */ }
+    .holder .grid.interactive, .holder .grid.motion {
+      /* 3 columns, percentage width */ }
       .holder .grid.interactive .grid-item,
-      .holder .grid.interactive .grid-sizer {
-        width: 20%; }
-        @media only screen and (max-width: 1199.9px) {
+      .holder .grid.interactive .grid-sizer, .holder .grid.motion .grid-item,
+      .holder .grid.motion .grid-sizer {
+        width: calc(33.33% - 1.6vw);
+        margin: 0 0.8vw 1.6vw 0.8vw; }
+        @media only screen and (max-width: 1023.9px) {
           .holder .grid.interactive .grid-item,
-          .holder .grid.interactive .grid-sizer {
-            width: 25%; } }
-        @media only screen and (max-width: 999.9px) {
-          .holder .grid.interactive .grid-item,
-          .holder .grid.interactive .grid-sizer {
-            width: 33.33%; } }
-        @media only screen and (max-width: 767.9px) {
-          .holder .grid.interactive .grid-item,
-          .holder .grid.interactive .grid-sizer {
-            width: 50%; } }
+          .holder .grid.interactive .grid-sizer, .holder .grid.motion .grid-item,
+          .holder .grid.motion .grid-sizer {
+            width: calc(50% - 1.6vw); } }
         @media only screen and (max-width: 599.9px) {
           .holder .grid.interactive .grid-item,
-          .holder .grid.interactive .grid-sizer {
-            width: 100%; } }
-      .holder .grid.interactive .grid-item {
+          .holder .grid.interactive .grid-sizer, .holder .grid.motion .grid-item,
+          .holder .grid.motion .grid-sizer {
+            width: calc(100% - 3.6vw);
+            margin-left: 1.6vw; } }
+        @media only screen and (min-width: 1500px) {
+          .holder .grid.interactive .grid-item,
+          .holder .grid.interactive .grid-sizer, .holder .grid.motion .grid-item,
+          .holder .grid.motion .grid-sizer {
+            height: calc(100px + 6.5vw) !important;
+            max-height: 220px; } }
+      .holder .grid.interactive .grid-item, .holder .grid.motion .grid-item {
         float: left;
-        height: calc(50px + 10vw + 5vh);
-        max-height: 280px;
-        background: rgba(255, 255, 255, 0.2);
-        border: 1px solid #fff;
-        border-color: rgba(255, 255, 255, 0.8);
-        margin: 4px 0 2px 0; }
-        .holder .grid.interactive .grid-item:hover {
-          background: rgba(255, 0, 255, 0.8); }
-  @media only screen and (max-width: 799.9px) {
+        height: calc(135px + 2vw); }
+        .holder .grid.interactive .grid-item .textContainer, .holder .grid.motion .grid-item .textContainer {
+          transition: background-position 0.2s;
+          background-position: 0px;
+          background-size: 160% 160%; }
+        .holder .grid.interactive .grid-item.selected .skewWrap, .holder .grid.motion .grid-item.selected .skewWrap {
+          background: -moz-linear-gradient(left, rgba(255, 45, 185, 0) 0%, rgba(255, 45, 185, 0) 57%, rgba(255, 45, 185, 0.5) 66%, rgba(255, 45, 185, 0.5) 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(left, rgba(255, 45, 185, 0) 0%, rgba(255, 45, 185, 0) 57%, rgba(255, 45, 185, 0.5) 66%, rgba(255, 45, 185, 0.5) 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to right, rgba(255, 45, 185, 0) 0%, rgba(255, 45, 185, 0) 57%, rgba(255, 45, 185, 0.5) 66%, rgba(255, 45, 185, 0.5) 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+          @media only screen and (max-width: 599.9px) {
+            .holder .grid.interactive .grid-item.selected .skewWrap, .holder .grid.motion .grid-item.selected .skewWrap {
+              background: -moz-linear-gradient(left, rgba(255, 45, 185, 0) 0%, rgba(255, 45, 185, 0) 57%, rgba(255, 45, 185, 0.5) 66%, rgba(255, 45, 185, 0.5) 100%);
+              background: -webkit-linear-gradient(left, rgba(255, 45, 185, 0) 0%, rgba(255, 45, 185, 0) 57%, rgba(255, 45, 185, 0.5) 66%, rgba(255, 45, 185, 0.5) 100%);
+              background: linear-gradient(to right, rgba(255, 45, 185, 0.5) 0%, rgba(255, 45, 185, 0.65) 50%, rgba(255, 45, 185, 0) 60%, rgba(255, 45, 185, 0) 100%); } }
+        @media only screen and (max-width: 599.9px) {
+          .holder .grid.interactive .grid-item, .holder .grid.motion .grid-item {
+            margin: 27px 0 4px 4%;
+            width: 92%;
+            height: calc(80px + 5vh); } }
+        .holder .grid.interactive .grid-item .skewWrap, .holder .grid.motion .grid-item .skewWrap {
+          transform: skew(-8deg);
+          display: flex;
+          height: 100%;
+          box-shadow: 1px 5px 18px rgba(0, 0, 0, 0.1);
+          background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 100%);
+          background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 100%);
+          background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 100%);
+          transition: background-color 0.125s; }
+          @media only screen and (max-width: 599.9px) {
+            .holder .grid.interactive .grid-item .skewWrap, .holder .grid.motion .grid-item .skewWrap {
+              flex-direction: row-reverse;
+              background-repeat: no-repeat;
+              box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1); } }
+        .holder .grid.interactive .grid-item .imgWrap, .holder .grid.motion .grid-item .imgWrap {
+          overflow: hidden;
+          width: 66.6%;
+          -webkit-clip-path: polygon(0% 0%, 100% 0%, 97% 5%, 100% 11%, 98% 16%, 100% 21%, 98% 25%, 100% 31%, 98% 36%, 100% 40%, 97% 45%, 100% 50%, 98% 55%, 100% 60%, 98% 66%, 100% 71%, 98% 77%, 100% 84%, 98% 89%, 100% 94%, 98% 97%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 97% 5%, 100% 11%, 98% 16%, 100% 21%, 98% 25%, 100% 31%, 98% 36%, 100% 40%, 97% 45%, 100% 50%, 98% 55%, 100% 60%, 98% 66%, 100% 71%, 98% 77%, 100% 84%, 98% 89%, 100% 94%, 98% 97%, 100% 100%, 0% 100%); }
+          @media only screen and (max-width: 599.9px) {
+            .holder .grid.interactive .grid-item .imgWrap, .holder .grid.motion .grid-item .imgWrap {
+              width: 55%;
+              height: 100%; } }
+        .holder .grid.interactive .grid-item .imgContainer, .holder .grid.motion .grid-item .imgContainer {
+          height: 100%;
+          background-size: cover;
+          background-position-x: center;
+          background-position-y: center;
+          margin: 0;
+          min-width: 16vw;
+          opacity: 0.925;
+          transform: skew(8deg) scale(1.1);
+          -webkit-mask-image: -webkit-linear-gradient(-8deg, black 0%, black 66%, rgba(0, 0, 0, 0.933) 75%, rgba(0, 0, 0, 0.8) 85%, rgba(0, 0, 0, 0.62) 90%);
+          mask-image: linear-gradient(-8deg, black 0%, black 66%, rgba(0, 0, 0, 0.933) 75%, rgba(0, 0, 0, 0.8) 85%, rgba(0, 0, 0, 0.62) 90%); }
+          @media only screen and (max-width: 599.9px) {
+            .holder .grid.interactive .grid-item .imgContainer, .holder .grid.motion .grid-item .imgContainer {
+              opacity: 1;
+              -webkit-mask-image: -webkit-linear-gradient(-8deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.2) 15%, rgba(0, 0, 0, 0.8) 25%, black 33%, black 100%);
+              mask-image: linear-gradient(-8deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.2) 15%, rgba(0, 0, 0, 0.8) 25%, black 33%, black 100%); } }
+          @media only screen and (min-width: 1300px) {
+            .holder .grid.interactive .grid-item .imgContainer, .holder .grid.motion .grid-item .imgContainer {
+              transform: skew(8deg) scale(1) translateX(-16%);
+              min-width: 150%;
+              -webkit-mask-image: -webkit-linear-gradient(-8deg, black 0%, black 61%, rgba(0, 0, 0, 0.933) 70%, rgba(0, 0, 0, 0.75) 75%, rgba(0, 0, 0, 0) 90%); } }
+          @media only screen and (max-width: 599.9px) {
+            .holder .grid.interactive .grid-item .imgContainer, .holder .grid.motion .grid-item .imgContainer {
+              transform: skew(8deg) scale(1.125); } }
+        .holder .grid.interactive .grid-item:hover .imgContainer, .holder .grid.motion .grid-item:hover .imgContainer {
+          opacity: 1; }
+        .holder .grid.interactive .grid-item .textContainer, .holder .grid.motion .grid-item .textContainer {
+          width: 33.3%;
+          display: flex;
+          flex-direction: column; }
+          @media only screen and (max-width: 599.9px) {
+            .holder .grid.interactive .grid-item .textContainer, .holder .grid.motion .grid-item .textContainer {
+              width: 45%; } }
+          .holder .grid.interactive .grid-item .textContainer .textWrap, .holder .grid.motion .grid-item .textContainer .textWrap {
+            height: 100%; }
+          .holder .grid.interactive .grid-item .textContainer p, .holder .grid.interactive .grid-item .textContainer .cta, .holder .grid.motion .grid-item .textContainer p, .holder .grid.motion .grid-item .textContainer .cta {
+            padding: 4px 7px 5px 9px;
+            display: flex;
+            vertical-align: middle;
+            color: #fff;
+            margin: 0.5vh 0; }
+          .holder .grid.interactive .grid-item .textContainer p.client, .holder .grid.motion .grid-item .textContainer p.client {
+            text-transform: uppercase;
+            font-size: 1.2em;
+            line-height: 0.75em;
+            background-color: #fff;
+            color: #222;
+            margin: 0;
+            letter-spacing: 0.025rem;
+            padding-right: 8px;
+            position: absolute;
+            right: 0; }
+            @media only screen and (max-width: 599.9px) {
+              .holder .grid.interactive .grid-item .textContainer p.client, .holder .grid.motion .grid-item .textContainer p.client {
+                position: absolute;
+                min-width: 45%;
+                top: -20px;
+                line-height: 13px;
+                font-size: 1em;
+                left: 0;
+                right: unset;
+                height: 20px; } }
+            .holder .grid.interactive .grid-item .textContainer p.client span, .holder .grid.motion .grid-item .textContainer p.client span {
+              transform: skewX(8deg); }
+          .holder .grid.interactive .grid-item .textContainer p.project, .holder .grid.motion .grid-item .textContainer p.project {
+            font-size: 0.85em;
+            line-height: 1.225em;
+            padding-top: 25px;
+            flex-direction: column; }
+            .holder .grid.interactive .grid-item .textContainer p.project span.title, .holder .grid.motion .grid-item .textContainer p.project span.title {
+              font-weight: 600;
+              margin-bottom: 0.35em;
+              font-size: 1.1em;
+              letter-spacing: 0.03em;
+              line-height: 1.2em;
+              margin-top: 0.125em;
+              text-align: right;
+              width: 125%;
+              transform: translateX(-20%); }
+            .holder .grid.interactive .grid-item .textContainer p.project span.description, .holder .grid.motion .grid-item .textContainer p.project span.description {
+              display: none; }
+            .holder .grid.interactive .grid-item .textContainer p.project span.year, .holder .grid.motion .grid-item .textContainer p.project span.year {
+              text-align: right;
+              width: 100%; }
+            .holder .grid.interactive .grid-item .textContainer p.project span.tech, .holder .grid.motion .grid-item .textContainer p.project span.tech {
+              position: absolute;
+              bottom: 8px;
+              right: 8px;
+              text-shadow: #1e2159 0px 0px 6px; }
+            @media only screen and (max-width: 599.9px) {
+              .holder .grid.interactive .grid-item .textContainer p.project, .holder .grid.motion .grid-item .textContainer p.project {
+                font-size: 0.825em;
+                padding-top: 4px; }
+                .holder .grid.interactive .grid-item .textContainer p.project span.title, .holder .grid.motion .grid-item .textContainer p.project span.title {
+                  text-align: left;
+                  transform: translateX(0%); }
+                .holder .grid.interactive .grid-item .textContainer p.project span.year, .holder .grid.motion .grid-item .textContainer p.project span.year {
+                  text-align: left; }
+                .holder .grid.interactive .grid-item .textContainer p.project span.tech, .holder .grid.motion .grid-item .textContainer p.project span.tech {
+                  right: unset;
+                  left: 8px; }
+                .holder .grid.interactive .grid-item .textContainer p.project span.description, .holder .grid.motion .grid-item .textContainer p.project span.description {
+                  display: none; } }
+          .holder .grid.interactive .grid-item .textContainer .cta, .holder .grid.motion .grid-item .textContainer .cta {
+            position: absolute;
+            bottom: 0;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            background-color: #fff;
+            color: #225;
+            margin: 0;
+            width: 100%;
+            padding-right: 10px;
+            left: 0;
+            height: 21px; }
+            @media only screen and (max-width: 599.9px) {
+              .holder .grid.interactive .grid-item .textContainer .cta, .holder .grid.motion .grid-item .textContainer .cta {
+                background-color: transparent;
+                color: #FFF;
+                bottom: 4px;
+                width: unset; } }
+            .holder .grid.interactive .grid-item .textContainer .cta a span, .holder .grid.motion .grid-item .textContainer .cta a span {
+              letter-spacing: 0.02rem; }
+              .holder .grid.interactive .grid-item .textContainer .cta a span:after, .holder .grid.motion .grid-item .textContainer .cta a span:after {
+                content: ""; }
+              .holder .grid.interactive .grid-item .textContainer .cta a span svg path, .holder .grid.motion .grid-item .textContainer .cta a span svg path {
+                transform: translateY(3px) translateX(0px) scale(0.06);
+                stroke-width: 0.05px;
+                stroke: #225; }
+                .holder .grid.interactive .grid-item .textContainer .cta a span svg path.arrow, .holder .grid.motion .grid-item .textContainer .cta a span svg path.arrow {
+                  transform: translateY(3.5px) translateX(-0.5px) scale(0.06);
+                  transition: transform 0.25s; }
+              .holder .grid.interactive .grid-item .textContainer .cta a span span.view, .holder .grid.motion .grid-item .textContainer .cta a span span.view {
+                right: 11px; }
+                .holder .grid.interactive .grid-item .textContainer .cta a span span.view svg, .holder .grid.motion .grid-item .textContainer .cta a span span.view svg {
+                  display: none; }
+              .holder .grid.interactive .grid-item .textContainer .cta a span span.open, .holder .grid.motion .grid-item .textContainer .cta a span span.open {
+                right: 27px; }
+                .holder .grid.interactive .grid-item .textContainer .cta a span span.open svg, .holder .grid.motion .grid-item .textContainer .cta a span span.open svg {
+                  display: inline-block;
+                  width: 20px;
+                  height: 20px;
+                  position: absolute;
+                  top: -4px;
+                  right: -24px; }
+            .holder .grid.interactive .grid-item .textContainer .cta .year, .holder .grid.motion .grid-item .textContainer .cta .year {
+              line-height: 0.9em;
+              font-size: 1.05em; }
+            .holder .grid.interactive .grid-item .textContainer .cta span, .holder .grid.motion .grid-item .textContainer .cta span {
+              transform: skewX(8deg);
+              display: block;
+              position: absolute;
+              right: 9px;
+              color: #225;
+              text-decoration: underline;
+              font-size: 0.825em;
+              line-height: 1.25em; }
+              .holder .grid.interactive .grid-item .textContainer .cta span:after, .holder .grid.motion .grid-item .textContainer .cta span:after {
+                font-size: 1rem;
+                line-height: 0;
+                color: #444; }
+    .holder .grid.interactive .grid-item:hover .textContainer .cta a span svg path.arrow,
+    .holder .grid.motion .grid-item:hover .textContainer .cta a span svg path.arrow {
+      transform: translateY(2px) translateX(1px) scale(0.06); }
+    .holder .grid.motion .grid-item .textContainer {
+      /*p.project {
+  }
+  .cta a span{ 
+      color:#fff;
+      &:after{
+        content:'';
+      }
+  }*/ }
+  @media only screen and (max-width: 919.9px) {
     .holder.skillHolder {
-      width: 90%; } }
+      width: 97%;
+      padding-left: 1%; } }
+  @media only screen and (max-width: 599.9px) {
+    .holder.skillHolder {
+      height: 88vh;
+      -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 3.5%, black 84%, rgba(0, 0, 0, 0) 90%); } }
   @media only screen and (orientation: landscape) and (max-width: 736px) {
     .holder.skillHolder {
       width: 95%;
       margin: 0; } }
+  @media only screen and (max-height: 500px) and (orientation: landscape) {
+    .holder.skillHolder {
+      width: 100%; } }
 
 /* ---- / END holder ---- */

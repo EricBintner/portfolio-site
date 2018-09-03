@@ -1,32 +1,48 @@
+/*
+$chart-dkBlue: 	#073B4C;
+$chart-yellow: 	#ffd166;
+$chart-green: 	#06D6A0;
+$chart-red: 	#EF476F;
+$chart-blue: 	#118AB2;
+*/
 svg#metro {
+  display: none; }
+
+svg#metro.show {
+  display: block;
   width: 150%;
   position: absolute;
   bottom: 80px;
   left: -25%;
   pointer-events: none; }
-  svg#metro .metro path, svg#metro .metro line, svg#metro .metro polyline {
+  @media only screen and (orientation: portrait) and (max-width: 599.9px) {
+    svg#metro.show {
+      display: none; } }
+  svg#metro.show rect {
+    fill: rgba(255, 255, 255, 0.9); }
+  svg#metro.show .metro path, svg#metro.show .metro line, svg#metro.show .metro polyline {
     fill: none;
     stroke-width: 7;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 23; }
-  svg#metro .metro .st0 {
+  svg#metro.show .metro .st0 {
     stroke: #008061; }
-  svg#metro .metro .st1 {
+  svg#metro.show .metro .st1 {
     stroke: #FFD400; }
-  svg#metro .metro .st2 {
+  svg#metro.show .metro .st2 {
     stroke: #00A88E; }
-  svg#metro .metro .st3 {
+  svg#metro.show .metro .st3 {
     stroke: #023F88; }
-  svg#metro .metro .st4 {
+  svg#metro.show .metro .st4 {
     stroke: #007C8E; }
-  svg#metro .metro .st5 {
+  svg#metro.show .metro .st5 {
     stroke: #00539F; }
-  svg#metro .metro .st6 {
+  svg#metro.show .metro .st6 {
     stroke: #F04E23; }
-  svg#metro .metro .st7 {
+  svg#metro.show .metro .st7 {
     stroke: #9F1866; }
-  svg#metro .metro .st8 {
+  svg#metro.show .metro .st8 {
     stroke: #9E9D92; }
-  svg#metro .metro .st9 {
+  svg#metro.show .metro .st9 {
     fill: #53C2EF; }
