@@ -1,0 +1,87 @@
+.cta {
+xborder-radius: 4px;
+overflow: hidden;
+width: 130px;
+position: absolute;
+text-align: center;
+}
+.cta .cta_shell {
+position: relative;
+width: 100%;
+height: 25px;
+background: white;
+overflow: hidden;
+display: table;
+table-layout: fixed;
+}
+.cta .cta_shell .arrow {
+font-size: 8px;
+vertical-align: middle;
+}
+.cta .disclaimer {
+font-size: 8px;
+line-height:15px;
+color:white;
+display:none;
+font-family:verdana;
+}
+.content .cta .cta_txt {
+font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: -0.02rem;
+	padding-top: 0px;
+display: table-cell;
+vertical-align: middle;
+}
+.content:hover .cta .cta_shell {
+-webkit-animation: out 0.3s forwards;
+animation: out 0.3s forwards;
+}
+@-webkit-keyframes out {
+50% {
+background: #000;
+}
+51% {
+background: #000;
+}
+100% {
+background: #000;
+}
+}
+@keyframes out {
+50% {
+background: #000;
+}
+51% {
+background: #000;
+}
+100% {
+background: #000;
+}
+}
+.content:hover .cta .cta_shell .cta_txt {
+-webkit-animation: outtxt 0.3s forwards;
+animation: outtxt 0.3s forwards;
+}
+@-webkit-keyframes outtxt {
+50% {
+color: #fff;
+}
+51% {
+color: #fff;
+}
+100% {
+color: #fff;
+}
+}
+@keyframes outtxt {
+50% {
+color: #fff;
+}
+51% {
+color: #fff;
+}
+100% {
+color: #fff;
+}
+}

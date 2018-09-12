@@ -2,6 +2,10 @@
 
 (function () {
 
+if ( !$('html').hasClass('touch') ){
+    
+
+
 	/* ****************************** */
 	/* GLOBAL VARIABLES */
 
@@ -141,5 +145,9 @@
 	Number.prototype.map = function (inMIN, inMAX, outMIN, outMAX) {
 	  return outMIN + ( (this - inMIN) * (outMAX - outMIN) / (inMAX - inMIN) );
 	}
+
+
+  } // if not .touch
+
 
 })();

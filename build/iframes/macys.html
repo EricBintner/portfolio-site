@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+  <meta name="robots" content="noindex" />
+  <meta name="robots" content="nofollow" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>careers.jpmorgan.com</title>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<style>
+body {
+	background-color:transparent;
+	 /*	-ms-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    		transform-origin: top left;*/
+    margin: 0;
+    padding: 0;
+    background-color: #f3f0e9;
+    overflow: hidden;
+} 
+
+.box {
+  background-color:transparent;
+    -ms-transform-origin: top left;
+    -webkit-transform-origin: top left;
+        transform-origin: top left;
+    margin: 0;
+    padding: 0;
+} 
+
+#container{
+  display:block;
+	width: 955px;
+    height: 800px;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+    -ms-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    top: 0 !important;
+    box-sizing: border-box;
+    border: none;
+    background-image: url('careers/mobile.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+@media (min-width: 600px )  { 
+    #container{ background-image: url('careers/desktop.jpg') }
+}
+
+</style>
+
+</head>
+<body>
+
+
+<div class="box">
+  <a id="container" rel="nofollow" target="blank" href="http://careers.jpmorgan.com"></a>
+</div>
+
+
+
+
+
+<script>
+// scalable container
+
+var pageWidth, pageHeight;
+
+var basePage = {
+  width: 955,
+  height: 800,
+  scale: 1,
+  scaleX: 1,
+  scaleY: 1
+};
+
+$(function(){
+  var $page = $('#container');
+  
+  getPageSize();
+  scalePages($page, pageWidth, pageHeight);
+  
+  //using underscore to delay resize method till finished resizing window
+  $(window).resize(function () {
+    getPageSize();            
+    scalePages($page, pageWidth, pageHeight);
+  });
+  
+
+function getPageSize() {
+  pageHeight = $('.box').height();
+  pageWidth = $('.box').width();
+}
+
+function scalePages(page, maxWidth, maxHeight) {            
+  var scaleX = 1, scaleY = 1;                      
+  scaleX = maxWidth / basePage.width;
+  scaleY = maxHeight / basePage.height;
+  basePage.scaleX = scaleX;
+  basePage.scaleY = scaleY;
+  basePage.scale = (scaleX > scaleY) ? scaleY : scaleX;
+
+  var newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth)/2));
+  var newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight)/2));
+
+  page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');left:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
+}
+});
+
+
+console.log = function() {};
+</script>
+
+</body>  
+</html> 
+    

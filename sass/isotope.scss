@@ -118,7 +118,7 @@
 }*/
 &.skills#filters-s {
     //transform: translateX( -7.75vw );
-    transform: translateX( -5vw );
+    //transform: translateX( -5vw );
 
     .button-group button {
       color: #225;
@@ -285,29 +285,89 @@
 }
 
 
-&.skills#sorts{
-    DISPLAY: NONE;
+&#sorts{
     flex-direction: column;
     flex: 1;
-    margin: 5px 5px 10px 0;
-    height: 10vh;
+    margin: 10px 5px 10px 0;
+    height: calc(4vh + 1.5vw + 3.5%);
+    margin-top: calc(3vh - 5px - 0.5%);
+    justify-content: center;
+    @media only screen and (max-width: 1199.9px) {  
+        height: calc(4vh + 1.5vw + 3.75%);
+        margin-top: calc(3.5vh - 6px - 0.5%);
+    }
+    @media only screen and (max-width: 599.9px) and (orientation: portrait){
+        position: absolute;
+        right: 0;
+        top: -9.5vh;
+        width: 20vw;
+        height: 7vh;
+    }
 
-    button {
-        margin: 0;
-        padding: 0 2vw;
-        width: 100%;
-        border-radius: 0;
-        border: 1px solid rgba(0,0,0,0);
-    &:nth-child(1){
-        background-color: #2e3192;
+    button.button:not(.notButton) {
+        //margin: 0;
+        padding: 0 2.25vw 0 0.5vw;
+        border: none;
+        color: #fff;
+        text-transform: uppercase;
+        height: 33.3%;
+        min-height: unset;
+        align-items: start;
+        text-align:left;
+        justify-content: center;
+        margin: 2.5% 0 3.5% 0;
+        font-size: calc(1vh + 3px);
+        flex: 1 !important;
+
+
+
+        &:nth-child(1){
+            background-color: #225;
+            transform: translateX(3px) skewX(-8deg);
+        }
+        &:nth-child(2){
+            //background: linear-gradient(to right, #ffbb00 0%, #28d32d 100%);
+            background: #7FC800;
+            background: -moz-linear-gradient(left, #EfB400 0%, #7FC800 70%);
+            background: -webkit-linear-gradient(left, #EfB400 0%, #7FC800 70%);
+            background: linear-gradient(to right, #EfB400 0%, #7FC800 70%);
+            @media only screen and (max-width: 1024px) and (orientation: portrait), 
+                   only screen and (max-height: 768px) and (orientation: landscape) {
+                background: #7FC800;
+            }
+
+        }
+        &:nth-child(3){
+            background-color: #DA0000;
+            transform: translateX(-3px) skewX(-8deg);
+        }
+        @media only screen and (max-width: 599.9px) and (orientation: portrait){
+        & > span:before{
+          font-size: 0.7em;
+          bottom:-1px;
+        }
+        }
+        
     }
-    &:nth-child(2){
-        margin: calc(18px - 1vh) 0;
-        background: linear-gradient(to right, #ffbb00 0%, #28d32d 100%);
-    }
-    &:nth-child(3){
-        background-color: #ec008c;
-    }
+    @media only screen and (max-height: 500px) and (orientation: landscape){
+        min-height: 36px;
+        margin: calc(5vh - 13px) 5px 0 0;
+
+        button.button:not(.notButton) {
+          font-size: 0.6em;
+          padding: 0 3.5vw 0 0.75vw;
+          
+          &:nth-child(1){
+              transform: translateX(2px) skewX(-8deg);
+          }
+          &:nth-child(3){
+              transform: translateX(-2px) skewX(-8deg);
+          }
+          & > span:before{
+            //font-size: 1.2em;
+            bottom:-1px;
+          }
+        }
     }
 }
 

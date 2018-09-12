@@ -1,8 +1,0 @@
-[
-  {"name":"SVG", 		"category":"front-end",				"mastery":"100", 		"experience":"100", 	"love":"100"},
-  {"name":"CSS/SASS",	"category":"front-end",				"mastery":"100",		"experience":"100",		"love":"100"},
-  {"name":"Something", 	"category":"front-end",				"mastery":"60", 		"experience":" 80", 	"love": "90"},
-  {"name":"GSAP",		"category":"front-end javascript",	"mastery":"95",			"experience":" 95",		"love":"100"},
-  {"name":"D3.js",		"category":"front-end javascript",	"mastery":"30",			"experience":" 20",		"love": "90"},
-  {"name":"GIT",		"category":"front-end",				"mastery":"30",			"experience":"  40",	"love": "15"}
-]

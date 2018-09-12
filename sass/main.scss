@@ -176,6 +176,34 @@ Main Background Animation - Placement Z-Axis
 	  background-position: center bottom;
 	  background-repeat: no-repeat;
 
+
+
+
+
+	.svgScale.level0 .st0{fill:#3C7C45;}
+	.svgScale.level0 .st1{fill:#b8c9cA;}
+	.svgScale.level0 .st2{fill:#a3b1b3;}
+	.svgScale.level0 .st3{fill:#F7FBFC;stroke:#C7D9DD;stroke-miterlimit:10;}
+	.svgScale.level0 .st4{fill:#F4F8F9;stroke:#EBEDED;stroke-miterlimit:10;}
+	.svgScale.level0 .st5{fill:#84979B;}
+	.svgScale.level0 .st6{opacity:0.7;fill:url(#lake_1_);}
+	.svgScale.level0 .st7{opacity:0.8;}
+	.svgScale.level0 .st8{fill:#D6D085;}
+	.svgScale.level0 .st9{fill:#74AD83;}
+	.svgScale.level0 .st10{fill:#9B9586;}
+
+	.svgScale.level0 .st12{display:inline;}
+	.svgScale.level0 .st13{fill:#637B7F;}
+	.svgScale.level0 .st14{fill:#9B8E86;}
+	.svgScale.level0 .st15{opacity:0.9;}
+	.svgScale.level0 .st16{fill:#74AF78;}
+	.svgScale.level0 .st17{fill:#699E6E;}
+	.svgScale.level0 .st18{display:inline;fill:#9B8E86;}
+	.svgScale.level0 .st19{display:inline;fill:#CEC48A;}
+	.svgScale.level0 .st20{display:inline;opacity:0.71;fill:url(#SVGID_1_);}
+	.svgScale.level0 .st21{display:inline;fill:#3C7C45;}
+	.svgScale.level0 .st22{fill:#4D9154;}
+
 	  	svg.svgBackground{
 	  		position: absolute;
 	  		bottom: -5vh;
@@ -1065,4 +1093,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', end
   color: #0077b5;
 }
 */
+
+.icon-graduate:before {
+  content: "\e905";
+  color: #fff;
+  margin-right:4px;
+}
+.icon-briefcase:before {
+  content: "\e9ae";
+  color: #fff;
+  margin-right:6px;
+}
+.icon-heart:before {
+  content: "\e9da";
+  color: #fff;
+  font-size:0.9em;
+  margin-right:7px;
+}
+button {
+	.icon-graduate:before,
+	.icon-briefcase:before,
+	.icon-heart:before {
+	    position: absolute;
+	    right: 0;
+	    bottom: 10%;
+	}
+}
 
