@@ -1,0 +1,109 @@
+/*body {
+	background-image:url(../../../guide/300x250.jpg);
+	background-repeat:no-repeat;
+	background-position: 310px 0;
+	}*/
+.content {
+width:300px;
+height:250px;
+background:#fff;
+display:none;
+}
+.content .container {
+width:525px;
+height:484px;
+xoverflow:hidden;
+}
+.content .container .balloons> * {
+position:absolute;
+top:0;
+left:0;
+}
+.content .container > * {
+position:absolute;
+top:0;
+left:0;
+}
+.content .txt {
+    font-family: 'Cabin Condensed', sans-serif;
+    font-size: 10pt;
+    font-weight: 700;
+    text-align: left;
+    color: #fff;
+    line-height: 14px;
+    -webkit-font-smoothing: antialiased;
+}
+.content .txt span.wide{
+    letter-spacing:1.8px;
+}
+.content .txt span.wide2{
+    letter-spacing:0.7px;
+}
+.content .txt span.small{
+    font-size: 9pt;
+}
+.content .cta .cta_txt {
+color: red;
+    font-size: 0.9rem;
+    letter-spacing: -0.02rem;
+	
+}
+.cta {
+left: 148px;
+top: 5px;
+width:150px;
+}
+.cta .cta_shell {
+background:transparent;
+}
+.content:hover .cta .cta_shell {
+-webkit-animation: none;
+animation: none;
+}
+.content .rect_1{
+background:black;
+height:33px;
+position:absolute;
+bottom:0;
+top:auto;
+width:100%;
+}
+.content .rect_0{
+background:black;
+height:20px;
+position:absolute;
+top:auto;
+width:100%;
+}
+
+
+.content .rect_1 .txt{
+font-weight:400;
+position:absolute;
+top:5px;
+left:24px;
+}
+
+.content .nbc_logo {
+margin:0 0 0 240px;
+display:block;
+padding-top:5px;
+padding-bottom:5px;
+}
+#lockup path{
+	fill:#FFF;
+	}
+.Macys_svg #macys{
+	stroke-width:0.5px;
+	stroke:#FFF;
+	}
+.txt.disclaimer {
+    font-family: 'Cabin Condensed', sans-serif;
+    font-size: 4pt;
+    font-weight: 400;
+    text-align: left;
+    color: #fff;
+    line-height: 5px;
+	width:1500px;
+    -webkit-font-smoothing: antialiased;
+}

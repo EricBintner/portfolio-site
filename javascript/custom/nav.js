@@ -5,16 +5,8 @@
 TweenLite.to('.carousel svg text', 1, { rotation: '-90', x: '33%', y: '50px'});
 
 
-// if ( window.matchMedia("(max-width:  600px) and (orientation: portrait)").matches ||
-// 	 window.matchMedia("(max-height: 500px) and (orientation: landscape)").matches ){
-// 	var initNavOpen = new TimelineLite({repeat: -1});
-// 	initNavOpen.staggerTo('.navPos a .subStop', 0.35, { x: '0', y: '0', height: '40px', width: '40px', right: '-26px', 
-// 	  	top: '-8px', borderWidth: '15px', ease: metroEase}, 0.025);
-// }
-
 
 checkCloudSize( state2 );
-
 
 
 // var fixedTouchScroll = document.getElementById('environment');
@@ -28,7 +20,6 @@ var metroTime = time/1.5;
 var navDelay;
 var metroEase = Power1.easeInOut;
 var metroEaseIn = Power1.easeIn;
-//document.domain = 'localhost:3000';
 
 
 // build HTML items before ISOTOPE init
@@ -48,11 +39,11 @@ $(function() {
 		        htmls += '<div class="element-item '+value.category+'">'; //data-category="'+value.category+'"
 		        htmls += '	<div class="name"><p>'+value.name+'</p></div>';
 		        htmls += '	<div class="barContainer">';
-		        htmls += '		<div class="bar mastery"	data-mastery="'+value.mastery+'"	style="width:'+value.mastery+'%"><p>'+value.mastery+'%</p></div>';
+		        htmls += '		<div class="bar mastery"	data-mastery="'+value.mastery+'"	style="width:'+value.mastery+'%"><p><span class="icon-graduate"></span>'+value.mastery+'%</p></div>';
 		        htmls += '		<div class="bar experience"	data-experience="'+value.experience+'"	style="width:'+value.experience+'%">';
-		        htmls += '			<div class="experience-grad" style="width:'+calcPercent+'%"><p style="margin-right: calc('+(-1*(value.experience - 100))+'% + 5px);">'+value.experience+'%</p></div>';
+		        htmls += '			<div class="experience-grad" style="width:'+calcPercent+'%"><p style="margin-right: calc('+(-1*(value.experience - 100))+'% + 5px);"><span class="icon-briefcase"></span>'+value.experience+'%</p></div>';
 		        htmls += '		</div>';
-		        htmls += '		<div class="bar love" 		data-love="'+value.love+'"	style="width:'+value.love+'%"><p>'+value.love+'%</p></div>';
+		        htmls += '		<div class="bar love" 		data-love="'+value.love+'"	style="width:'+value.love+'%"><p><span class="icon-heart"></span>'+value.love+'%</p></div>';
 		        htmls += '		<div class="comments"><p>'+value.comments+'</p></div>';
 		        htmls += '	</div>';
 		        htmls += '</div>';
@@ -68,14 +59,7 @@ $(function() {
 
 		    var intTitle = value.title;
 			var urlParam = intTitle.replace(/ /g,"_");
-		    	// if (value.location === '_blank') { 
-		    	// 	locationClass = 'open';
-		    	// 	locationText = 'Open Link <svg  fill=\'#222222\' viewBox=\'0 0 16 16\' fill-rule=\'evenodd\' clip-rule=\'evenodd\' stroke-linejoin=\'round\' stroke-miterlimit=\'1.414\' x=\'0px\' y=\'0px\'><path class=\'arrow\' d=\'M175,33.8l-70.6,70.6c-2.5,2.4-6.4,2.3-8.8-0.2c-2.3-2.4-2.3-6.3,0-8.7L166.2,25h-47.4c-3.5,0-6.2-2.8-6.2-6.2	s2.8-6.2,6.2-6.2h62.5c3.5,0,6.2,2.8,6.2,6.2v62.5c0,3.5-2.8,6.2-6.2,6.2s-6.2-2.8-6.2-6.2V33.8z\'/><path d=\'M62.5,37.5H31.2c-10.4,0-18.7,8.4-18.7,18.7v112.6c0,10.3,8.5,18.7,18.8,18.7h112.4c10.4,0,18.8-8.4,18.8-18.7	c0,0,0,0,0-0.1v-31.2c0-3.5-2.8-6.2-6.2-6.2c-3.5,0-6.2,2.8-6.2,6.2v31.2c0,3.5-2.8,6.3-6.2,6.3c0,0,0,0-0.1,0H31.3	c-3.4,0-6.2-2.8-6.3-6.2V56.2c0-3.4,2.8-6.2,6.2-6.2h31.3c3.5,0,6.2-2.8,6.2-6.2S66,37.5,62.5,37.5z\'/></svg>' 
-		    	// } else { 
-		    	// 	locationClass = 'view';
-		    	// 	locationText = 'View' 
-		    	// }
-		    	// locationText
+
 				htmli += '<div class="grid-item '+value.kind+' '+urlParam+' " data-url="'+value.url+'" data-iframesize="'+value.iframeSize+'" data-size="'+value.size+'" data-bgcolor="'+value.bgcolor+'" data-codepen="'+value.codepen+'" data-location="'+value.location+'" data-gotourl="'+value.gotourl+'"><div class="skewWrap">';
 				htmli += '  <div class="imgWrap"><div class="imgContainer" style="background-image:url(\'img/interactive/' +value.img+ '\')"></div></div>';
 				htmli += '	<div class="textContainer">';
@@ -86,7 +70,6 @@ $(function() {
 				htmli += '			<span class="description">'	+value.project+	'</span><span class="year">'+value.year+'</span>';
 				htmli += '			<span class="tech">'	+value.tech+	'</span>';
 				htmli += '		</p>';
-				//htmli += '		<div class="cta"><div class="year">'+value.year+'</div><a href="'+value.url+'" target="'+value.location+'"><span class="'+locationClass+'">'+locationText+' </span></a></div>';
 				htmli += '	  </div>';
 				htmli += '	</div>';
 				htmli += '</div></div>';
@@ -110,7 +93,6 @@ $(function() {
 				htmlm += '			<span class="description">'	+value.project+	'</span><span class="year">'+value.year+'</span>';
 				htmlm += '			<span class="tech">'	+value.tech+	'</span>';
 				htmlm += '		</p>';
-				//htmlm += '		<div class="cta"><div class="year">'+value.year+'</div></div>';
 				htmlm += '	  </div>';
 				htmlm += '	</div>';
 				htmlm += '</div></div>';
@@ -120,7 +102,6 @@ $(function() {
 		})
   	).then(function() {
 	  	
-		//startPage(finishPage);
 		startPage();
 
   	});	
@@ -134,7 +115,7 @@ $(function() {
 
 
     
-function startPage(){  //finishPage
+function startPage(){  
 
 	// - - - - - - MAIN NAV ANIMATION / CLICK HANDLER - - - - - //
 	var link 	= null;
@@ -189,17 +170,7 @@ function startPage(){  //finishPage
 		if ( link === 5 ) {	linkName = 'About'; }
 		updateQueryStringParam( 'nav', linkName );
 
-		
-
-// console.log(updateQueryStringParam('work'));
-// 		//updateQueryStringParam( 'work', linkName );
-// 		//console.log(work);
-// 		//updateQueryStringParam( 'work', '' );
-// 		// console.log(updateQueryStringParam('work'));
-// 		if (updateQueryStringParam('work') !== null && updateQueryStringParam('work') !== 'undefined' && updateQueryStringParam('work') !== "" ){
-			
-// 			// 	updateQueryStringParam( 'work', 'THIS-IS-WORKING' );
-// 		}
+	
 
 	    GenerateSpeed(link, oldLink, yaxis);
 	    return false;
@@ -324,17 +295,12 @@ function startPage(){  //finishPage
 		if ( window.matchMedia("(min-width: 600px)").matches  && link !== 0 ){
 			metroDelay = 0;
 			navDelay = metroDelay;
-			//navAnimation(navDelay);
-			//metroAnimation(navDelay);
 			//console.log('Desktop NOT Intro');
 		} else if (window.matchMedia("(min-width: 600px)").matches  && link == 0) {
 			metroDelay = 0;
 			navDelay = metroDelay;
 			//console.log('Desktop Intro');
 		}
-		//else If mobile
-		//else if ( $(window).width() < 767.9 ) {
-		//else if ( window.matchMedia("(max-width: 599.9px)").matches ) {
 		else if ( window.matchMedia("(max-width: 599.9px)").matches || window.matchMedia("(max-height: 500px)").matches ) {
 			var $nav = $('nav');
 			// 	If menu open -- 	and --  Intro 		(do nothing, keep open)
@@ -363,17 +329,6 @@ function startPage(){  //finishPage
 				//console.log('Mobile, close menu '+ $nav.hasClass('open') + ' '+ link);
 			}
 		}
-		// If desktop NOT collapsed (reopen nav)
-	/*	if ( link === 0 && $(window).width() > 767.9 ) {
-		 	metroDelay = 0;
-		 	navDelay = speed;
-		 	//navAnimationOpen(navDelay);
-		 	//metroAnimationOpen(navDelay);
-		 } else if (link === 0 && $(window).width() < 767.9) {
-		 	metroDelay = 0;
-		 	navDelay = speed;
-		 	//navAnimationMobileOpen(navDelay);
-		 }*/
 
 		 return metroDelay, link;
 		 //TweenLite.to("#content", speed, { y: yaxis*10000, ease: easy }).delay(metroDelay);
@@ -387,7 +342,6 @@ function startPage(){  //finishPage
 		oldLink = link;
 
 		// this ACTUAL GO TO animation currently inside metroClick() function
-	  //TweenLite.to("#content", speed, { y: yaxis*10000, ease: easy }).delay(metroDelay);
 	    TweenLite.to("#content", speed, { y: yaxis*10000, ease: easy, onComplete: 
 	    	function(){ 
 	    		if (window.matchMedia("(max-width: 599.9px)").matches || window.matchMedia("(max-height: 500px)").matches ) {
@@ -525,7 +479,8 @@ function startPage(){  //finishPage
 	//> SKILLS filter functions
 
 	// bind filter button click
-	$('.skills#filters-s').on( 'click', 'button', function() {
+	//$('.skills#filters-s').on( 'click', 'button', function() {
+	$('.skills#filters-s > button').on( 'click', function() {
 	  $('.element-item').removeClass('big');
 	  $('.element-item').css('margin-bottom', '');
 	  var filterValue = $( this ).attr('data-filter');
@@ -534,23 +489,38 @@ function startPage(){  //finishPage
 	  $grid_skills.isotope({ filter: filterValue });
 	});
 
-	// bind sort button click
-	// $('.skills#sorts').on( 'click', 'button', function() {
-	//   $('.element-item').removeClass('big');
-	//   $('.element-item').css('margin-bottom', '');
-	//   var sortByValue = $(this).attr('data-sort-by');
-	//   console.log(sortByValue);
-	//   $grid_skills.isotope({ sortBy: sortByValue });
-	// });
+	//bind sort button click
+	$('.skills#filters-s > #sorts').on( 'click', 'button', function() {
+	  $('.element-item').removeClass('big');
+	  $('.element-item').css('margin-bottom', '');
+	  var sortByValue = $(this).attr('data-sort-by');
+	  //console.log(sortByValue);
+	  $grid_skills.isotope({ sortBy: sortByValue });
+	});
 
 	// change is-checked class on buttons
-	$('.skills.button-group').each( function( i, buttonGroup ) {
-	  var $buttonGroup = $( buttonGroup );
-	  $buttonGroup.on( 'click', 'button', function() {
+	// $('#filters-s.skills.button-group').each( function( i, buttonGroup ) {
+	//   var $buttonGroup = $( buttonGroup );
+	//   $buttonGroup.on( 'click', 'button', function() {
+	//     $buttonGroup.find('.is-checked').removeClass('is-checked');
+	//     $( this ).addClass('is-checked');
+	//     console.log($( this ).html());
+	//   });
+	// });
+
+	$('#filters-s.skills.button-group button').on( 'click', function() {
+	  var $buttonGroup = $( this ).parent();
+	  //$buttonGroup.on( 'click', 'button', function() {
 	    $buttonGroup.find('.is-checked').removeClass('is-checked');
 	    $( this ).addClass('is-checked');
-	  });
+	  //});
 	});
+
+
+	// $('.skills.button-group#filters-s button').on( 'click', function() {
+	//     $( this ).parent().find('.is-checked').removeClass('is-checked');
+	//     $( this ).addClass('is-checked');
+	//   });
 
 	//> skills details (.big)
 	$('.element-item').click(function(){

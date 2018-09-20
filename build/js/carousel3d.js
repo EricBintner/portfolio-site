@@ -11,12 +11,14 @@ function rotateC(callback) {
       var angle = selectedIndex / cellCount * -360;
       if ( $('html').hasClass('touch') ){
             carousel.style.transform = 'translateZ(-10000px) rotateY(' + angle + 'deg)';
-            console.log( angle, $('html').hasClass('touch'));
+            //console.log( angle, $('html').hasClass('touch'));
       } else {
             carousel.style.transform = 'translateZ(-10000px) rotateY(' + angle + 'deg)';
             TweenMax.staggerTo( '.carousel__cell' , 1.1, { rotationX: '180deg', x:"-50%",  z:'-2500px', y:'-5000px', scale:7, overwrite:true, ease: Power2.easeInOut, repeat:1, yoyo:true, onComplete:clickable}, 0.175);
             function clickable() {
-              $('.carouselBtns').removeClass('no-click');
+              setTimeout(function(){ 
+                $('.carouselBtns').removeClass('no-click');
+              }, 500);
             }
       }
      

@@ -144,7 +144,7 @@ nav {
 	}
   	a {
   		font-weight:600;
-  		color: #225;
+  		color: #222;
 	  	padding:  10px;
 	    margin: 10px 10px 10px 5px;
 	    background-color: #fff;
@@ -650,8 +650,13 @@ nav {
 		}
 
 		@media (orientation: portrait) and (max-width: $mq-medDesk-min)  { 
-			bottom:70vh;
-			transform: translateY(-20%);
+			//bottom:70vh;
+			//transform: translateY(-20%);
+			top: calc(-100vh - 50vw);
+		    transform: translateY( calc(85vh - 580px) );
+		    transform-origin: 50% 100%;
+		    bottom: unset;
+		    height: 100vw;
 		}
 		@media only screen and (max-width: $mq-tablet-max){
 			//transform: translateY(-100vw) translateX(-50vw);
